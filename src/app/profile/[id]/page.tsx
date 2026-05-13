@@ -110,7 +110,7 @@ export default function PublicProfilePage() {
                   className="pmc-recipe-count"
                   style={{ color: 'var(--primary-color)', fontWeight: 700 }}
                 >
-                  {recipes.length} {t.profile?.recipes_created || 'Recipes Created'}
+                  {recipes.length} {t.profile?.stats?.recipes || 'Recipes Created'}
                 </span>
               </div>
             </div>
