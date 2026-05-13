@@ -320,8 +320,8 @@ export default function RecipeCard({
             {variant === 'profile' ? (
               <span className={`rc-status-badge ${recipe.is_private ? 'private' : 'public'}`}>
                 {recipe.is_private
-                  ? t.profile?.private || 'Private'
-                  : t.profile?.public || 'Public'}
+                  ? (t.profile as any)?.private || 'Private'
+                  : (t.profile as any)?.public || 'Public'}
               </span>
             ) : (
               <span className="rc-serv-box">
