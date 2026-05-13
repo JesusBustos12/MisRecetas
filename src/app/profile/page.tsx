@@ -504,10 +504,10 @@ function ProfileHubContent() {
             </div>
 
             <div className="cr-group">
-              <label className="cr-label">{t.profile.create_form?.description_label || 'Descripción'}</label>
+              <label className="cr-label">{(t.profile.create_form as any)?.description_label || 'Descripción'}</label>
               <textarea
                 className="cr-input"
-                placeholder={t.profile.create_form?.description_placeholder || 'Describe brevemente tu receta...'}
+                placeholder={(t.profile.create_form as any)?.description_placeholder || 'Describe brevemente tu receta...'}
                 value={newDesc}
                 onChange={(e) => setNewDesc(e.target.value)}
                 style={{ minHeight: '80px', resize: 'vertical' }}
