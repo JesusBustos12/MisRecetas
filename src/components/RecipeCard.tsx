@@ -272,7 +272,7 @@ export default function RecipeCard({
                 </span>
               ) : (
                 <span style={{ fontSize: '1.2rem', fontWeight: 600, color: 'var(--primary-color)', background: 'rgba(249,115,22,0.12)', padding: '0.2rem 0.8rem', borderRadius: '4px' }}>
-                  {t.card?.new_label || 'New'}
+                  {(t.card as any)?.new_label || 'New'}
                 </span>
               )}
             </div>
