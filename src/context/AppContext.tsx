@@ -14,7 +14,7 @@ interface AppContextProps {
   user: any;
   userProfile: any;
   setUserProfile: (profile: any) => void;
-  login: (userData: any) => void; // New method
+  login: (userData: any, token?: string) => void;
   logout: () => void;
   t: Translations;
   searchTerm: string;
