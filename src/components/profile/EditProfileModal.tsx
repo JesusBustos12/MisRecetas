@@ -34,26 +34,22 @@ export default function EditProfileModal({
     setLoading(true);
 
     try {
-      // 1. Update Profile DB
-      await userService.updateProfile(user.id, {
-        full_name: name,
-        avatar_url: avatarUrl,
-      });
+     const updates: any = {
+     full_name: name,
+     avatar_url: avatarUrl,
+   };
 
-      // 2. Update Auth (Email/Password)
-      const authUpdates: any = {};
-      if (email !== user.email) authUpdates.email = email;
-      if (password) authUpdates.password = password;
+   if (email !== user.email) updates.email = email;
+   if (password) updates.password = password;
 
-      if (Object.keys(authUpdates).length > 0) {
-        await userService.updateAuth(authUpdates);
-        if (authUpdates.email) {
-          setToast({
-            message: 'Email update requested. Please check both emails for confirmation.',
-            type: 'info',
-          });
-        }
-      }
+   await userService.updateProfile(user.id, updates);
+
+   if (updates.email) {
+     setToast({
+       message: 'Email update requested. Please check both emails for confirmation.',
+       type: 'info',
+     });
+   }
 
       setToast({ message: 'Profile updated successfully!', type: 'success' });
       onUpdate();
