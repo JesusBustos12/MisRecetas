@@ -1,0 +1,35 @@
+{
+  "name": "react-example",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev -p 4000",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:full": "concurrently \"npm run dev\" \"npm run dev:backend\"",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint src",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,css}\""
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.4.2",
+    "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
+    "mysql2": "^3.22.1",
+    "next": "^16.1.6",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.13",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "concurrently": "^9.2.1",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.8.3",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.2"
+  }
+}

@@ -1,0 +1,1371 @@
+
+--- NEW QUERY ---
+SEARCH: Pollo
+CATEGORY: italy
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?) OR (LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?) OR (LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%pollo%","%pollo%","%pollo%","%pollo%","%pollo%","%ave%","%ave%","%ave%","%ave%","%ave%","%chicken%","%chicken%","%chicken%","%chicken%","%chicken%",12,0]
+
+--- NEW QUERY ---
+SEARCH: Pollo
+CATEGORY: italy
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?) OR (LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?) OR (LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%pollo%","%pollo%","%pollo%","%pollo%","%pollo%","%ave%","%ave%","%ave%","%ave%","%ave%","%chicken%","%chicken%","%chicken%","%chicken%","%chicken%",12,0]
+
+--- NEW QUERY ---
+SEARCH: Pollo
+CATEGORY: italy
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?) OR (LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?) OR (LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%pollo%","%pollo%","%pollo%","%pollo%","%pollo%","%ave%","%ave%","%ave%","%ave%","%ave%","%chicken%","%chicken%","%chicken%","%chicken%","%chicken%",12,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"USA"}
+SEARCH: undefined
+CATEGORY: USA
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND r.category_country = ? ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["USA",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"france"}
+SEARCH: undefined
+CATEGORY: france
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND r.category_country = ? ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["france",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"E","category":"france"}
+SEARCH: E
+CATEGORY: france
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"En","category":"france"}
+SEARCH: En
+CATEGORY: france
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%en%","%en%","%en%","%en%","%en%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"Enc","category":"france"}
+SEARCH: Enc
+CATEGORY: france
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%enc%","%enc%","%enc%","%enc%","%enc%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"Ench","category":"france"}
+SEARCH: Ench
+CATEGORY: france
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%ench%","%ench%","%ench%","%ench%","%ench%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"Enchi","category":"france"}
+SEARCH: Enchi
+CATEGORY: france
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%enchi%","%enchi%","%enchi%","%enchi%","%enchi%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"Enchil","category":"france"}
+SEARCH: Enchil
+CATEGORY: france
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%enchil%","%enchil%","%enchil%","%enchil%","%enchil%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"Enchila","category":"france"}
+SEARCH: Enchila
+CATEGORY: france
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%enchila%","%enchila%","%enchila%","%enchila%","%enchila%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"Enchil","category":"france"}
+SEARCH: Enchil
+CATEGORY: france
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%enchil%","%enchil%","%enchil%","%enchil%","%enchil%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"Enchi","category":"france"}
+SEARCH: Enchi
+CATEGORY: france
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%enchi%","%enchi%","%enchi%","%enchi%","%enchi%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"Ench","category":"france"}
+SEARCH: Ench
+CATEGORY: france
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%ench%","%ench%","%ench%","%ench%","%ench%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"Enc","category":"france"}
+SEARCH: Enc
+CATEGORY: france
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%enc%","%enc%","%enc%","%enc%","%enc%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"En","category":"france"}
+SEARCH: En
+CATEGORY: france
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%en%","%en%","%en%","%en%","%en%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"E","category":"france"}
+SEARCH: E
+CATEGORY: france
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"france"}
+SEARCH: undefined
+CATEGORY: france
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND r.category_country = ? ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["france",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"italy"}
+SEARCH: undefined
+CATEGORY: italy
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND r.category_country = ? ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["italy",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"s","category":"italy"}
+SEARCH: s
+CATEGORY: italy
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"sh","category":"italy"}
+SEARCH: sh
+CATEGORY: italy
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%sh%","%sh%","%sh%","%sh%","%sh%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"shi","category":"italy"}
+SEARCH: shi
+CATEGORY: italy
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%shi%","%shi%","%shi%","%shi%","%shi%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"sh","category":"italy"}
+SEARCH: sh
+CATEGORY: italy
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%sh%","%sh%","%sh%","%sh%","%sh%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"s","category":"italy"}
+SEARCH: s
+CATEGORY: italy
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"italy"}
+SEARCH: undefined
+CATEGORY: italy
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND r.category_country = ? ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["italy",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"france"}
+SEARCH: undefined
+CATEGORY: france
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND r.category_country = ? ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["france",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"mexico"}
+SEARCH: undefined
+CATEGORY: mexico
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND r.category_country = ? ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["mexico",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"mexico"}
+SEARCH: undefined
+CATEGORY: mexico
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND r.category_country = ? ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["mexico",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"mexico"}
+SEARCH: undefined
+CATEGORY: mexico
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND r.category_country = ? ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["mexico",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"usa"}
+SEARCH: undefined
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND r.category_country = ? ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["usa",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"G","category":"usa"}
+SEARCH: G
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"Ga","category":"usa"}
+SEARCH: Ga
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%ga%","%ga%","%ga%","%ga%","%ga%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"Gal","category":"usa"}
+SEARCH: Gal
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%gal%","%gal%","%gal%","%gal%","%gal%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"Gall","category":"usa"}
+SEARCH: Gall
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%gall%","%gall%","%gall%","%gall%","%gall%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"Gal","category":"usa"}
+SEARCH: Gal
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%gal%","%gal%","%gal%","%gal%","%gal%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"Ga","category":"usa"}
+SEARCH: Ga
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%ga%","%ga%","%ga%","%ga%","%ga%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"G","category":"usa"}
+SEARCH: G
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"usa"}
+SEARCH: undefined
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND r.category_country = ? ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["usa",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"m","category":"usa"}
+SEARCH: m
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"mo","category":"usa"}
+SEARCH: mo
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%mo%","%mo%","%mo%","%mo%","%mo%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"mon","category":"usa"}
+SEARCH: mon
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%mon%","%mon%","%mon%","%mon%","%mon%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"mo","category":"usa"}
+SEARCH: mo
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%mo%","%mo%","%mo%","%mo%","%mo%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"m","category":"usa"}
+SEARCH: m
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"usa"}
+SEARCH: undefined
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND r.category_country = ? ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["usa",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"l","category":"usa"}
+SEARCH: l
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"li","category":"usa"}
+SEARCH: li
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%li%","%li%","%li%","%li%","%li%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"lim","category":"usa"}
+SEARCH: lim
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%lim%","%lim%","%lim%","%lim%","%lim%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"limo","category":"usa"}
+SEARCH: limo
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%limo%","%limo%","%limo%","%limo%","%limo%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"limon","category":"usa"}
+SEARCH: limon
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%limon%","%limon%","%limon%","%limon%","%limon%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"limo","category":"usa"}
+SEARCH: limo
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%limo%","%limo%","%limo%","%limo%","%limo%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"lim","category":"usa"}
+SEARCH: lim
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%lim%","%lim%","%lim%","%lim%","%lim%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"li","category":"usa"}
+SEARCH: li
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND ((LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)) ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["%li%","%li%","%li%","%li%","%li%",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","search":"l","category":"usa"}
+SEARCH: l
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"usa"}
+SEARCH: undefined
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND r.category_country = ? ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["usa",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"World"}
+SEARCH: undefined
+CATEGORY: World
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"World"}
+SEARCH: undefined
+CATEGORY: World
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"usa"}
+SEARCH: undefined
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND r.category_country = ? ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["usa",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"usa"}
+SEARCH: undefined
+CATEGORY: usa
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND r.category_country = ? ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["usa",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"World"}
+SEARCH: undefined
+CATEGORY: World
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"World"}
+SEARCH: undefined
+CATEGORY: World
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"World"}
+SEARCH: undefined
+CATEGORY: World
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"World"}
+SEARCH: undefined
+CATEGORY: World
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"World"}
+SEARCH: undefined
+CATEGORY: World
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"mexico"}
+SEARCH: undefined
+CATEGORY: mexico
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND r.category_country = ? ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["mexico",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"Mexico"}
+SEARCH: undefined
+CATEGORY: Mexico
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND r.category_country = ? ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["Mexico",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"Mexico"}
+SEARCH: undefined
+CATEGORY: Mexico
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND r.category_country = ? ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["Mexico",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"Mexico"}
+SEARCH: undefined
+CATEGORY: Mexico
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND r.category_country = ? ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["Mexico",8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","type":"desserts"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND (r.category_type IN ('dessert', 'desserts') OR LOWER(CAST(r.title AS CHAR)) REGEXP 'postre|dulce|tarta|pastel|cake|dessert|chocolate|helado|flan|galleta|cookie|brownie|muffin|cupcake|mermelada|mousse|creme brulee|pudding|pudin|pay|pie|caramelo|tiramisu|tiramisú|gelato|cannoli|panettone|panna cotta|crepe|crêpe|macaron|baklava|dorayaki|mochi|profiteroles|churros|sfogliatella|zabaione|zeppole|loukoumades|mooncakes' OR LOWER(CAST(r.ingredients AS CHAR)) REGEXP 'postre|dulce|tarta|pastel|cake|dessert|chocolate|helado|flan|galleta|cookie|brownie|muffin|cupcake|mermelada|mousse|creme brulee|pudding|pudin|pay|pie|caramelo|tiramisu|tiramisú|gelato|cannoli|panettone|panna cotta|crepe|crêpe|macaron|baklava|dorayaki|mochi|profiteroles|churros|sfogliatella|zabaione|zeppole|loukoumades|mooncakes') AND LOWER(CAST(r.title AS CHAR)) NOT REGEXP 'pollo|carne|\\bres\\b|cerdo|beef|pork|cordero|steak|ternera|chuleta|tocino|bacon|jamon|jamón|salchicha|pepperoni|salami|pavo|turkey|duck|\\bpato\\b|meatball|albóndiga|brisket|wings|prosciutto|guanciale|pancetta|chorizo|carnitas|cochinita|pastrami|veal|lamb|ribs|costillas|ossobuco|bolognese|boloñesa|katsu|tonkotsu|sukiyaki|okonomiyaki|gyoza|omurice|tamales|pozole|menudo|barbacoa|hot dog|perrito|hamburguesa|burger|bistecca|fiorentina|meatloaf|wonton|jambalaya|ahogada|cocido|fabada|mapo tofu|jiaozi|dumpling|dim sum|mole poblano|nogada|gravy|carbonara|ragu|ragú|cochinillo|coq|boeuf|bourguignon|cassoulet|rogan josh|gai\\b|larb|moo\\b|moussaka|tlayuda|shabu|pastitsio|escargot|brodo|pescado|fish|camaron|camarón|shrimp|marisco|seafood|salmon|salmón|atun|atún|pulpo|octopus|calamar|squid|bacalao|\\bcod\\b|tuna|lobster|langosta|crab|cangrejo|mussels|mejillones|clams|almejas|ostras|oysters|vieiras|scallops|prawns|gambas|langostinos|aguachile|ceviche|takoyaki|unagi|paella|anchoa|anchovy|pissaladiere|pissaladière|clam\\b|chowder|bouillabaisse|pla\\b|goong|nicoise|niçoise|chawanmushi|coquilles|saint-jacques' AND LOWER(CAST(r.ingredients AS CHAR)) NOT REGEXP 'pollo|carne|\\bres\\b|cerdo|beef|pork|cordero|steak|ternera|chuleta|tocino|bacon|jamon|jamón|salchicha|pepperoni|salami|pavo|turkey|duck|\\bpato\\b|meatball|albóndiga|brisket|wings|prosciutto|guanciale|pancetta|chorizo|carnitas|cochinita|pastrami|veal|lamb|ribs|costillas|ossobuco|bolognese|boloñesa|katsu|tonkotsu|sukiyaki|okonomiyaki|gyoza|omurice|tamales|pozole|menudo|barbacoa|hot dog|perrito|hamburguesa|burger|bistecca|fiorentina|meatloaf|wonton|jambalaya|ahogada|cocido|fabada|mapo tofu|jiaozi|dumpling|dim sum|mole poblano|nogada|gravy|carbonara|ragu|ragú|cochinillo|coq|boeuf|bourguignon|cassoulet|rogan josh|gai\\b|larb|moo\\b|moussaka|tlayuda|shabu|pastitsio|escargot|brodo|pescado|fish|camaron|camarón|shrimp|marisco|seafood|salmon|salmón|atun|atún|pulpo|octopus|calamar|squid|bacalao|\\bcod\\b|tuna|lobster|langosta|crab|cangrejo|mussels|mejillones|clams|almejas|ostras|oysters|vieiras|scallops|prawns|gambas|langostinos|aguachile|ceviche|takoyaki|unagi|paella|anchoa|anchovy|pissaladiere|pissaladière|clam\\b|chowder|bouillabaisse|pla\\b|goong|nicoise|niçoise|chawanmushi|coquilles|saint-jacques' ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","type":"seafood"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND (r.category_type = 'seafood' OR LOWER(CAST(r.title AS CHAR)) REGEXP 'pescado|fish|camaron|camarón|shrimp|marisco|seafood|salmon|salmón|atun|atún|pulpo|octopus|calamar|squid|bacalao|\\bcod\\b|tuna|lobster|langosta|crab|cangrejo|mussels|mejillones|clams|almejas|ostras|oysters|vieiras|scallops|prawns|gambas|langostinos|aguachile|ceviche|takoyaki|unagi|paella|anchoa|anchovy|pissaladiere|pissaladière|clam\\b|chowder|bouillabaisse|pla\\b|goong|nicoise|niçoise|chawanmushi|coquilles|saint-jacques' OR LOWER(CAST(r.ingredients AS CHAR)) REGEXP 'pescado|fish|camaron|camarón|shrimp|marisco|seafood|salmon|salmón|atun|atún|pulpo|octopus|calamar|squid|bacalao|\\bcod\\b|tuna|lobster|langosta|crab|cangrejo|mussels|mejillones|clams|almejas|ostras|oysters|vieiras|scallops|prawns|gambas|langostinos|aguachile|ceviche|takoyaki|unagi|paella|anchoa|anchovy|pissaladiere|pissaladière|clam\\b|chowder|bouillabaisse|pla\\b|goong|nicoise|niçoise|chawanmushi|coquilles|saint-jacques') AND LOWER(CAST(r.title AS CHAR)) NOT REGEXP 'pollo|carne|\\bres\\b|cerdo|beef|pork|cordero|steak|ternera|chuleta|tocino|bacon|jamon|jamón|salchicha|pepperoni|salami|pavo|turkey|duck|\\bpato\\b|meatball|albóndiga|brisket|wings|prosciutto|guanciale|pancetta|chorizo|carnitas|cochinita|pastrami|veal|lamb|ribs|costillas|ossobuco|bolognese|boloñesa|katsu|tonkotsu|sukiyaki|okonomiyaki|gyoza|omurice|tamales|pozole|menudo|barbacoa|hot dog|perrito|hamburguesa|burger|bistecca|fiorentina|meatloaf|wonton|jambalaya|ahogada|cocido|fabada|mapo tofu|jiaozi|dumpling|dim sum|mole poblano|nogada|gravy|carbonara|ragu|ragú|cochinillo|coq|boeuf|bourguignon|cassoulet|rogan josh|gai\\b|larb|moo\\b|moussaka|tlayuda|shabu|pastitsio|escargot|brodo|postre|dulce|tarta|pastel|cake|dessert|chocolate|helado|flan|galleta|cookie|brownie|muffin|cupcake|mermelada|mousse|creme brulee|pudding|pudin|pay|pie|caramelo|tiramisu|tiramisú|gelato|cannoli|panettone|panna cotta|crepe|crêpe|macaron|baklava|dorayaki|mochi|profiteroles|churros|sfogliatella|zabaione|zeppole|loukoumades|mooncakes' AND LOWER(CAST(r.ingredients AS CHAR)) NOT REGEXP 'pollo|carne|\\bres\\b|cerdo|beef|pork|cordero|steak|ternera|chuleta|tocino|bacon|jamon|jamón|salchicha|pepperoni|salami|pavo|turkey|duck|\\bpato\\b|meatball|albóndiga|brisket|wings|prosciutto|guanciale|pancetta|chorizo|carnitas|cochinita|pastrami|veal|lamb|ribs|costillas|ossobuco|bolognese|boloñesa|katsu|tonkotsu|sukiyaki|okonomiyaki|gyoza|omurice|tamales|pozole|menudo|barbacoa|hot dog|perrito|hamburguesa|burger|bistecca|fiorentina|meatloaf|wonton|jambalaya|ahogada|cocido|fabada|mapo tofu|jiaozi|dumpling|dim sum|mole poblano|nogada|gravy|carbonara|ragu|ragú|cochinillo|coq|boeuf|bourguignon|cassoulet|rogan josh|gai\\b|larb|moo\\b|moussaka|tlayuda|shabu|pastitsio|escargot|brodo|postre|dulce|tarta|pastel|cake|dessert|chocolate|helado|flan|galleta|cookie|brownie|muffin|cupcake|mermelada|mousse|creme brulee|pudding|pudin|pay|pie|caramelo|tiramisu|tiramisú|gelato|cannoli|panettone|panna cotta|crepe|crêpe|macaron|baklava|dorayaki|mochi|profiteroles|churros|sfogliatella|zabaione|zeppole|loukoumades|mooncakes' ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","type":"meat"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND (r.category_type = 'meat' OR LOWER(CAST(r.title AS CHAR)) REGEXP 'pollo|carne|\\bres\\b|cerdo|beef|pork|cordero|steak|ternera|chuleta|tocino|bacon|jamon|jamón|salchicha|pepperoni|salami|pavo|turkey|duck|\\bpato\\b|meatball|albóndiga|brisket|wings|prosciutto|guanciale|pancetta|chorizo|carnitas|cochinita|pastrami|veal|lamb|ribs|costillas|ossobuco|bolognese|boloñesa|katsu|tonkotsu|sukiyaki|okonomiyaki|gyoza|omurice|tamales|pozole|menudo|barbacoa|hot dog|perrito|hamburguesa|burger|bistecca|fiorentina|meatloaf|wonton|jambalaya|ahogada|cocido|fabada|mapo tofu|jiaozi|dumpling|dim sum|mole poblano|nogada|gravy|carbonara|ragu|ragú|cochinillo|coq|boeuf|bourguignon|cassoulet|rogan josh|gai\\b|larb|moo\\b|moussaka|tlayuda|shabu|pastitsio|escargot|brodo' OR LOWER(CAST(r.ingredients AS CHAR)) REGEXP 'pollo|carne|\\bres\\b|cerdo|beef|pork|cordero|steak|ternera|chuleta|tocino|bacon|jamon|jamón|salchicha|pepperoni|salami|pavo|turkey|duck|\\bpato\\b|meatball|albóndiga|brisket|wings|prosciutto|guanciale|pancetta|chorizo|carnitas|cochinita|pastrami|veal|lamb|ribs|costillas|ossobuco|bolognese|boloñesa|katsu|tonkotsu|sukiyaki|okonomiyaki|gyoza|omurice|tamales|pozole|menudo|barbacoa|hot dog|perrito|hamburguesa|burger|bistecca|fiorentina|meatloaf|wonton|jambalaya|ahogada|cocido|fabada|mapo tofu|jiaozi|dumpling|dim sum|mole poblano|nogada|gravy|carbonara|ragu|ragú|cochinillo|coq|boeuf|bourguignon|cassoulet|rogan josh|gai\\b|larb|moo\\b|moussaka|tlayuda|shabu|pastitsio|escargot|brodo') AND LOWER(CAST(r.title AS CHAR)) NOT REGEXP 'pescado|fish|camaron|camarón|shrimp|marisco|seafood|salmon|salmón|atun|atún|pulpo|octopus|calamar|squid|bacalao|\\bcod\\b|tuna|lobster|langosta|crab|cangrejo|mussels|mejillones|clams|almejas|ostras|oysters|vieiras|scallops|prawns|gambas|langostinos|aguachile|ceviche|takoyaki|unagi|paella|anchoa|anchovy|pissaladiere|pissaladière|clam\\b|chowder|bouillabaisse|pla\\b|goong|nicoise|niçoise|chawanmushi|coquilles|saint-jacques|postre|dulce|tarta|pastel|cake|dessert|chocolate|helado|flan|galleta|cookie|brownie|muffin|cupcake|mermelada|mousse|creme brulee|pudding|pudin|pay|pie|caramelo|tiramisu|tiramisú|gelato|cannoli|panettone|panna cotta|crepe|crêpe|macaron|baklava|dorayaki|mochi|profiteroles|churros|sfogliatella|zabaione|zeppole|loukoumades|mooncakes' AND LOWER(CAST(r.ingredients AS CHAR)) NOT REGEXP 'pescado|fish|camaron|camarón|shrimp|marisco|seafood|salmon|salmón|atun|atún|pulpo|octopus|calamar|squid|bacalao|\\bcod\\b|tuna|lobster|langosta|crab|cangrejo|mussels|mejillones|clams|almejas|ostras|oysters|vieiras|scallops|prawns|gambas|langostinos|aguachile|ceviche|takoyaki|unagi|paella|anchoa|anchovy|pissaladiere|pissaladière|clam\\b|chowder|bouillabaisse|pla\\b|goong|nicoise|niçoise|chawanmushi|coquilles|saint-jacques|postre|dulce|tarta|pastel|cake|dessert|chocolate|helado|flan|galleta|cookie|brownie|muffin|cupcake|mermelada|mousse|creme brulee|pudding|pudin|pay|pie|caramelo|tiramisu|tiramisú|gelato|cannoli|panettone|panna cotta|crepe|crêpe|macaron|baklava|dorayaki|mochi|profiteroles|churros|sfogliatella|zabaione|zeppole|loukoumades|mooncakes' ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","type":"vegetarian"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND (r.category_type = 'vegetarian' OR LOWER(CAST(r.title AS CHAR)) REGEXP 'vegetariano|vegetarian|vegano|vegan') AND LOWER(CAST(r.title AS CHAR)) NOT REGEXP 'pollo|carne|\\bres\\b|cerdo|beef|pork|cordero|steak|ternera|chuleta|tocino|bacon|jamon|jamón|salchicha|pepperoni|salami|pavo|turkey|duck|\\bpato\\b|meatball|albóndiga|brisket|wings|prosciutto|guanciale|pancetta|chorizo|carnitas|cochinita|pastrami|veal|lamb|ribs|costillas|ossobuco|bolognese|boloñesa|katsu|tonkotsu|sukiyaki|okonomiyaki|gyoza|omurice|tamales|pozole|menudo|barbacoa|hot dog|perrito|hamburguesa|burger|bistecca|fiorentina|meatloaf|wonton|jambalaya|ahogada|cocido|fabada|mapo tofu|jiaozi|dumpling|dim sum|mole poblano|nogada|gravy|carbonara|ragu|ragú|cochinillo|coq|boeuf|bourguignon|cassoulet|rogan josh|gai\\b|larb|moo\\b|moussaka|tlayuda|shabu|pastitsio|escargot|brodo|pescado|fish|camaron|camarón|shrimp|marisco|seafood|salmon|salmón|atun|atún|pulpo|octopus|calamar|squid|bacalao|\\bcod\\b|tuna|lobster|langosta|crab|cangrejo|mussels|mejillones|clams|almejas|ostras|oysters|vieiras|scallops|prawns|gambas|langostinos|aguachile|ceviche|takoyaki|unagi|paella|anchoa|anchovy|pissaladiere|pissaladière|clam\\b|chowder|bouillabaisse|pla\\b|goong|nicoise|niçoise|chawanmushi|coquilles|saint-jacques|postre|dulce|tarta|pastel|cake|dessert|chocolate|helado|flan|galleta|cookie|brownie|muffin|cupcake|mermelada|mousse|creme brulee|pudding|pudin|pay|pie|caramelo|tiramisu|tiramisú|gelato|cannoli|panettone|panna cotta|crepe|crêpe|macaron|baklava|dorayaki|mochi|profiteroles|churros|sfogliatella|zabaione|zeppole|loukoumades|mooncakes' AND LOWER(CAST(r.ingredients AS CHAR)) NOT REGEXP 'pollo|carne|\\bres\\b|cerdo|beef|pork|cordero|steak|ternera|chuleta|tocino|bacon|jamon|jamón|salchicha|pepperoni|salami|pavo|turkey|duck|\\bpato\\b|meatball|albóndiga|brisket|wings|prosciutto|guanciale|pancetta|chorizo|carnitas|cochinita|pastrami|veal|lamb|ribs|costillas|ossobuco|bolognese|boloñesa|katsu|tonkotsu|sukiyaki|okonomiyaki|gyoza|omurice|tamales|pozole|menudo|barbacoa|hot dog|perrito|hamburguesa|burger|bistecca|fiorentina|meatloaf|wonton|jambalaya|ahogada|cocido|fabada|mapo tofu|jiaozi|dumpling|dim sum|mole poblano|nogada|gravy|carbonara|ragu|ragú|cochinillo|coq|boeuf|bourguignon|cassoulet|rogan josh|gai\\b|larb|moo\\b|moussaka|tlayuda|shabu|pastitsio|escargot|brodo|pescado|fish|camaron|camarón|shrimp|marisco|seafood|salmon|salmón|atun|atún|pulpo|octopus|calamar|squid|bacalao|\\bcod\\b|tuna|lobster|langosta|crab|cangrejo|mussels|mejillones|clams|almejas|ostras|oysters|vieiras|scallops|prawns|gambas|langostinos|aguachile|ceviche|takoyaki|unagi|paella|anchoa|anchovy|pissaladiere|pissaladière|clam\\b|chowder|bouillabaisse|pla\\b|goong|nicoise|niçoise|chawanmushi|coquilles|saint-jacques|postre|dulce|tarta|pastel|cake|dessert|chocolate|helado|flan|galleta|cookie|brownie|muffin|cupcake|mermelada|mousse|creme brulee|pudding|pudin|pay|pie|caramelo|tiramisu|tiramisú|gelato|cannoli|panettone|panna cotta|crepe|crêpe|macaron|baklava|dorayaki|mochi|profiteroles|churros|sfogliatella|zabaione|zeppole|loukoumades|mooncakes' ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","type":"desserts"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND (r.category_type IN ('dessert', 'desserts') OR LOWER(CAST(r.title AS CHAR)) REGEXP 'postre|dulce|tarta|pastel|cake|dessert|chocolate|helado|flan|galleta|cookie|brownie|muffin|cupcake|mermelada|mousse|creme brulee|pudding|pudin|pay|pie|caramelo|tiramisu|tiramisú|gelato|cannoli|panettone|panna cotta|crepe|crêpe|macaron|baklava|dorayaki|mochi|profiteroles|churros|sfogliatella|zabaione|zeppole|loukoumades|mooncakes' OR LOWER(CAST(r.ingredients AS CHAR)) REGEXP 'postre|dulce|tarta|pastel|cake|dessert|chocolate|helado|flan|galleta|cookie|brownie|muffin|cupcake|mermelada|mousse|creme brulee|pudding|pudin|pay|pie|caramelo|tiramisu|tiramisú|gelato|cannoli|panettone|panna cotta|crepe|crêpe|macaron|baklava|dorayaki|mochi|profiteroles|churros|sfogliatella|zabaione|zeppole|loukoumades|mooncakes') AND LOWER(CAST(r.title AS CHAR)) NOT REGEXP 'pollo|carne|\\bres\\b|cerdo|beef|pork|cordero|steak|ternera|chuleta|tocino|bacon|jamon|jamón|salchicha|pepperoni|salami|pavo|turkey|duck|\\bpato\\b|meatball|albóndiga|brisket|wings|prosciutto|guanciale|pancetta|chorizo|carnitas|cochinita|pastrami|veal|lamb|ribs|costillas|ossobuco|bolognese|boloñesa|katsu|tonkotsu|sukiyaki|okonomiyaki|gyoza|omurice|tamales|pozole|menudo|barbacoa|hot dog|perrito|hamburguesa|burger|bistecca|fiorentina|meatloaf|wonton|jambalaya|ahogada|cocido|fabada|mapo tofu|jiaozi|dumpling|dim sum|mole poblano|nogada|gravy|carbonara|ragu|ragú|cochinillo|coq|boeuf|bourguignon|cassoulet|rogan josh|gai\\b|larb|moo\\b|moussaka|tlayuda|shabu|pastitsio|escargot|brodo|pescado|fish|camaron|camarón|shrimp|marisco|seafood|salmon|salmón|atun|atún|pulpo|octopus|calamar|squid|bacalao|\\bcod\\b|tuna|lobster|langosta|crab|cangrejo|mussels|mejillones|clams|almejas|ostras|oysters|vieiras|scallops|prawns|gambas|langostinos|aguachile|ceviche|takoyaki|unagi|paella|anchoa|anchovy|pissaladiere|pissaladière|clam\\b|chowder|bouillabaisse|pla\\b|goong|nicoise|niçoise|chawanmushi|coquilles|saint-jacques' AND LOWER(CAST(r.ingredients AS CHAR)) NOT REGEXP 'pollo|carne|\\bres\\b|cerdo|beef|pork|cordero|steak|ternera|chuleta|tocino|bacon|jamon|jamón|salchicha|pepperoni|salami|pavo|turkey|duck|\\bpato\\b|meatball|albóndiga|brisket|wings|prosciutto|guanciale|pancetta|chorizo|carnitas|cochinita|pastrami|veal|lamb|ribs|costillas|ossobuco|bolognese|boloñesa|katsu|tonkotsu|sukiyaki|okonomiyaki|gyoza|omurice|tamales|pozole|menudo|barbacoa|hot dog|perrito|hamburguesa|burger|bistecca|fiorentina|meatloaf|wonton|jambalaya|ahogada|cocido|fabada|mapo tofu|jiaozi|dumpling|dim sum|mole poblano|nogada|gravy|carbonara|ragu|ragú|cochinillo|coq|boeuf|bourguignon|cassoulet|rogan josh|gai\\b|larb|moo\\b|moussaka|tlayuda|shabu|pastitsio|escargot|brodo|pescado|fish|camaron|camarón|shrimp|marisco|seafood|salmon|salmón|atun|atún|pulpo|octopus|calamar|squid|bacalao|\\bcod\\b|tuna|lobster|langosta|crab|cangrejo|mussels|mejillones|clams|almejas|ostras|oysters|vieiras|scallops|prawns|gambas|langostinos|aguachile|ceviche|takoyaki|unagi|paella|anchoa|anchovy|pissaladiere|pissaladière|clam\\b|chowder|bouillabaisse|pla\\b|goong|nicoise|niçoise|chawanmushi|coquilles|saint-jacques' ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"100"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [100,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","type":"desserts"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND (r.category_type IN ('dessert', 'desserts') OR LOWER(CAST(r.title AS CHAR)) REGEXP 'postre|dulce|tarta|pastel|cake|dessert|chocolate|helado|flan|galleta|cookie|brownie|muffin|cupcake|mermelada|mousse|creme brulee|pudding|pudin|pay|pie|caramelo|tiramisu|tiramisú|gelato|cannoli|panettone|panna cotta|crepe|crêpe|macaron|baklava|dorayaki|mochi|profiteroles|churros|sfogliatella|zabaione|zeppole|loukoumades|mooncakes' OR LOWER(CAST(r.ingredients AS CHAR)) REGEXP 'postre|dulce|tarta|pastel|cake|dessert|chocolate|helado|flan|galleta|cookie|brownie|muffin|cupcake|mermelada|mousse|creme brulee|pudding|pudin|pay|pie|caramelo|tiramisu|tiramisú|gelato|cannoli|panettone|panna cotta|crepe|crêpe|macaron|baklava|dorayaki|mochi|profiteroles|churros|sfogliatella|zabaione|zeppole|loukoumades|mooncakes') AND LOWER(CAST(r.title AS CHAR)) NOT REGEXP 'pollo|carne|\\bres\\b|cerdo|beef|pork|cordero|steak|ternera|chuleta|tocino|bacon|jamon|jamón|salchicha|pepperoni|salami|pavo|turkey|duck|\\bpato\\b|meatball|albóndiga|brisket|wings|prosciutto|guanciale|pancetta|chorizo|carnitas|cochinita|pastrami|veal|lamb|ribs|costillas|ossobuco|bolognese|boloñesa|katsu|tonkotsu|sukiyaki|okonomiyaki|gyoza|omurice|tamales|pozole|menudo|barbacoa|hot dog|perrito|hamburguesa|burger|bistecca|fiorentina|meatloaf|wonton|jambalaya|ahogada|cocido|fabada|mapo tofu|jiaozi|dumpling|dim sum|mole poblano|nogada|gravy|carbonara|ragu|ragú|cochinillo|coq|boeuf|bourguignon|cassoulet|rogan josh|gai\\b|larb|moo\\b|moussaka|tlayuda|shabu|pastitsio|escargot|brodo|pescado|fish|camaron|camarón|shrimp|marisco|seafood|salmon|salmón|atun|atún|pulpo|octopus|calamar|squid|bacalao|\\bcod\\b|tuna|lobster|langosta|crab|cangrejo|mussels|mejillones|clams|almejas|ostras|oysters|vieiras|scallops|prawns|gambas|langostinos|aguachile|ceviche|takoyaki|unagi|paella|anchoa|anchovy|pissaladiere|pissaladière|clam\\b|chowder|bouillabaisse|pla\\b|goong|nicoise|niçoise|chawanmushi|coquilles|saint-jacques' AND LOWER(CAST(r.ingredients AS CHAR)) NOT REGEXP 'pollo|carne|\\bres\\b|cerdo|beef|pork|cordero|steak|ternera|chuleta|tocino|bacon|jamon|jamón|salchicha|pepperoni|salami|pavo|turkey|duck|\\bpato\\b|meatball|albóndiga|brisket|wings|prosciutto|guanciale|pancetta|chorizo|carnitas|cochinita|pastrami|veal|lamb|ribs|costillas|ossobuco|bolognese|boloñesa|katsu|tonkotsu|sukiyaki|okonomiyaki|gyoza|omurice|tamales|pozole|menudo|barbacoa|hot dog|perrito|hamburguesa|burger|bistecca|fiorentina|meatloaf|wonton|jambalaya|ahogada|cocido|fabada|mapo tofu|jiaozi|dumpling|dim sum|mole poblano|nogada|gravy|carbonara|ragu|ragú|cochinillo|coq|boeuf|bourguignon|cassoulet|rogan josh|gai\\b|larb|moo\\b|moussaka|tlayuda|shabu|pastitsio|escargot|brodo|pescado|fish|camaron|camarón|shrimp|marisco|seafood|salmon|salmón|atun|atún|pulpo|octopus|calamar|squid|bacalao|\\bcod\\b|tuna|lobster|langosta|crab|cangrejo|mussels|mejillones|clams|almejas|ostras|oysters|vieiras|scallops|prawns|gambas|langostinos|aguachile|ceviche|takoyaki|unagi|paella|anchoa|anchovy|pissaladiere|pissaladière|clam\\b|chowder|bouillabaisse|pla\\b|goong|nicoise|niçoise|chawanmushi|coquilles|saint-jacques' ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [8,0]
