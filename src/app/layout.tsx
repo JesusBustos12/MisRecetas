@@ -1,3 +1,4 @@
+import React from 'react';
 import '../../public/CSS/index.css';
 import { AppProvider } from '@/context/AppContext';
 import Navbar from '@/components/Navbar';
@@ -39,10 +40,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es">
       <body>
-        <AppProvider>
-          <Navbar />
-          {children}
-        </AppProvider>
+        <React.Suspense fallback={null}>
+          <AppProvider>
+            <Navbar />
+            {children}
+          </AppProvider>
+        </React.Suspense>
       </body>
     </html>
   );
