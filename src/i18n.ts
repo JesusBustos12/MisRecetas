@@ -12,7 +12,7 @@ export type Translations = {
     theme_light: string;
     theme_dark: string;
   };
-    common: {
+  common: {
     recipes: string;
     home: string;
     world: string;
