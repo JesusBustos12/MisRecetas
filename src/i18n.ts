@@ -12,12 +12,20 @@ export type Translations = {
     theme_light: string;
     theme_dark: string;
   };
-  common: {
+    common: {
     recipes: string;
     home: string;
     world: string;
     view_all: string;
     back: string;
+    edit?: string;
+    delete?: string;
+    cancel?: string;
+    save?: string;
+    confirm_delete?: string;
+    delete_warning?: string;
+    delete_btn?: string;
+    send?: string;
   };
   countries: Record<string, string>;
   hero: {
@@ -84,6 +92,8 @@ export type Translations = {
       favorites: string;
       create: string;
     };
+    public?: string;
+    private?: string;
     stats: {
       recipes: string;
       followers: string;
@@ -180,29 +190,18 @@ export type Translations = {
     login_required: string;
     provide_rating_comment: string;
     user_rating_label: string;
+    already_rated?: string;
+    must_login_review?: string;
+    no_description?: string;
+    reviews_title?: string;
+    author_reply?: string;
+    reply_placeholder?: string;
+    reply_btn?: string;
+    no_comments?: string;
+    confirm_delete?: string;
+    delete_warning?: string;
+    cancel?: string;
   };
-};
-
-export const translations: Record<'es' | 'en', Translations> = {
-  es: {
-    nav: {
-      explore: 'Explorar',
-      categories: 'Categorías',
-      community: 'Comunidad',
-      search_placeholder: 'Buscar recetas...',
-      my_profile: 'Mi Perfil',
-      my_recipes: 'Mis Recetas',
-      favorites: 'Favoritos',
-      logout: 'Cerrar Sesión',
-      login: 'Iniciar Sesión',
-      theme_light: 'Modo Claro',
-      theme_dark: 'Modo Oscuro',
-    },
-    common: {
-      recipes: 'Recetas',
-      home: 'Inicio',
-      world: 'Mundo',
-      view_all: 'Ver Todo',
       back: 'Volver',
       edit: 'Editar',
       delete: 'Eliminar',
