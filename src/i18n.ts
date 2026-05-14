@@ -202,6 +202,28 @@ export type Translations = {
     delete_warning?: string;
     cancel?: string;
   };
+};
+
+export const translations: Record<'es' | 'en', Translations> = {
+  es: {
+    nav: {
+      explore: 'Explorar',
+      categories: 'Categorías',
+      community: 'Comunidad',
+      search_placeholder: 'Buscar recetas...',
+      my_profile: 'Mi Perfil',
+      my_recipes: 'Mis Recetas',
+      favorites: 'Favoritos',
+      logout: 'Cerrar Sesión',
+      login: 'Iniciar Sesión',
+      theme_light: 'Modo Claro',
+      theme_dark: 'Modo Oscuro',
+    },
+    common: {
+      recipes: 'Recetas',
+      home: 'Inicio',
+      world: 'Mundo',
+      view_all: 'Ver Todo',
       back: 'Volver',
       edit: 'Editar',
       delete: 'Eliminar',
@@ -593,3 +615,4 @@ export type Translations = {
     },
   },
 };
+
