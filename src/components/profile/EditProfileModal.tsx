@@ -34,22 +34,22 @@ export default function EditProfileModal({
     setLoading(true);
 
     try {
-     const updates: any = {
-     full_name: name,
-     avatar_url: avatarUrl,
-   };
+      const updates: any = {
+        full_name: name,
+        avatar_url: avatarUrl,
+      };
 
-   if (email !== user.email) updates.email = email;
-   if (password) updates.password = password;
+      if (email !== user.email) updates.email = email;
+      if (password) updates.password = password;
 
-   await userService.updateProfile(user.id, updates);
+      await userService.updateProfile(user.id, updates);
 
-   if (updates.email) {
-     setToast({
-       message: 'Email update requested. Please check both emails for confirmation.',
-       type: 'info',
-     });
-   }
+      if (updates.email) {
+        setToast({
+          message: 'Email update requested. Please check both emails for confirmation.',
+          type: 'info',
+        });
+      }
 
       setToast({ message: 'Profile updated successfully!', type: 'success' });
       onUpdate();
