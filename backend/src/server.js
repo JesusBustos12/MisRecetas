@@ -212,24 +212,14 @@ app.get('/api/recipes', async (req, res) => {
       
       const type = typeVal ? typeVal.toLowerCase() : '';
       
-      const castTitle = 'LOWER(CAST(r.title AS CHAR))';
-      const castIng = 'LOWER(CAST(r.ingredients AS CHAR))';
-
       if (type === 'vegetarian' || type === 'vegetariano') {
-        q += ` AND (r.diet_type IN ('Vegetariano', 'Vegano') OR ${castTitle} REGEXP 'vegetariano|vegetarian|vegano|vegan')`;
-        q += ` AND ${castTitle} NOT REGEXP '${meatLand}|${meatSea}|${dessertTerms}' AND ${castIng} NOT REGEXP '${meatLand}|${meatSea}|${dessertTerms}'`;
-        
+        q += ` AND r.category_type = 'vegetarian'`;
       } else if (type === 'meat' || type === 'carnes' || type === 'carne') {
-        q += ` AND (${castTitle} REGEXP '${meatLand}' OR ${castIng} REGEXP '${meatLand}')`;
-        q += ` AND ${castTitle} NOT REGEXP '${meatSea}|${dessertTerms}' AND ${castIng} NOT REGEXP '${meatSea}|${dessertTerms}'`;
-
+        q += ` AND r.category_type = 'meat'`;
       } else if (type === 'seafood' || type === 'mariscos' || type === 'marisco') {
-        q += ` AND (${castTitle} REGEXP '${meatSea}' OR ${castIng} REGEXP '${meatSea}')`;
-        q += ` AND ${castTitle} NOT REGEXP '${meatLand}|${dessertTerms}' AND ${castIng} NOT REGEXP '${meatLand}|${dessertTerms}'`;
-
+        q += ` AND r.category_type = 'seafood'`;
       } else if (type === 'dessert' || type === 'desserts' || type === 'postres' || type === 'postre') {
-        q += ` AND (${castTitle} REGEXP '${dessertTerms}' OR ${castIng} REGEXP '${dessertTerms}')`;
-        q += ` AND ${castTitle} NOT REGEXP '${meatLand}|${meatSea}' AND ${castIng} NOT REGEXP '${meatLand}|${meatSea}'`;
+        q += ` AND r.category_type = 'desserts'`;
       }
       return q;
     };
