@@ -1,0 +1,1202 @@
+[
+  {
+    "id": 1,
+    "title": {
+      "en": "Margherita Pizza",
+      "es": "Pizza Margherita"
+    },
+    "category_country": "italy",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/italy/italy_pizza_margarita.png"
+  },
+  {
+    "id": 2,
+    "title": {
+      "en": "Lasagna Bolognese",
+      "es": "Lasagna Bolognese"
+    },
+    "category_country": "italy",
+    "category_type": "meat",
+    "image_url": "/recipes/italy/italy_lasagna_casera.png"
+  },
+  {
+    "id": 3,
+    "title": {
+      "en": "Mushroom Risotto",
+      "es": "Risotto de Hongos"
+    },
+    "category_country": "italy",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/italy/italy_risotto_setas.png"
+  },
+  {
+    "id": 4,
+    "title": {
+      "en": "Pasta Carbonara",
+      "es": "Pasta Carbonara"
+    },
+    "category_country": "italy",
+    "category_type": "meat",
+    "image_url": "/recipes/italy/italy_spaghetti_carbonara.png"
+  },
+  {
+    "id": 5,
+    "title": {
+      "en": "Pistachio Gelato",
+      "es": "Gelato de Pistacho"
+    },
+    "category_country": "italy",
+    "category_type": "desserts",
+    "image_url": "/recipes/italy/italy_gelato_1772409092302.png"
+  },
+  {
+    "id": 6,
+    "title": {
+      "en": "Classic Tiramisu",
+      "es": "Tiramisú Clásico"
+    },
+    "category_country": "italy",
+    "category_type": "desserts",
+    "image_url": "/recipes/italy/italy_tiramisu_clasico.png"
+  },
+  {
+    "id": 7,
+    "title": {
+      "en": "Rosemary Focaccia",
+      "es": "Focaccia de Romero"
+    },
+    "category_country": "italy",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/italy/italy_focaccia.png"
+  },
+  {
+    "id": 8,
+    "title": {
+      "en": "Osso Buco",
+      "es": "Ossobuco"
+    },
+    "category_country": "italy",
+    "category_type": "meat",
+    "image_url": "/recipes/italy/italy_ossobuco.png"
+  },
+  {
+    "id": 9,
+    "title": {
+      "en": "Potato Gnocchi",
+      "es": "Gnocchi de Papa"
+    },
+    "category_country": "italy",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/italy/italy_gnocchi_pesto.png"
+  },
+  {
+    "id": 10,
+    "title": {
+      "en": "Minestrone Soup",
+      "es": "Minestrone"
+    },
+    "category_country": "italy",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/italy/italy_minestrone_1772408855322.png"
+  },
+  {
+    "id": 11,
+    "title": {
+      "en": "Panna Cotta",
+      "es": "Panna Cotta"
+    },
+    "category_country": "italy",
+    "category_type": "desserts",
+    "image_url": "/recipes/italy/italy_panna_cotta.png"
+  },
+  {
+    "id": 12,
+    "title": {
+      "en": "Chicken Parmesan",
+      "es": "Pollo a la Parmesana"
+    },
+    "category_country": "italy",
+    "category_type": "meat",
+    "image_url": "/recipes/italy/italy_pollo_cacciatore_1772409006303.png"
+  },
+  {
+    "id": 13,
+    "title": {
+      "en": "Tomato Bruschetta",
+      "es": "Bruschetta de Tomate"
+    },
+    "category_country": "italy",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/italy/italy_bruschetta.png"
+  },
+  {
+    "id": 14,
+    "title": {
+      "en": "Rice Arancini",
+      "es": "Arancini de Arroz"
+    },
+    "category_country": "italy",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/italy/italy_arancini.png"
+  },
+  {
+    "id": 15,
+    "title": {
+      "en": "Saltimbocca alla Romana",
+      "es": "Saltimbocca"
+    },
+    "category_country": "italy",
+    "category_type": "meat",
+    "image_url": "/recipes/italy/italy_veal_milanese.png"
+  },
+  {
+    "id": 16,
+    "title": {
+      "en": "Tacos al Pastor",
+      "es": "Tacos al Pastor"
+    },
+    "category_country": "mexico",
+    "category_type": "meat",
+    "image_url": "/recipes/mexico/mexico_tacos_pastor.png"
+  },
+  {
+    "id": 17,
+    "title": {
+      "en": "Mole Poblano",
+      "es": "Mole Poblano"
+    },
+    "category_country": "mexico",
+    "category_type": "meat",
+    "image_url": "/recipes/mexico/mexico_mole.png"
+  },
+  {
+    "id": 18,
+    "title": {
+      "en": "Chiles en Nogada",
+      "es": "Chiles en Nogada"
+    },
+    "category_country": "mexico",
+    "category_type": "meat",
+    "image_url": "/recipes/mexico/mexico_chiles_nogada.png"
+  },
+  {
+    "id": 19,
+    "title": {
+      "en": "Green Enchiladas",
+      "es": "Enchiladas Verdes"
+    },
+    "category_country": "mexico",
+    "category_type": "meat",
+    "image_url": "/recipes/mexico/mexico_enchiladas_suizas.png"
+  },
+  {
+    "id": 20,
+    "title": {
+      "en": "Red Pozole",
+      "es": "Pozole Rojo"
+    },
+    "category_country": "mexico",
+    "category_type": "meat",
+    "image_url": "/recipes/mexico/mexico_pozole.png"
+  },
+  {
+    "id": 21,
+    "title": {
+      "en": "Homemade Guacamole",
+      "es": "Guacamole Casero"
+    },
+    "category_country": "mexico",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/mexico/mexico_guacamole_tradicional.png"
+  },
+  {
+    "id": 22,
+    "title": {
+      "en": "Sweet Corn Tamales",
+      "es": "Tamales de Elote"
+    },
+    "category_country": "mexico",
+    "category_type": "meat",
+    "image_url": "/recipes/mexico/mexico_tamales.png"
+  },
+  {
+    "id": 23,
+    "title": {
+      "en": "Fish Ceviche",
+      "es": "Ceviche de Pescado"
+    },
+    "category_country": "mexico",
+    "category_type": "seafood",
+    "image_url": "/recipes/mexico/mexico_ceviche.png"
+  },
+  {
+    "id": 24,
+    "title": {
+      "en": "Chicken Tinga Tostadas",
+      "es": "Tostadas de Tinga"
+    },
+    "category_country": "mexico",
+    "category_type": "meat",
+    "image_url": "/recipes/mexico/mexico_sopes.png"
+  },
+  {
+    "id": 25,
+    "title": {
+      "en": "Pumpkin Flower Quesadillas",
+      "es": "Quesadillas de Flor de Calabaza"
+    },
+    "category_country": "mexico",
+    "category_type": "meat",
+    "image_url": "/recipes/mexico/mexico_quesadillas.png"
+  },
+  {
+    "id": 26,
+    "title": {
+      "en": "Lime Soup",
+      "es": "Sopa de Lima"
+    },
+    "category_country": "mexico",
+    "category_type": "meat",
+    "image_url": "/recipes/mexico/mexico_sopa_tortilla.png"
+  },
+  {
+    "id": 27,
+    "title": {
+      "en": "Neapolitan Flan",
+      "es": "Flan Napolitano"
+    },
+    "category_country": "mexico",
+    "category_type": "desserts",
+    "image_url": "/recipes/mexico/flan_cajeta.png"
+  },
+  {
+    "id": 28,
+    "title": {
+      "en": "Michoacan Style Carnitas",
+      "es": "Carnitas Estilo Michoacán"
+    },
+    "category_country": "mexico",
+    "category_type": "meat",
+    "image_url": "/recipes/mexico/mexico_carnitas.png"
+  },
+  {
+    "id": 29,
+    "title": {
+      "en": "Zarandeado Fish",
+      "es": "Pescado Zarandeado"
+    },
+    "category_country": "mexico",
+    "category_type": "seafood",
+    "image_url": "/recipes/mexico/mexico_camarones_diabla.png"
+  },
+  {
+    "id": 30,
+    "title": {
+      "en": "Beef Birria",
+      "es": "Birria de Res"
+    },
+    "category_country": "mexico",
+    "category_type": "meat",
+    "image_url": "/recipes/mexico/mexico_barbacoa.png"
+  },
+  {
+    "id": 31,
+    "title": {
+      "en": "Tonkotsu Ramen",
+      "es": "Ramen Tonkotsu"
+    },
+    "category_country": "japan",
+    "category_type": "meat",
+    "image_url": "/recipes/japan/japan_ramen_tonkotsu.png"
+  },
+  {
+    "id": 32,
+    "title": {
+      "en": "Assorted Nigiri Sushi",
+      "es": "Sushi Nigiri Variado"
+    },
+    "category_country": "japan",
+    "category_type": "seafood",
+    "image_url": "/recipes/japan/japan_sushi_roll.png"
+  },
+  {
+    "id": 33,
+    "title": {
+      "en": "Shrimp Tempura",
+      "es": "Tempura de Camarón"
+    },
+    "category_country": "japan",
+    "category_type": "seafood",
+    "image_url": "/recipes/japan/japan_tempura.png"
+  },
+  {
+    "id": 34,
+    "title": {
+      "en": "Okonomiyaki",
+      "es": "Okonomiyaki"
+    },
+    "category_country": "japan",
+    "category_type": "meat",
+    "image_url": "/recipes/japan/japan_okonomiyaki.png"
+  },
+  {
+    "id": 35,
+    "title": {
+      "en": "Takoyaki",
+      "es": "Takoyaki"
+    },
+    "category_country": "japan",
+    "category_type": "seafood",
+    "image_url": "/recipes/japan/japan_takoyaki.png"
+  },
+  {
+    "id": 36,
+    "title": {
+      "en": "Miso Soup",
+      "es": "Sopa Miso"
+    },
+    "category_country": "japan",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/japan/japan_miso_soup.png"
+  },
+  {
+    "id": 37,
+    "title": {
+      "en": "Katsudon",
+      "es": "Katsudon"
+    },
+    "category_country": "japan",
+    "category_type": "meat",
+    "image_url": "/recipes/japan/japan_katsudon.png"
+  },
+  {
+    "id": 38,
+    "title": {
+      "en": "Chicken Yakitori",
+      "es": "Yakitori de Pollo"
+    },
+    "category_country": "japan",
+    "category_type": "meat",
+    "image_url": "/recipes/japan/japan_yakitori.png"
+  },
+  {
+    "id": 39,
+    "title": {
+      "en": "Salmon Onigiri",
+      "es": "Onigiri de Salmón"
+    },
+    "category_country": "japan",
+    "category_type": "seafood",
+    "image_url": "/recipes/japan/japan_onigiri.png"
+  },
+  {
+    "id": 40,
+    "title": {
+      "en": "Unagi Don",
+      "es": "Unagi Don"
+    },
+    "category_country": "japan",
+    "category_type": "seafood",
+    "image_url": "/recipes/japan/japan_unagi_don.png"
+  },
+  {
+    "id": 41,
+    "title": {
+      "en": "Pork Gyoza",
+      "es": "Gyoza de Cerdo"
+    },
+    "category_country": "japan",
+    "category_type": "meat",
+    "image_url": "/recipes/japan/japan_gyoza.png"
+  },
+  {
+    "id": 42,
+    "title": {
+      "en": "Matcha Mochi",
+      "es": "Mochi de Matcha"
+    },
+    "category_country": "japan",
+    "category_type": "desserts",
+    "image_url": "/recipes/japan/japan_matcha_mochi.png"
+  },
+  {
+    "id": 43,
+    "title": {
+      "en": "Shabu Shabu",
+      "es": "Shabu Shabu"
+    },
+    "category_country": "japan",
+    "category_type": "meat",
+    "image_url": "/recipes/japan/japan_shabu_shabu.png"
+  },
+  {
+    "id": 44,
+    "title": {
+      "en": "Tuna Sashimi",
+      "es": "Sashimi de Atún"
+    },
+    "category_country": "japan",
+    "category_type": "seafood",
+    "image_url": "/recipes/japan/japan_sashimi.png"
+  },
+  {
+    "id": 45,
+    "title": {
+      "en": "Japanese Curry",
+      "es": "Curry Japonés"
+    },
+    "category_country": "japan",
+    "category_type": "meat",
+    "image_url": "/recipes/japan/japan_katsu_curry.png"
+  },
+  {
+    "id": 46,
+    "title": {
+      "en": "Spanish Paella",
+      "es": "Paella Valenciana"
+    },
+    "category_country": "spain",
+    "category_type": "seafood",
+    "image_url": "/recipes/spain/paella_valenciana.png"
+  },
+  {
+    "id": 47,
+    "title": {
+      "en": "Spanish Tortilla",
+      "es": "Tortilla de Patatas"
+    },
+    "category_country": "spain",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/spain/tortilla_patatas.png"
+  },
+  {
+    "id": 48,
+    "title": {
+      "en": "Andalusian Gazpacho",
+      "es": "Gazpacho Andaluz"
+    },
+    "category_country": "spain",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/spain/gazpacho.png"
+  },
+  {
+    "id": 49,
+    "title": {
+      "en": "Patatas Bravas",
+      "es": "Patatas Bravas"
+    },
+    "category_country": "spain",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/spain/patatas_bravas.png"
+  },
+  {
+    "id": 50,
+    "title": {
+      "en": "Galician Octopus",
+      "es": "Pulpo a la Gallega"
+    },
+    "category_country": "spain",
+    "category_type": "seafood",
+    "image_url": "/recipes/spain/pulpo_gallega.png"
+  },
+  {
+    "id": 51,
+    "title": {
+      "en": "Ham Croquettes",
+      "es": "Croquetas de Jamón"
+    },
+    "category_country": "spain",
+    "category_type": "meat",
+    "image_url": "/recipes/spain/croquetas_jamon.png"
+  },
+  {
+    "id": 52,
+    "title": {
+      "en": "Garlic Prawns",
+      "es": "Gambas al Ajillo"
+    },
+    "category_country": "spain",
+    "category_type": "seafood",
+    "image_url": "/recipes/spain/gambas_ajillo.png"
+  },
+  {
+    "id": 53,
+    "title": {
+      "en": "Churros with Chocolate",
+      "es": "Churros con Chocolate"
+    },
+    "category_country": "spain",
+    "category_type": "desserts",
+    "image_url": "/recipes/spain/churros_chocolate.png"
+  },
+  {
+    "id": 54,
+    "title": {
+      "en": "Asturian Bean Stew",
+      "es": "Fabada Asturiana"
+    },
+    "category_country": "spain",
+    "category_type": "meat",
+    "image_url": "/recipes/spain/fabada_asturiana.png"
+  },
+  {
+    "id": 55,
+    "title": {
+      "en": "Salmorejo",
+      "es": "Salmorejo"
+    },
+    "category_country": "spain",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/spain/salmorejo.png"
+  },
+  {
+    "id": 56,
+    "title": {
+      "en": "Crema Catalana",
+      "es": "Crema Catalana"
+    },
+    "category_country": "spain",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/spain/crema_catalana.png"
+  },
+  {
+    "id": 57,
+    "title": {
+      "en": "Fried Fish",
+      "es": "Pescaito Frito"
+    },
+    "category_country": "spain",
+    "category_type": "meat",
+    "image_url": "/recipes/spain/pescado_frito.png"
+  },
+  {
+    "id": 58,
+    "title": {
+      "en": "Padron Peppers",
+      "es": "Pimientos de Padrón"
+    },
+    "category_country": "spain",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/spain/pimientos_padron.png"
+  },
+  {
+    "id": 59,
+    "title": {
+      "en": "Iberian Ham with Bread",
+      "es": "Jamón Ibérico con Pan"
+    },
+    "category_country": "spain",
+    "category_type": "meat",
+    "image_url": "/recipes/spain/jamon_iberico.png"
+  },
+  {
+    "id": 60,
+    "title": {
+      "en": "Spanish French Toast",
+      "es": "Torrijas"
+    },
+    "category_country": "spain",
+    "category_type": "desserts",
+    "image_url": "/recipes/spain/tarta_santiago.png"
+  },
+  {
+    "id": 61,
+    "title": {
+      "en": "Cheeseburger",
+      "es": "Hamburguesa con Queso"
+    },
+    "category_country": "usa",
+    "category_type": "meat",
+    "image_url": "/recipes/usa/hamburguesa_bacon.png"
+  },
+  {
+    "id": 62,
+    "title": {
+      "en": "BBQ Ribs",
+      "es": "Costillas BBQ"
+    },
+    "category_country": "usa",
+    "category_type": "meat",
+    "image_url": "/recipes/usa/costillas_bbq.png"
+  },
+  {
+    "id": 63,
+    "title": {
+      "en": "Apple Pie",
+      "es": "Apple Pie"
+    },
+    "category_country": "usa",
+    "category_type": "desserts",
+    "image_url": "/recipes/usa/apple_pie.png"
+  },
+  {
+    "id": 64,
+    "title": {
+      "en": "Mac and Cheese",
+      "es": "Mac and Cheese"
+    },
+    "category_country": "usa",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/usa/mac_cheese.png"
+  },
+  {
+    "id": 65,
+    "title": {
+      "en": "Fried Chicken",
+      "es": "Pollo Frito"
+    },
+    "category_country": "usa",
+    "category_type": "meat",
+    "image_url": "/recipes/usa/fried_chicken.png"
+  },
+  {
+    "id": 66,
+    "title": {
+      "en": "New York Cheesecake",
+      "es": "New York Cheesecake"
+    },
+    "category_country": "usa",
+    "category_type": "desserts",
+    "image_url": "/recipes/usa/cheesecake.png"
+  },
+  {
+    "id": 67,
+    "title": {
+      "en": "Clam Chowder",
+      "es": "Clam Chowder"
+    },
+    "category_country": "usa",
+    "category_type": "seafood",
+    "image_url": "/recipes/usa/clam_chowder.png"
+  },
+  {
+    "id": 68,
+    "title": {
+      "en": "Buffalo Wings",
+      "es": "Buffalo Wings"
+    },
+    "category_country": "usa",
+    "category_type": "meat",
+    "image_url": "/recipes/usa/buffalo_wings.png"
+  },
+  {
+    "id": 69,
+    "title": {
+      "en": "Pancakes with Maple",
+      "es": "Pancakes con Maple"
+    },
+    "category_country": "usa",
+    "category_type": "desserts",
+    "image_url": "/recipes/usa/pancakes.png"
+  },
+  {
+    "id": 70,
+    "title": {
+      "en": "Chicago Style Hot Dog",
+      "es": "Hot Dog Estilo Chicago"
+    },
+    "category_country": "usa",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/usa/hot_dog_ny.png"
+  },
+  {
+    "id": 71,
+    "title": {
+      "en": "Cornbread",
+      "es": "Cornbread"
+    },
+    "category_country": "usa",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/usa/cornbread.png"
+  },
+  {
+    "id": 72,
+    "title": {
+      "en": "Chocolate Chip Cookies",
+      "es": "Chocolate Chip Cookies"
+    },
+    "category_country": "usa",
+    "category_type": "desserts",
+    "image_url": "/recipes/usa/brownie.png"
+  },
+  {
+    "id": 73,
+    "title": {
+      "en": "Texas Brisket",
+      "es": "Texas Brisket"
+    },
+    "category_country": "usa",
+    "category_type": "meat",
+    "image_url": "/recipes/usa/texas_brisket.png"
+  },
+  {
+    "id": 74,
+    "title": {
+      "en": "Seafood Gumbo",
+      "es": "Gumbo de Mariscos"
+    },
+    "category_country": "usa",
+    "category_type": "seafood",
+    "image_url": "/recipes/usa/jambalaya.png"
+  },
+  {
+    "id": 75,
+    "title": {
+      "en": "Pumpkin Pie",
+      "es": "Tarta de Calabaza"
+    },
+    "category_country": "usa",
+    "category_type": "desserts",
+    "image_url": "/recipes/usa/pumpkin_pie.png"
+  },
+  {
+    "id": 76,
+    "title": {
+      "en": "Ratatouille",
+      "es": "Ratatouille"
+    },
+    "category_country": "france",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/france/ratatouille.png"
+  },
+  {
+    "id": 77,
+    "title": {
+      "en": "Coq au Vin",
+      "es": "Coq au Vin"
+    },
+    "category_country": "france",
+    "category_type": "meat",
+    "image_url": "/recipes/france/coq_au_vin.png"
+  },
+  {
+    "id": 78,
+    "title": {
+      "en": "French Onion Soup",
+      "es": "Sopa de Cebolla"
+    },
+    "category_country": "france",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/france/soupe_oignon.png"
+  },
+  {
+    "id": 79,
+    "title": {
+      "en": "Quiche Lorraine",
+      "es": "Quiche Lorraine"
+    },
+    "category_country": "france",
+    "category_type": "meat",
+    "image_url": "/recipes/france/quiche_lorraine.png"
+  },
+  {
+    "id": 80,
+    "title": {
+      "en": "Boeuf Bourguignon",
+      "es": "Boeuf Bourguignon"
+    },
+    "category_country": "france",
+    "category_type": "meat",
+    "image_url": "/recipes/france/boeuf_bourguignon.png"
+  },
+  {
+    "id": 81,
+    "title": {
+      "en": "Assorted Macarons",
+      "es": "Macarons de Colores"
+    },
+    "category_country": "france",
+    "category_type": "desserts",
+    "image_url": "/recipes/france/macarons.png"
+  },
+  {
+    "id": 82,
+    "title": {
+      "en": "Crème Brûlée",
+      "es": "Crème Brûlée"
+    },
+    "category_country": "france",
+    "category_type": "desserts",
+    "image_url": "/recipes/france/creme_brulee.png"
+  },
+  {
+    "id": 83,
+    "title": {
+      "en": "Burundy Snails",
+      "es": "Escargots de Bourgogne"
+    },
+    "category_country": "france",
+    "category_type": "meat",
+    "image_url": "/recipes/france/escargots.png"
+  },
+  {
+    "id": 84,
+    "title": {
+      "en": "Bouillabaisse",
+      "es": "Bouillabaisse"
+    },
+    "category_country": "france",
+    "category_type": "seafood",
+    "image_url": "/recipes/france/bouillabaisse.png"
+  },
+  {
+    "id": 85,
+    "title": {
+      "en": "Cassoulet",
+      "es": "Cassoulet"
+    },
+    "category_country": "france",
+    "category_type": "meat",
+    "image_url": "/recipes/france/cassoulet.png"
+  },
+  {
+    "id": 86,
+    "title": {
+      "en": "Profiteroles",
+      "es": "Profiteroles"
+    },
+    "category_country": "france",
+    "category_type": "desserts",
+    "image_url": "/recipes/france/profiteroles.png"
+  },
+  {
+    "id": 87,
+    "title": {
+      "en": "Tarte Tatin",
+      "es": "Tarte Tatin"
+    },
+    "category_country": "france",
+    "category_type": "desserts",
+    "image_url": "/recipes/france/tarte_tatin.png"
+  },
+  {
+    "id": 88,
+    "title": {
+      "en": "Duck Confit",
+      "es": "Confit de Canard"
+    },
+    "category_country": "france",
+    "category_type": "meat",
+    "image_url": "/recipes/france/confit_canard.png"
+  },
+  {
+    "id": 89,
+    "title": {
+      "en": "Nicoise Salad",
+      "es": "Salade Niçoise"
+    },
+    "category_country": "france",
+    "category_type": "seafood",
+    "image_url": "/recipes/france/salade_nicoise.png"
+  },
+  {
+    "id": 90,
+    "title": {
+      "en": "Cheese Soufflé",
+      "es": "Soufflé de Queso"
+    },
+    "category_country": "france",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/france/souffle_chocolat.png"
+  },
+  {
+    "id": 91,
+    "title": {
+      "en": "Pad Thai",
+      "es": "Pad Thai"
+    },
+    "category_country": "thailand",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/thailand/pad_thai.png"
+  },
+  {
+    "id": 92,
+    "title": {
+      "en": "Tom Yum Goong",
+      "es": "Tom Yum Goong"
+    },
+    "category_country": "thailand",
+    "category_type": "seafood",
+    "image_url": "/recipes/thailand/tom_yum_goong.png"
+  },
+  {
+    "id": 93,
+    "title": {
+      "en": "Green Chicken Curry",
+      "es": "Green Curry de Pollo"
+    },
+    "category_country": "thailand",
+    "category_type": "meat",
+    "image_url": "/recipes/thailand/green_curry.png"
+  },
+  {
+    "id": 94,
+    "title": {
+      "en": "Mango Sticky Rice",
+      "es": "Mango Sticky Rice"
+    },
+    "category_country": "thailand",
+    "category_type": "desserts",
+    "image_url": "/recipes/thailand/mango_sticky_rice.png"
+  },
+  {
+    "id": 95,
+    "title": {
+      "en": "Papaya Salad",
+      "es": "Som Tum (Ensalada de Papaya)"
+    },
+    "category_country": "thailand",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/thailand/som_tum.png"
+  },
+  {
+    "id": 96,
+    "title": {
+      "en": "Massaman Curry",
+      "es": "Massaman Curry"
+    },
+    "category_country": "thailand",
+    "category_type": "meat",
+    "image_url": "/recipes/thailand/massaman_curry.png"
+  },
+  {
+    "id": 97,
+    "title": {
+      "en": "Pad See Ew",
+      "es": "Pad See Ew"
+    },
+    "category_country": "thailand",
+    "category_type": "meat",
+    "image_url": "/recipes/thailand/pad_see_ew.png"
+  },
+  {
+    "id": 98,
+    "title": {
+      "en": "Fried Rice",
+      "es": "Khao Pad (Arroz Frito)"
+    },
+    "category_country": "thailand",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/thailand/khao_pad.png"
+  },
+  {
+    "id": 99,
+    "title": {
+      "en": "Tom Kha Kai Soup",
+      "es": "Sopa Tom Kha Kai"
+    },
+    "category_country": "thailand",
+    "category_type": "meat",
+    "image_url": "/recipes/thailand/tom_kha_gai.png"
+  },
+  {
+    "id": 100,
+    "title": {
+      "en": "Pork Satay",
+      "es": "Satay de Cerdo"
+    },
+    "category_country": "thailand",
+    "category_type": "meat",
+    "image_url": "/recipes/thailand/satay_gai.png"
+  },
+  {
+    "id": 101,
+    "title": {
+      "en": "Laab Moo",
+      "es": "Laab Moo"
+    },
+    "category_country": "thailand",
+    "category_type": "meat",
+    "image_url": "/recipes/thailand/larb_moo.png"
+  },
+  {
+    "id": 102,
+    "title": {
+      "en": "Red Duck Curry",
+      "es": "Red Curry de Pato"
+    },
+    "category_country": "thailand",
+    "category_type": "meat",
+    "image_url": "/recipes/thailand/panang_curry.png"
+  },
+  {
+    "id": 103,
+    "title": {
+      "en": "Fried Bananas",
+      "es": "Plátanos Fritos"
+    },
+    "category_country": "thailand",
+    "category_type": "desserts",
+    "image_url": "/recipes/thailand/thailand_bananas.png"
+  },
+  {
+    "id": 104,
+    "title": {
+      "en": "Drunken Noodles",
+      "es": "Tallarines Borrachos"
+    },
+    "category_country": "thailand",
+    "category_type": "meat",
+    "image_url": "/recipes/thailand/khao_soi.png"
+  },
+  {
+    "id": 105,
+    "title": {
+      "en": "Steamed Lime Fish",
+      "es": "Pescado al Vapor"
+    },
+    "category_country": "thailand",
+    "category_type": "seafood",
+    "image_url": "/recipes/thailand/pla_goong.png"
+  },
+  {
+    "id": 106,
+    "title": {
+      "en": "Moussaka",
+      "es": "Moussaka"
+    },
+    "category_country": "greece",
+    "category_type": "meat",
+    "image_url": "/recipes/greece/moussaka.png"
+  },
+  {
+    "id": 107,
+    "title": {
+      "en": "Chicken Souvlaki",
+      "es": "Souvlaki de Pollo"
+    },
+    "category_country": "greece",
+    "category_type": "meat",
+    "image_url": "/recipes/greece/souvlaki.png"
+  },
+  {
+    "id": 108,
+    "title": {
+      "en": "Baklava",
+      "es": "Baklava"
+    },
+    "category_country": "greece",
+    "category_type": "desserts",
+    "image_url": "/recipes/greece/baklava.png"
+  },
+  {
+    "id": 109,
+    "title": {
+      "en": "Greek Salad",
+      "es": "Ensalada Griega"
+    },
+    "category_country": "greece",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/greece/greek_salad.png"
+  },
+  {
+    "id": 110,
+    "title": {
+      "en": "Spanakopita",
+      "es": "Spanakopita"
+    },
+    "category_country": "greece",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/greece/spanakopita.png"
+  },
+  {
+    "id": 111,
+    "title": {
+      "en": "Homemade Tzatziki",
+      "es": "Tzatziki Casero"
+    },
+    "category_country": "greece",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/greece/tzatziki.png"
+  },
+  {
+    "id": 112,
+    "title": {
+      "en": "Dolmades",
+      "es": "Dolmades"
+    },
+    "category_country": "greece",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/greece/dolmades.png"
+  },
+  {
+    "id": 113,
+    "title": {
+      "en": "Pastitsio",
+      "es": "Pastitsio"
+    },
+    "category_country": "greece",
+    "category_type": "meat",
+    "image_url": "/recipes/greece/pastitsio.png"
+  },
+  {
+    "id": 114,
+    "title": {
+      "en": "Lamb Gyros",
+      "es": "Gyros de Cordero"
+    },
+    "category_country": "greece",
+    "category_type": "meat",
+    "image_url": "/recipes/greece/gyros.png"
+  },
+  {
+    "id": 115,
+    "title": {
+      "en": "Lamb Kleftiko",
+      "es": "Kleftiko de Cordero"
+    },
+    "category_country": "greece",
+    "category_type": "meat",
+    "image_url": "/recipes/greece/kleftiko.png"
+  },
+  {
+    "id": 116,
+    "title": {
+      "en": "Greek Donuts",
+      "es": "Loukoumades"
+    },
+    "category_country": "greece",
+    "category_type": "desserts",
+    "image_url": "/recipes/greece/loukoumades.png"
+  },
+  {
+    "id": 117,
+    "title": {
+      "en": "Fried Cheese Saganaki",
+      "es": "Saganaki de Queso"
+    },
+    "category_country": "greece",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/greece/saganaki.png"
+  },
+  {
+    "id": 118,
+    "title": {
+      "en": "Horiatiki",
+      "es": "Horiatiki"
+    },
+    "category_country": "greece",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/greece/gemista.png"
+  },
+  {
+    "id": 119,
+    "title": {
+      "en": "Lentil Soup",
+      "es": "Fakes (Sopa de Lentejas)"
+    },
+    "category_country": "greece",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/greece/fasolada.png"
+  },
+  {
+    "id": 120,
+    "title": {
+      "en": "Chickpea Stew",
+      "es": "Revithia"
+    },
+    "category_country": "greece",
+    "category_type": "vegetarian",
+    "image_url": "/recipes/greece/revithada.png"
+  }
+]
