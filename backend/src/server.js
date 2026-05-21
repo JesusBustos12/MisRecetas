@@ -241,8 +241,10 @@ app.get('/api/recipes', async (req, res) => {
     query += ` ORDER BY r.created_at DESC LIMIT ? OFFSET ?`;
     params.push(parseInt(limit), parseInt(offset));
 
-    const fs = await import('fs');
-    fs.appendFileSync('query_log.txt', `\n--- NEW QUERY ---\nQUERY_PARAMS: ${JSON.stringify(req.query)}\nSEARCH: ${search}\nCATEGORY: ${category}\nQUERY: ${query}\nPARAMS: ${JSON.stringify(params)}\n`);
+    if (!process.env.VERCEL) {
+      const fs = await import('fs');
+      fs.appendFileSync('query_log.txt', `\n--- NEW QUERY ---\nQUERY_PARAMS: ${JSON.stringify(req.query)}\nSEARCH: ${search}\nCATEGORY: ${category}\nQUERY: ${query}\nPARAMS: ${JSON.stringify(params)}\n`);
+    }
     const [rows] = await pool.query(query, params);
 
     // Contar total para paginación (con los mismos filtros)
