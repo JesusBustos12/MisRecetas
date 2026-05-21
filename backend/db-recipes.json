@@ -117,7 +117,7 @@
     },
     "category_country": "italy",
     "category_type": "meat",
-    "image_url": "/recipes/italy/italy_pollo_cacciatore_1772409006303.png"
+    "image_url": "/recipes/italy/italy_chicken_parm.png"
   },
   {
     "id": 13,
@@ -147,7 +147,7 @@
     },
     "category_country": "italy",
     "category_type": "meat",
-    "image_url": "/recipes/italy/italy_veal_milanese.png"
+    "image_url": "/recipes/italy/italy_saltimbocca.png"
   },
   {
     "id": 16,
@@ -237,7 +237,7 @@
     },
     "category_country": "mexico",
     "category_type": "meat",
-    "image_url": "/recipes/mexico/mexico_sopes.png"
+    "image_url": "/recipes/mexico/mexico_tostadas.png"
   },
   {
     "id": 25,
@@ -257,7 +257,7 @@
     },
     "category_country": "mexico",
     "category_type": "meat",
-    "image_url": "/recipes/mexico/mexico_sopa_tortilla.png"
+    "image_url": "/recipes/mexico/mexico_sopa_lima.png"
   },
   {
     "id": 27,
@@ -317,7 +317,7 @@
     },
     "category_country": "japan",
     "category_type": "seafood",
-    "image_url": "/recipes/japan/japan_sushi_roll.png"
+    "image_url": "/recipes/japan/japan_sushi_nigiri.png"
   },
   {
     "id": 33,
@@ -597,7 +597,7 @@
     },
     "category_country": "spain",
     "category_type": "desserts",
-    "image_url": "/recipes/spain/tarta_santiago.png"
+    "image_url": "/recipes/spain/spain_torrijas.png"
   },
   {
     "id": 61,
@@ -697,7 +697,7 @@
     },
     "category_country": "usa",
     "category_type": "vegetarian",
-    "image_url": "/recipes/usa/hot_dog_ny.png"
+    "image_url": "/recipes/usa/usa_hotdog_chicago.png"
   },
   {
     "id": 71,
@@ -717,7 +717,7 @@
     },
     "category_country": "usa",
     "category_type": "desserts",
-    "image_url": "/recipes/usa/brownie.png"
+    "image_url": "/recipes/usa/usa_cookies.png"
   },
   {
     "id": 73,
@@ -737,7 +737,7 @@
     },
     "category_country": "usa",
     "category_type": "seafood",
-    "image_url": "/recipes/usa/jambalaya.png"
+    "image_url": "/recipes/usa/usa_gumbo.png"
   },
   {
     "id": 75,
@@ -897,7 +897,7 @@
     },
     "category_country": "france",
     "category_type": "vegetarian",
-    "image_url": "/recipes/france/souffle_chocolat.png"
+    "image_url": "/recipes/france/souffle_fromage.png"
   },
   {
     "id": 91,
@@ -1037,7 +1037,7 @@
     },
     "category_country": "thailand",
     "category_type": "meat",
-    "image_url": "/recipes/thailand/khao_soi.png"
+    "image_url": "/recipes/thailand/thailand_noodles.png"
   },
   {
     "id": 105,
@@ -1047,7 +1047,7 @@
     },
     "category_country": "thailand",
     "category_type": "seafood",
-    "image_url": "/recipes/thailand/pla_goong.png"
+    "image_url": "/recipes/thailand/thailand_fish.png"
   },
   {
     "id": 106,
@@ -1177,7 +1177,7 @@
     },
     "category_country": "greece",
     "category_type": "vegetarian",
-    "image_url": "/recipes/greece/gemista.png"
+    "image_url": "/recipes/greece/greece_horiatiki.png"
   },
   {
     "id": 119,
@@ -1187,7 +1187,7 @@
     },
     "category_country": "greece",
     "category_type": "vegetarian",
-    "image_url": "/recipes/greece/fasolada.png"
+    "image_url": "/recipes/greece/greece_fakes.png"
   },
   {
     "id": 120,
