@@ -37,7 +37,7 @@ export default function RecipeDetailClient({ id }: { id: string }) {
   };
 
   const [recipe, setRecipe] = useState<any>(null);
-  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || '/api';
 
   const [comments, setComments] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);

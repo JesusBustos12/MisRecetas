@@ -33,7 +33,7 @@ export default function RegisterForm({ t, onSwitchToLogin }: RegisterFormProps) 
     setError('');
 
     try {
-      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || '/api';
       const response = await fetch(`${API_URL}/auth/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -65,7 +65,7 @@ export default function RegisterForm({ t, onSwitchToLogin }: RegisterFormProps) 
     } catch (err: any) {
       console.error('Register Exception:', err);
       setError(
-        'Error de conexión: No se pudo contactar con el servidor local del Backend (Puerto 5000).',
+        'Error de conexión: No se pudo contactar con el servidor.',
       );
     } finally {
       setLoading(false);

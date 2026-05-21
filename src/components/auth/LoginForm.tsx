@@ -32,7 +32,7 @@ export default function LoginForm({ t, onSwitchToRegister }: LoginFormProps) {
     setError('');
 
     try {
-      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || '/api';
       const response = await fetch(`${API_URL}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -54,8 +54,8 @@ export default function LoginForm({ t, onSwitchToRegister }: LoginFormProps) {
       console.error('Login Exception:', err);
       setError(
         language === 'es'
-          ? 'Error de conexión: No se pudo contactar con el servidor local (Puerto 5000).'
-          : 'Connection error: Could not contact the local server (Port 5000).',
+          ? 'Error de conexión: No se pudo contactar con el servidor.'
+          : 'Connection error: Could not contact the server.',
       );
     } finally {
       setLoading(false);

@@ -1,6 +1,6 @@
 import { HERO_RECIPE_IDS, RECIPES_PER_PAGE } from '@/constants';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || '/api';
 
 /**
  * Helper para parsear campos JSON que vienen como string desde MySQL
