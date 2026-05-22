@@ -42,7 +42,7 @@ export const recipeService = {
       const heroRecipes: any[] = [];
 
       // Traemos una muestra grande de recetas para filtrar
-      const response = await fetch(`${API_URL}/recipes?limit=100`);
+      const response = await fetch(`${API_URL}/recipes?limit=200`);
       const result = await response.json();
       const data = Array.isArray(result) ? result : result.data || [];
       const parsed = data.map(parseRecipeData);
