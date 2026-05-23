@@ -58,15 +58,15 @@ export const recipeService = {
                    (country === 'thailand' && rCountry === 'tailandia') ||
                    (country === 'greece' && rCountry === 'grecia');
           })
-          .slice(0, 2);
+          .slice(0, 1);
         
         heroRecipes.push(...countryRecipes);
       });
 
-      // Si no llegamos a 20 con los filtros, rellenamos con las más recientes
-      if (heroRecipes.length < 20) {
+      // Si no llegamos a 10 con los filtros, rellenamos con las más recientes
+      if (heroRecipes.length < 10) {
         const existingIds = new Set(heroRecipes.map(r => r.id));
-        const additional = parsed.filter((r: any) => !existingIds.has(r.id)).slice(0, 20 - heroRecipes.length);
+        const additional = parsed.filter((r: any) => !existingIds.has(r.id)).slice(0, 10 - heroRecipes.length);
         heroRecipes.push(...additional);
       }
 

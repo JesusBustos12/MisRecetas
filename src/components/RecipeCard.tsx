@@ -121,6 +121,7 @@ export default function RecipeCard({
     <div className={`recipe-card-m ${variant === 'profile' ? 'rc-profile-variant' : ''}`}>
       <Link
         href={`/recipe/${recipe.id}`}
+        prefetch={false}
         className="rc-link-wrapper"
         style={{ textDecoration: 'none', color: 'inherit', flex: 1, display: 'flex' }}
       >

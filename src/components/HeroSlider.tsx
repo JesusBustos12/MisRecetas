@@ -101,6 +101,7 @@ export default function HeroSlider() {
           <div className="hero-actions">
             <Link
               href={`/recipe/${currentHero.id}`}
+              prefetch={false}
               className="btn btn-primary"
               style={{
                 borderRadius: '2rem',

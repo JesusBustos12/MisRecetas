@@ -50,3 +50,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+
+// Trigger deployment: Limpieza y desactivación de scripts de enriquecimiento de recetas
+

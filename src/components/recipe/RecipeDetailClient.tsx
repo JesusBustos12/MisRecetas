@@ -74,11 +74,15 @@ export default function RecipeDetailClient({ id }: { id: string }) {
   const fetchRecipeData = async (silent = false) => {
     if (!silent) setLoading(true);
     try {
+      let country = '';
       // Fetch Recipe
       const recResp = await fetch(`${API_URL}/recipes/${id}`);
       if (recResp.ok) {
         const recData = await recResp.json();
         setRecipe(recData);
+        if (recData && recData.category_country) {
+          country = recData.category_country;
+        }
       }
 
       // Fetch Comments
@@ -94,22 +98,17 @@ export default function RecipeDetailClient({ id }: { id: string }) {
         setIsFavorite(favIds.includes(Number(id)));
       }
 
-      // Fetch recommended recipes (same country)
-      const recRespCheck = await fetch(`${API_URL}/recipes/${id}`);
-      if (recRespCheck.ok) {
-        const recData = await recRespCheck.json();
-        if (recData && recData.category_country) {
-          const country = recData.category_country;
-          const recs = await recipeService.getRecipes({
-            page: 1,
-            searchTerm: '',
-            activeCategory: country,
-            activeSidebarFilter: 'all',
-          });
-          if (recs && recs.data) {
-            const filtered = recs.data.filter((r: any) => String(r.id) !== String(id)).slice(0, 2);
-            setRecommendedRecipes(filtered);
-          }
+      // Fetch recommended recipes (same country) using already fetched country info
+      if (country) {
+        const recs = await recipeService.getRecipes({
+          page: 1,
+          searchTerm: '',
+          activeCategory: country,
+          activeSidebarFilter: 'all',
+        });
+        if (recs && recs.data) {
+          const filtered = recs.data.filter((r: any) => String(r.id) !== String(id)).slice(0, 2);
+          setRecommendedRecipes(filtered);
         }
       }
     } catch (error) {
@@ -1010,7 +1009,7 @@ export default function RecipeDetailClient({ id }: { id: string }) {
                       const recTitle =
                         typeof rec.title === 'object' ? rec.title.es || rec.title.en : rec.title;
                       return (
-                        <Link href={`/recipe/${rec.id}`} key={rec.id} className="rd-rec-item">
+                        <Link href={`/recipe/${rec.id}`} prefetch={false} key={rec.id} className="rd-rec-item">
                           <div className="rd-rec-img-box">
                             <img
                               src={rec.image_url || 'https://via.placeholder.com/100'}
