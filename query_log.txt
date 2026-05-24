@@ -37,3 +37,29 @@ QUERY:
       WHERE 1=1
      AND r.category_country = ? ORDER BY r.created_at DESC LIMIT ? OFFSET ?
 PARAMS: ["italy",8,8]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"limit":"200"}
+SEARCH: undefined
+CATEGORY: undefined
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: [200,0]
+
+--- NEW QUERY ---
+QUERY_PARAMS: {"page":"1","limit":"8","category":"italy"}
+SEARCH: undefined
+CATEGORY: italy
+QUERY: 
+      SELECT r.*, u.full_name as author_name, u.avatar_url as author_avatar,
+        (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
+      FROM recipes r 
+      JOIN users u ON r.user_id = u.id 
+      WHERE 1=1
+     AND r.category_country = ? ORDER BY r.created_at DESC LIMIT ? OFFSET ?
+PARAMS: ["italy",8,0]
