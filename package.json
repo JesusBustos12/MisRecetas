@@ -10,7 +10,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint src",
-    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,css}\""
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,css}\"",
+    "migrate:tidb": "node backend/src/scripts/migrate_to_tidb.js"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
