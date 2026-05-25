@@ -200,9 +200,27 @@ app.get('/api/recipes', async (req, res) => {
     query += queryAdd;
     params.push(...paramsAdd);
 
+    const applyCategoryFilter = (q, p, cat) => {
+      const catLower = cat.toLowerCase();
+      if (catLower === 'mexico' || catLower === 'méxico') {
+        q += ` AND (LOWER(r.category_country) = 'mexico' OR LOWER(r.category_country) = 'méxico')`;
+      } else if (catLower === 'spain' || catLower === 'españa') {
+        q += ` AND (LOWER(r.category_country) = 'spain' OR LOWER(r.category_country) = 'españa')`;
+      } else if (catLower === 'japan' || catLower === 'japón') {
+        q += ` AND (LOWER(r.category_country) = 'japan' OR LOWER(r.category_country) = 'japón')`;
+      } else if (catLower === 'thailand' || catLower === 'tailandia') {
+        q += ` AND (LOWER(r.category_country) = 'thailand' OR LOWER(r.category_country) = 'tailandia')`;
+      } else if (catLower === 'greece' || catLower === 'grecia') {
+        q += ` AND (LOWER(r.category_country) = 'greece' OR LOWER(r.category_country) = 'grecia')`;
+      } else {
+        q += ` AND LOWER(r.category_country) = ?`;
+        p.push(catLower);
+      }
+      return q;
+    };
+
     if (!search && category && category !== 'World' && category !== 'Todas') {
-      query += ` AND r.category_country = ?`;
-      params.push(category);
+      query = applyCategoryFilter(query, params, category);
     }
 
     const applyTypeFilter = (q, p, typeVal) => {
@@ -246,8 +264,7 @@ app.get('/api/recipes', async (req, res) => {
     countParams.push(...countFilter.paramsAdd);
 
     if (!search && category && category !== 'World' && category !== 'Todas') {
-      countQuery += ` AND r.category_country = ?`;
-      countParams.push(category);
+      countQuery = applyCategoryFilter(countQuery, countParams, category);
     }
     if (!search && type) {
       countQuery = applyTypeFilter(countQuery, countParams, type);
