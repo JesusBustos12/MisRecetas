@@ -7,8 +7,12 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Load .env relative to the project root
 dotenv.config({ path: path.join(__dirname, '../../../.env') });
+
+const formatDate = (isoString) => {
+    if (!isoString) return null;
+    return isoString.replace('T', ' ').replace('Z', '').split('.')[0];
+};
 
 const pool = mysql.createPool({
   host: process.env.DB_HOST,
@@ -25,61 +29,89 @@ async function migrate() {
     connection = await pool.getConnection();
     console.log('Connected to TiDB Cloud successfully.');
 
-    // Path to the backup file
     const backupPath = 'c:\\IDEs - Lenguajes de Programacion\\IDEs\\(Portafolio)\\(Curso de Vide Coding)\\(Vercion superior)\\Recetas de comida-s - copia\\Recetas\\BACKUP_SISTEMA_TOTAL.json';
     
     console.log(`Reading backup file from: ${backupPath}`);
-    const data = JSON.parse(fs.readFileSync(backupPath, 'utf8'));
-    
-    if (!data.recipes || !Array.isArray(data.recipes)) {
-      throw new Error('Invalid JSON format: Missing recipes array');
+    const backup = JSON.parse(fs.readFileSync(backupPath, 'utf8'));
+
+    console.log('🧹 Vaciando tablas actuales de la base de datos de producción (TiDB)...');
+    await connection.query("SET FOREIGN_KEY_CHECKS = 0");
+    await connection.query("TRUNCATE TABLE comments");
+    await connection.query("TRUNCATE TABLE favorites");
+    await connection.query("TRUNCATE TABLE recipes");
+    await connection.query("TRUNCATE TABLE users");
+    await connection.query("SET FOREIGN_KEY_CHECKS = 1");
+    console.log('✅ Tablas vaciadas correctamente y contadores reiniciados.');
+
+    if (backup.users) {
+        console.log(`👥 Restaurando ${backup.users.length} usuarios...`);
+        for (const u of backup.users) {
+            await connection.query(
+                "INSERT INTO users (id, full_name, email, password, avatar_url, created_at) VALUES (?, ?, ?, ?, ?, ?)", 
+                [u.id, u.full_name, u.email, u.password || '123456', u.avatar_url, formatDate(u.created_at)]
+            );
+        }
+        console.log('✅ Usuarios restaurados.');
     }
 
-    console.log(`Found ${data.recipes.length} recipes to migrate.`);
-
-    // Disable foreign key checks to avoid errors with missing users
-    await connection.query('SET FOREIGN_KEY_CHECKS=0;');
-
-    let successCount = 0;
-    let errorCount = 0;
-
-    for (const recipe of data.recipes) {
-      try {
-        const query = `
-          INSERT IGNORE INTO recipes 
-          (id, user_id, title, description, category_country, prep_time, cook_time, servings, image_url, ingredients, steps, category_type, created_at)
-          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        `;
-        
-        // Handle dates
-        const createdAt = recipe.created_at ? new Date(recipe.created_at) : new Date();
-
-        await connection.execute(query, [
-          recipe.id,
-          recipe.user_id,
-          JSON.stringify(recipe.title),
-          JSON.stringify(recipe.description),
-          recipe.category_country || null,
-          recipe.prep_time || 0,
-          recipe.cook_time || 0,
-          recipe.servings || 1,
-          recipe.image_url || null,
-          JSON.stringify(recipe.ingredients),
-          JSON.stringify(recipe.steps),
-          recipe.category_type || null,
-          createdAt
-        ]);
-        successCount++;
-      } catch (err) {
-        console.error(`Error inserting recipe ID ${recipe.id}:`, err.message);
-        errorCount++;
-      }
+    if (backup.recipes) {
+        console.log(`🍳 Restaurando ${backup.recipes.length} recetas de alta calidad con el buen seeding...`);
+        const batchSize = 50;
+        for (let i = 0; i < backup.recipes.length; i += batchSize) {
+            const batch = backup.recipes.slice(i, i + batchSize);
+            const placeholders = batch.map(() => "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)").join(", ");
+            const values = batch.flatMap(r => [
+                r.id, 
+                r.user_id, 
+                JSON.stringify(r.title), 
+                JSON.stringify(r.description), 
+                r.category_country || null, 
+                r.diet_type || null, 
+                r.prep_time || 30, 
+                r.cook_time || 20, 
+                r.servings || 4, 
+                r.image_url || null, 
+                JSON.stringify(r.ingredients), 
+                JSON.stringify(r.steps), 
+                r.nutrition ? JSON.stringify(r.nutrition) : null, 
+                r.category_type || null, 
+                formatDate(r.created_at)
+            ]);
+            
+            await connection.query(
+                `INSERT INTO recipes 
+                (id, user_id, title, description, category_country, diet_type, prep_time, cook_time, servings, image_url, ingredients, steps, nutrition, category_type, created_at) 
+                VALUES ${placeholders}`,
+                values
+            );
+        }
+        console.log('✅ Recetas restauradas en lotes.');
     }
 
-    // Re-enable foreign key checks
-    await connection.query('SET FOREIGN_KEY_CHECKS=1;');
+    if (backup.comments && backup.comments.length > 0) {
+        console.log(`💬 Restaurando ${backup.comments.length} comentarios...`);
+        const batchSize = 200;
+        for (let i = 0; i < backup.comments.length; i += batchSize) {
+            const batch = backup.comments.slice(i, i + batchSize);
+            const placeholders = batch.map(() => "(?, ?, ?, ?, ?, ?)").join(", ");
+            const values = batch.flatMap(c => [
+                c.id, 
+                c.recipe_id, 
+                c.user_id, 
+                c.content || c.comment_text || '', 
+                c.rating || 5, 
+                formatDate(c.created_at)
+            ]);
+            
+            await connection.query(
+                `INSERT INTO comments (id, recipe_id, user_id, content, rating, created_at) VALUES ${placeholders}`,
+                values
+            );
+        }
+        console.log('✅ Comentarios restaurados en lotes.');
+    }
 
-    console.log(`Migration completed: ${successCount} inserted, ${errorCount} errors.`);
+    console.log('🎉 Migración COMPLETADA con éxito. Todos los datos fueron sobreescritos con la versión superior.');
   } catch (error) {
     console.error('Migration failed:', error);
   } finally {
