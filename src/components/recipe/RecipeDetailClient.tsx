@@ -304,23 +304,40 @@ export default function RecipeDetailClient({ id }: { id: string }) {
   const cookTime = getTranslatedLabel(recipe.cook_time) || '30 mins';
   const prepTime = getTranslatedLabel(recipe.prep_time) || '20 mins';
 
-  const ingredientsListRaw = getTranslatedLabel(recipe.ingredients);
-  const rawIngArray = Array.isArray(ingredientsListRaw)
-    ? ingredientsListRaw
-    : typeof ingredientsListRaw === 'string'
-      ? ingredientsListRaw.split('\n').filter((i) => i.trim())
+  // Helper: parse a value that could be a JSON string (array or object), a plain array, or a plain string
+  const parseJsonField = (val: any): any => {
+    if (!val) return val;
+    if (typeof val === 'string') {
+      try {
+        return JSON.parse(val);
+      } catch (e) {}
+    }
+    return val;
+  };
+
+  // Parse ingredients
+  const parsedIngredients = parseJsonField(recipe.ingredients);
+  const rawIngArray = Array.isArray(parsedIngredients)
+    ? parsedIngredients
+    : typeof parsedIngredients === 'string'
+      ? parsedIngredients.split('\n').filter((i) => i.trim())
       : [];
   const ingredientsList = rawIngArray.map((ing: any) => getTranslatedLabel(ing));
 
-  const stepsListRaw = getTranslatedLabel(recipe.steps);
-  const rawStepArray = Array.isArray(stepsListRaw)
-    ? stepsListRaw
-    : typeof stepsListRaw === 'string'
-      ? [stepsListRaw]
+  // Parse steps
+  const parsedSteps = parseJsonField(recipe.steps);
+  const rawStepArray = Array.isArray(parsedSteps)
+    ? parsedSteps
+    : typeof parsedSteps === 'string'
+      ? parsedSteps.split('\n').filter((s) => s.trim())
       : [];
   const stepsList = rawStepArray.map((step: any) => getTranslatedLabel(step));
 
-  const nutritionObj = getTranslatedLabel(recipe.nutrition);
+  // Parse nutrition
+  const parsedNutrition = parseJsonField(recipe.nutrition);
+  const nutritionObj = (typeof parsedNutrition === 'object' && !Array.isArray(parsedNutrition))
+    ? parsedNutrition
+    : null;
 
   const countryEn =
     recipe.category_country && typeof recipe.category_country === 'object'
@@ -700,12 +717,12 @@ export default function RecipeDetailClient({ id }: { id: string }) {
             {activeTab === 'Nutrition' && (
               <div className="rd-tab-section">
                 <h3>{t.recipe?.tab_nutrition || 'Nutritional Information'}</h3>
-                {nutritionObj && typeof nutritionObj === 'object' ? (
+                {nutritionObj && typeof nutritionObj === 'object' && !('es' in nutritionObj && 'en' in nutritionObj) ? (
                   <div className="rd-nutrition-grid">
                     {Object.entries(nutritionObj).map(([key, value]) => (
                       <div key={key} className="rd-nutrition-item">
-                        <span className="rd-nutrition-val">{String(value)}</span>
-                        <span className="rd-nutrition-label">{key}</span>
+                        <span className="rd-nutrition-val">{getTranslatedLabel(value)}</span>
+                        <span className="rd-nutrition-label">{getTranslatedLabel(key)}</span>
                       </div>
                     ))}
                   </div>
