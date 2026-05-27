@@ -152,7 +152,11 @@ export const recipeService = {
         },
         body: JSON.stringify(recipeData),
       });
-      if (!response.ok) throw new Error('Error creating recipe');
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        console.error('SERVER ERROR DETAILS:', errorData);
+        throw new Error(`Server Error: ${errorData.details || errorData.error || 'Unknown'}`);
+      }
       return await response.json();
     } catch (error) {
       console.error('Error in createRecipe:', error);
