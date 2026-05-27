@@ -164,9 +164,6 @@ export default function Navbar() {
                 <Link href="/profile" onClick={() => setMenuOpen(false)}>
                   {fallbackT.nav?.my_profile || 'Mi Perfil'}
                 </Link>
-                <Link href="/favorites" onClick={() => setMenuOpen(false)}>
-                  {fallbackT.nav?.favorites || 'Favoritos'}
-                </Link>
                 <button onClick={handleLogout} style={{ color: '#ef4444' }}>
                   {fallbackT.nav?.logout || 'Cerrar Sesión'}
                 </button>
