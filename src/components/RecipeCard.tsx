@@ -23,22 +23,22 @@ export default function RecipeCard({
     if (!val) return '';
 
     // If it's a bilingual object: { es: "...", en: "..." }
-    if (typeof val === 'object' && !Array.isArray(val) && (val.es || val.en)) {
-      return val[language] || val['es'] || '';
+    if (typeof val === 'object' && !Array.isArray(val) && ('es' in val || 'en' in val)) {
+      return val[language] || val['es'] || val['en'] || '';
     }
 
     // If it's a string that looks like JSON
     if (typeof val === 'string' && val.trim().startsWith('{')) {
       try {
         const parsed = JSON.parse(val);
-        if (parsed.es || parsed.en) {
-          return parsed[language] || parsed['es'] || val;
+        if ('es' in parsed || 'en' in parsed) {
+          return parsed[language] || parsed['es'] || parsed['en'] || '';
         }
       } catch (e) {}
     }
 
     // Fallback for legacy values (plain arrays or strings)
-    return val;
+    return typeof val === 'object' ? JSON.stringify(val) : val;
   };
 
   useEffect(() => {
