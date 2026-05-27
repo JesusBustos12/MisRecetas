@@ -321,8 +321,8 @@ app.post('/api/recipes', authMiddleware, async (req, res) => {
 
     const [result] = await pool.query(`
       INSERT INTO recipes 
-      (title, description, steps, ingredients, prep_time, cook_time, servings, category_country, image_url, user_id)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      (title, description, steps, ingredients, prep_time, cook_time, servings, category_country, image_url, user_id, category_type, diet_type, nutrition)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'vegetarian', 'Omnívoro', '{}')
     `, [
       title, description, steps, ingredients, prep_time,
       cook_time, servings, category_country, image_url, user_id
