@@ -19,6 +19,13 @@ export default function RecipeForm({ user, onSuccess, t }: RecipeFormProps) {
   const [imgUrl, setImgUrl] = useState('');
   const [ingredients, setIngredients] = useState<string[]>(['']);
   const [instructions, setInstructions] = useState<string[]>(['']);
+  
+  // Nutrición
+  const [calories, setCalories] = useState('');
+  const [protein, setProtein] = useState('');
+  const [fat, setFat] = useState('');
+  const [carbs, setCarbs] = useState('');
+
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState<{
     message: string;
@@ -33,6 +40,13 @@ export default function RecipeForm({ user, onSuccess, t }: RecipeFormProps) {
 
     const finalIngredients = JSON.stringify(ingredients.filter((i) => i.trim()));
     const finalSteps = JSON.stringify(instructions.filter((i) => i.trim()));
+    
+    const nutritionObj: any = {};
+    if (calories) nutritionObj['Calories'] = calories;
+    if (protein) nutritionObj['Protein'] = protein;
+    if (fat) nutritionObj['Fat'] = fat;
+    if (carbs) nutritionObj['Carbs'] = carbs;
+    const finalNutrition = Object.keys(nutritionObj).length > 0 ? JSON.stringify(nutritionObj) : '{}';
 
     try {
       await recipeService.createRecipe({
@@ -46,6 +60,7 @@ export default function RecipeForm({ user, onSuccess, t }: RecipeFormProps) {
         category_country: country,
         image_url: imgUrl,
         user_id: user.id,
+        nutrition: finalNutrition
       });
 
       setToast({ message: t.success_msg || 'Recipe Published!', type: 'success' });
@@ -57,6 +72,10 @@ export default function RecipeForm({ user, onSuccess, t }: RecipeFormProps) {
       setImgUrl('');
       setIngredients(['']);
       setInstructions(['']);
+      setCalories('');
+      setProtein('');
+      setFat('');
+      setCarbs('');
       onSuccess();
     } catch (error: any) {
       setToast({ message: error.message || 'Error creating recipe', type: 'error' });
@@ -247,6 +266,41 @@ export default function RecipeForm({ user, onSuccess, t }: RecipeFormProps) {
             value={instructions.join('\n')}
             onChange={(e) => setInstructions(e.target.value.split('\n'))}
           ></textarea>
+        </div>
+      </div>
+
+      {/* SECCIÓN DE NUTRICIÓN */}
+      <div className="cr-group">
+        <label className="cr-label">{t.recipe?.tab_nutrition || 'Nutritional Information'} (Opcional)</label>
+        <div className="cr-row-2" style={{ gap: '1.6rem', marginTop: '1rem' }}>
+          <input
+            type="text"
+            className="cr-input"
+            placeholder="Calories (ej: 250 kcal)"
+            value={calories}
+            onChange={(e) => setCalories(e.target.value)}
+          />
+          <input
+            type="text"
+            className="cr-input"
+            placeholder="Protein (ej: 15g)"
+            value={protein}
+            onChange={(e) => setProtein(e.target.value)}
+          />
+          <input
+            type="text"
+            className="cr-input"
+            placeholder="Fat (ej: 5g)"
+            value={fat}
+            onChange={(e) => setFat(e.target.value)}
+          />
+          <input
+            type="text"
+            className="cr-input"
+            placeholder="Carbs (ej: 30g)"
+            value={carbs}
+            onChange={(e) => setCarbs(e.target.value)}
+          />
         </div>
       </div>
 
