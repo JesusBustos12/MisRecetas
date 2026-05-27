@@ -41,6 +41,12 @@ function ProfileHubContent() {
   const [avatarUploading, setAvatarUploading] = useState(false);
   const avatarInputRef = useRef<HTMLInputElement>(null);
 
+  // Nutrition State
+  const [newCalories, setNewCalories] = useState('');
+  const [newProtein, setNewProtein] = useState('');
+  const [newFat, setNewFat] = useState('');
+  const [newCarbs, setNewCarbs] = useState('');
+
   // Edit Profile Modal State
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [editName, setEditName] = useState('');
@@ -126,6 +132,13 @@ function ProfileHubContent() {
     if (!user) return;
     setFormLoading(true);
 
+    const nutritionObj: any = {};
+    if (newCalories) nutritionObj['Calories'] = newCalories;
+    if (newProtein) nutritionObj['Protein'] = newProtein;
+    if (newFat) nutritionObj['Fat'] = newFat;
+    if (newCarbs) nutritionObj['Carbs'] = newCarbs;
+    const finalNutrition = Object.keys(nutritionObj).length > 0 ? JSON.stringify(nutritionObj) : '{}';
+
     const recipeData = {
       title: JSON.stringify({ es: newTitle, en: newTitle }),
       description: JSON.stringify({ es: newDesc || newTitle, en: newDesc || newTitle }),
@@ -137,6 +150,7 @@ function ProfileHubContent() {
       category_country: newCountry,
       image_url: newImgUrl || '/recipes/default.jpg',
       user_id: user.id,
+      nutrition: finalNutrition
     };
 
     try {
@@ -150,6 +164,10 @@ function ProfileHubContent() {
       setNewImgUrl('');
       setIngredients(['']);
       setInstructions(['']);
+      setNewCalories('');
+      setNewProtein('');
+      setNewFat('');
+      setNewCarbs('');
       setActiveTab('my_recipes');
       fetchData();
     } catch (error: any) {
@@ -650,6 +668,41 @@ function ProfileHubContent() {
                   value={instructions.join('\n')}
                   onChange={(e) => setInstructions(e.target.value.split('\n'))}
                 ></textarea>
+              </div>
+            </div>
+
+            {/* SECCIÓN DE NUTRICIÓN */}
+            <div className="cr-group">
+              <label className="cr-label">{t.recipe?.tab_nutrition || 'Nutritional Information'} (Opcional)</label>
+              <div className="cr-row-2" style={{ gap: '1.6rem', marginTop: '1rem' }}>
+                <input
+                  type="text"
+                  className="cr-input"
+                  placeholder="Calories (ej: 250 kcal)"
+                  value={newCalories}
+                  onChange={(e) => setNewCalories(e.target.value)}
+                />
+                <input
+                  type="text"
+                  className="cr-input"
+                  placeholder="Protein (ej: 15g)"
+                  value={newProtein}
+                  onChange={(e) => setNewProtein(e.target.value)}
+                />
+                <input
+                  type="text"
+                  className="cr-input"
+                  placeholder="Fat (ej: 5g)"
+                  value={newFat}
+                  onChange={(e) => setNewFat(e.target.value)}
+                />
+                <input
+                  type="text"
+                  className="cr-input"
+                  placeholder="Carbs (ej: 30g)"
+                  value={newCarbs}
+                  onChange={(e) => setNewCarbs(e.target.value)}
+                />
               </div>
             </div>
 
