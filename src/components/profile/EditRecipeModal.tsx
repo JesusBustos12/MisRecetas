@@ -20,6 +20,13 @@ export default function EditRecipeModal({ recipe, onClose, onSuccess, t }: EditR
   const [imgUrl, setImgUrl] = useState('');
   const [ingredients, setIngredients] = useState<string[]>(['']);
   const [instructions, setInstructions] = useState<string[]>(['']);
+  
+  // Nutrición
+  const [calories, setCalories] = useState('');
+  const [protein, setProtein] = useState('');
+  const [fat, setFat] = useState('');
+  const [carbs, setCarbs] = useState('');
+
   const [loading, setLoading] = useState(false);
   const [confirmDelete, setConfirmDelete] = useState(false);
   const [toast, setToast] = useState<{
@@ -65,6 +72,20 @@ export default function EditRecipeModal({ recipe, onClose, onSuccess, t }: EditR
       setCountry(recipe.category_country || 'World');
       setImgUrl(recipe.image_url || '');
 
+      // Handle nutrition
+      if (recipe.nutrition) {
+        let nutObj = recipe.nutrition;
+        if (typeof nutObj === 'string') {
+          try { nutObj = JSON.parse(nutObj); } catch(e) {}
+        }
+        if (typeof nutObj === 'object') {
+          setCalories(nutObj['Calories'] || '');
+          setProtein(nutObj['Protein'] || '');
+          setFat(nutObj['Fat'] || '');
+          setCarbs(nutObj['Carbs'] || '');
+        }
+      }
+
       // Handle ingredients - could be JSON string, array, or newline-separated string
       const parseList = (val: any): string[] => {
         if (!val) return [''];
@@ -89,6 +110,13 @@ export default function EditRecipeModal({ recipe, onClose, onSuccess, t }: EditR
     e.preventDefault();
     setLoading(true);
 
+    const nutritionObj: any = {};
+    if (calories) nutritionObj['Calories'] = calories;
+    if (protein) nutritionObj['Protein'] = protein;
+    if (fat) nutritionObj['Fat'] = fat;
+    if (carbs) nutritionObj['Carbs'] = carbs;
+    const finalNutrition = Object.keys(nutritionObj).length > 0 ? JSON.stringify(nutritionObj) : '{}';
+
     try {
       await recipeService.updateRecipe(recipe.id, {
         title: JSON.stringify({ es: title, en: title }),
@@ -100,6 +128,7 @@ export default function EditRecipeModal({ recipe, onClose, onSuccess, t }: EditR
         servings: servings ? parseInt(String(servings)) : 4,
         category_country: country,
         image_url: imgUrl,
+        nutrition: finalNutrition
       });
 
       setToast({
@@ -304,6 +333,41 @@ export default function EditRecipeModal({ recipe, onClose, onSuccess, t }: EditR
                 value={instructions.join('\n')}
                 onChange={(e) => setInstructions(e.target.value.split('\n'))}
               ></textarea>
+            </div>
+          </div>
+
+          {/* SECCIÓN DE NUTRICIÓN */}
+          <div className="cr-group">
+            <label className="cr-label">{t.recipe?.tab_nutrition || 'Nutritional Information'} (Opcional)</label>
+            <div className="cr-row-2" style={{ gap: '1.6rem', marginTop: '1rem' }}>
+              <input
+                type="text"
+                className="cr-input"
+                placeholder="Calories (ej: 250 kcal)"
+                value={calories}
+                onChange={(e) => setCalories(e.target.value)}
+              />
+              <input
+                type="text"
+                className="cr-input"
+                placeholder="Protein (ej: 15g)"
+                value={protein}
+                onChange={(e) => setProtein(e.target.value)}
+              />
+              <input
+                type="text"
+                className="cr-input"
+                placeholder="Fat (ej: 5g)"
+                value={fat}
+                onChange={(e) => setFat(e.target.value)}
+              />
+              <input
+                type="text"
+                className="cr-input"
+                placeholder="Carbs (ej: 30g)"
+                value={carbs}
+                onChange={(e) => setCarbs(e.target.value)}
+              />
             </div>
           </div>
 
