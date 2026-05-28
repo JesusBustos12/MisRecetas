@@ -224,20 +224,24 @@ app.get('/api/recipes', async (req, res) => {
     }
 
     const applyTypeFilter = (q, p, typeVal) => {
-      const meatLand = 'pollo|carne|\\\\bres\\\\b|cerdo|beef|pork|cordero|steak|ternera|chuleta|tocino|bacon|jamon|jamón|salchicha|pepperoni|salami|pavo|turkey|duck|\\\\bpato\\\\b|meatball|albóndiga|brisket|wings|prosciutto|guanciale|pancetta|chorizo|carnitas|cochinita|pastrami|veal|lamb|ribs|costillas|ossobuco|bolognese|boloñesa|katsu|tonkotsu|sukiyaki|okonomiyaki|gyoza|omurice|tamales|pozole|menudo|barbacoa|hot dog|perrito|hamburguesa|burger|bistecca|fiorentina|meatloaf|wonton|jambalaya|ahogada|cocido|fabada|mapo tofu|jiaozi|dumpling|dim sum|mole poblano|nogada|gravy|carbonara|ragu|ragú|cochinillo|coq|boeuf|bourguignon|cassoulet|rogan josh|gai\\\\b|larb|moo\\\\b|moussaka|tlayuda|shabu|pastitsio|escargot|brodo';
-      const meatSea = 'pescado|fish|camaron|camarón|shrimp|marisco|seafood|salmon|salmón|atun|atún|pulpo|octopus|calamar|squid|bacalao|\\\\bcod\\\\b|tuna|lobster|langosta|crab|cangrejo|mussels|mejillones|clams|almejas|ostras|oysters|vieiras|scallops|prawns|gambas|langostinos|aguachile|ceviche|takoyaki|unagi|paella|anchoa|anchovy|pissaladiere|pissaladière|clam\\\\b|chowder|bouillabaisse|pla\\\\b|goong|nicoise|niçoise|chawanmushi|coquilles|saint-jacques';
+      // Regex for filtering based on content if category_type is inaccurate
+      const meatLand = 'pollo|carne|cerdo|beef|pork|cordero|steak|ternera|chuleta|tocino|bacon|jamon|jamón|salchicha|pepperoni|salami|pavo|turkey|duck|pato|meatball|albóndiga|brisket|wings|prosciutto|guanciale|pancetta|chorizo|carnitas|cochinita|pastrami|veal|lamb|ribs|costillas|ossobuco|bolognese|boloñesa|katsu|tonkotsu|sukiyaki|okonomiyaki|gyoza|omurice|tamales|pozole|menudo|barbacoa|hot dog|perrito|hamburguesa|burger|bistecca|fiorentina|meatloaf|wonton|jambalaya|ahogada|cocido|fabada|mapo tofu|jiaozi|dumpling|dim sum|mole poblano|nogada|gravy|carbonara|ragu|ragú|cochinillo|coq|boeuf|bourguignon|cassoulet|rogan josh|moussaka|tlayuda|shabu|pastitsio|escargot|brodo';
+      const meatSea = 'pescado|fish|camaron|camarón|shrimp|marisco|seafood|salmon|salmón|atun|atún|pulpo|octopus|calamar|squid|bacalao|tuna|lobster|langosta|crab|cangrejo|mussels|mejillones|clams|almejas|ostras|oysters|vieiras|scallops|prawns|gambas|langostinos|aguachile|ceviche|takoyaki|unagi|paella|anchoa|anchovy|pissaladiere|pissaladière|chowder|bouillabaisse|nicoise|niçoise|chawanmushi|coquilles|saint-jacques';
       const dessertTerms = 'postre|dulce|tarta|pastel|cake|dessert|chocolate|helado|flan|galleta|cookie|brownie|muffin|cupcake|mermelada|mousse|creme brulee|pudding|pudin|pay|pie|caramelo|tiramisu|tiramisú|gelato|cannoli|panettone|panna cotta|crepe|crêpe|macaron|baklava|dorayaki|mochi|profiteroles|churros|sfogliatella|zabaione|zeppole|loukoumades|mooncakes';
       
       const type = typeVal ? typeVal.toLowerCase() : '';
       
-      if (type === 'vegetarian' || type === 'vegetariano') {
-        q += ` AND r.category_type = 'vegetarian'`;
-      } else if (type === 'meat' || type === 'carnes' || type === 'carne') {
-        q += ` AND r.category_type = 'meat'`;
+      const contentCheck = (regex) => `(LOWER(r.title) REGEXP '${regex}' OR LOWER(CAST(r.ingredients AS CHAR)) REGEXP '${regex}')`;
+      const notContentCheck = (regex) => `(LOWER(r.title) NOT REGEXP '${regex}' AND LOWER(CAST(r.ingredients AS CHAR)) NOT REGEXP '${regex}')`;
+
+      if (type === 'meat' || type === 'carnes' || type === 'carne') {
+        q += ` AND (r.category_type = 'meat' OR ${contentCheck(meatLand)})`;
       } else if (type === 'seafood' || type === 'mariscos' || type === 'marisco') {
-        q += ` AND r.category_type = 'seafood'`;
+        q += ` AND (r.category_type = 'seafood' OR ${contentCheck(meatSea)})`;
       } else if (type === 'dessert' || type === 'desserts' || type === 'postres' || type === 'postre') {
-        q += ` AND r.category_type = 'desserts'`;
+        q += ` AND (r.category_type = 'desserts' OR ${contentCheck(dessertTerms)})`;
+      } else if (type === 'vegetarian' || type === 'vegetariano') {
+        q += ` AND (r.category_type = 'vegetarian' OR (${notContentCheck(meatLand)} AND ${notContentCheck(meatSea)} AND ${notContentCheck(dessertTerms)}))`;
       }
       return q;
     };
