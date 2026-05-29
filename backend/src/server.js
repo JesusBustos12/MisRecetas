@@ -224,10 +224,12 @@ app.get('/api/recipes', async (req, res) => {
     }
 
     const applyTypeFilter = (q, p, typeVal) => {
-      // Regex estricto con proteínas reales (sin nombres de platos ambiguos como 'tamales' o 'gyoza')
-      const meatLand = 'pollo|chicken|carne|cerdo|beef|pork|cordero|steak|ternera|chuleta|tocino|bacon|jamon|jamón|ham|salchicha|sausage|pepperoni|salami|pavo|turkey|duck|pato|meatball|albóndiga|brisket|wings|prosciutto|guanciale|pancetta|chorizo|carnitas|cochinita|pastrami|veal|lamb|ribs|costillas|ossobuco|bolognese|boloñesa|tonkotsu|menudo|barbacoa|hot dog|perrito|hamburguesa|burger|bistecca|meatloaf|cochinillo|coq|boeuf|escargot';
-      const meatSea = 'pescado|fish|camaron|camarón|shrimp|marisco|seafood|salmon|salmón|atun|atún|pulpo|octopus|calamar|squid|bacalao|lobster|langosta|crab|cangrejo|mussels|mejillones|clams|almejas|ostras|oysters|vieiras|scallops|prawns|gambas|langostinos|unagi|anchoa|anchovy';
-      const dessertTerms = 'postre|dessert|helado|flan|galleta|cookie|brownie|muffin|cupcake|mermelada|mousse|creme brulee|pudding|pudin|tiramisu|tiramisú|gelato|cannoli|panettone|panna cotta|macaron|baklava|dorayaki|mochi|profiteroles|churros|sfogliatella|zabaione|zeppole|loukoumades|mooncakes|bizcocho|cheesecake|tartaleta|gelatina|sorbete|sorbet';
+      // Regex con proteínas y nombres de platillos que son inherentemente de carne
+      const meatLand = 'pollo|chicken|carne|cerdo|beef|pork|cordero|steak|ternera|chuleta|tocino|bacon|jamon|jamón|ham|salchicha|sausage|pepperoni|salami|pavo|turkey|duck|pato|meatball|albóndiga|brisket|wings|prosciutto|guanciale|pancetta|chorizo|carnitas|cochinita|pastrami|veal|lamb|ribs|costillas|ossobuco|bolognese|boloñesa|tonkotsu|menudo|barbacoa|hot dog|perrito|hamburguesa|burger|bistecca|meatloaf|cochinillo|coq|boeuf|escargot|katsudon|shabu shabu|sukiyaki|yakisoba|nogada|torta ahogada|gravy|arancini|calzone|fabada|cocido|cassoulet|croque monsieur|rogan josh|kra pao|larb|pastitsio|jambalaya|wonton';
+      
+      const meatSea = 'pescado|fish|camaron|camarón|shrimp|marisco|seafood|salmon|salmón|atun|atún|pulpo|octopus|calamar|squid|bacalao|lobster|langosta|crab|cangrejo|mussels|mejillones|clams|almejas|ostras|oysters|vieiras|scallops|prawns|gambas|langostinos|unagi|anchoa|anchovy|takoyaki|aguachile|clam|bouillabaisse|paella';
+      
+      const dessertTerms = 'postre|dessert|helado|flan|galleta|cookie|brownie|muffin|cupcake|mermelada|mousse|creme brulee|pudding|pudin|tiramisu|tiramisú|gelato|cannoli|panettone|panna cotta|macaron|baklava|dorayaki|mochi|profiteroles|churros|sfogliatella|zabaione|zeppole|loukoumades|mooncakes|bizcocho|cheesecake|tartaleta|gelatina|sorbete|sorbet|pumpkin pie|crema catalana|tarta santiago|tarte tatin|crepes suzette|gulab jamun|mango lassi|mango sticky|galaktoboureko|pancakes|souffle|pan de muerto|alfajor|apple pie|crepe|crêpe';
       
       const type = typeVal ? typeVal.toLowerCase() : '';
       
@@ -239,7 +241,7 @@ app.get('/api/recipes', async (req, res) => {
       } else if (type === 'seafood' || type === 'mariscos' || type === 'marisco') {
         q += ` AND ${contentCheck(meatSea)}`;
       } else if (type === 'dessert' || type === 'desserts' || type === 'postres' || type === 'postre') {
-        q += ` AND ${contentCheck(dessertTerms)}`;
+        q += ` AND ${contentCheck(dessertTerms)} AND ${notContentCheck(meatLand)} AND ${notContentCheck(meatSea)}`;
       } else if (type === 'vegetarian' || type === 'vegetariano') {
         q += ` AND (${notContentCheck(meatLand)} AND ${notContentCheck(meatSea)} AND ${notContentCheck(dessertTerms)})`;
       }
