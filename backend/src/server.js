@@ -237,12 +237,16 @@ app.get('/api/recipes', async (req, res) => {
       const notContentCheck = (regex) => `(LOWER(r.title) NOT REGEXP '${regex}' AND LOWER(CAST(r.ingredients AS CHAR)) NOT REGEXP '${regex}' AND LOWER(r.image_url) NOT REGEXP '${regex}')`;
 
       if (type === 'meat' || type === 'carnes' || type === 'carne') {
-        q += ` AND ${contentCheck(meatLand)}`;
+        // Estricto: Tiene carne, pero NO mariscos ni postres
+        q += ` AND ${contentCheck(meatLand)} AND ${notContentCheck(meatSea)} AND ${notContentCheck(dessertTerms)}`;
       } else if (type === 'seafood' || type === 'mariscos' || type === 'marisco') {
-        q += ` AND ${contentCheck(meatSea)}`;
+        // Estricto: Tiene mariscos, pero NO carne ni postres
+        q += ` AND ${contentCheck(meatSea)} AND ${notContentCheck(meatLand)} AND ${notContentCheck(dessertTerms)}`;
       } else if (type === 'dessert' || type === 'desserts' || type === 'postres' || type === 'postre') {
+        // Estricto: Tiene postres, pero NO carne ni mariscos
         q += ` AND ${contentCheck(dessertTerms)} AND ${notContentCheck(meatLand)} AND ${notContentCheck(meatSea)}`;
       } else if (type === 'vegetarian' || type === 'vegetariano') {
+        // Estricto: NO tiene carne, NO tiene mariscos, NO tiene postres
         q += ` AND (${notContentCheck(meatLand)} AND ${notContentCheck(meatSea)} AND ${notContentCheck(dessertTerms)})`;
       }
       return q;
