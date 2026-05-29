@@ -256,7 +256,7 @@ app.get('/api/recipes', async (req, res) => {
       query = applyTypeFilter(query, params, type);
     }
 
-    query += ` ORDER BY r.created_at DESC LIMIT ? OFFSET ?`;
+    query += ` ORDER BY r.created_at DESC, r.id DESC LIMIT ? OFFSET ?`;
     params.push(parseInt(limit), parseInt(offset));
 
     if (!process.env.VERCEL) {
