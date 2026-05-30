@@ -2,16 +2,16 @@
 
 // Constantes globales para la aplicación
 export const COUNTRIES = [
-  { name: 'italy', img: '/recipes/italy/italy_pizza_margarita.png' },
-  { name: 'mexico', img: '/recipes/mexico/mexico_tacos_pastor.png' },
-  { name: 'usa', img: '/recipes/usa/usa_category.png' },
-  { name: 'japan', img: '/recipes/japan/japan_sushi_roll.png' },
-  { name: 'france', img: '/recipes/france/ratatouille.png' },
-  { name: 'spain', img: '/recipes/spain/spain_category.png' },
-  { name: 'india', img: '/recipes/india/butter_chicken.png' },
-  { name: 'china', img: '/recipes/china/peking_duck.png' },
-  { name: 'thailand', img: '/recipes/thailand/thailand_category.png' },
-  { name: 'greece', img: '/recipes/greece/greek_salad.png' },
+  { name: 'italy', img: '/recipes/italy/italy_pizza_margarita.webp' },
+  { name: 'mexico', img: '/recipes/mexico/mexico_tacos_pastor.webp' },
+  { name: 'usa', img: '/recipes/usa/usa_category.webp' },
+  { name: 'japan', img: '/recipes/japan/japan_sushi_roll.webp' },
+  { name: 'france', img: '/recipes/france/ratatouille.webp' },
+  { name: 'spain', img: '/recipes/spain/spain_category.webp' },
+  { name: 'india', img: '/recipes/india/butter_chicken.webp' },
+  { name: 'china', img: '/recipes/china/peking_duck.webp' },
+  { name: 'thailand', img: '/recipes/thailand/thailand_category.webp' },
+  { name: 'greece', img: '/recipes/greece/greek_salad.webp' },
 ];
 
 export const HERO_RECIPE_IDS = [
