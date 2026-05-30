@@ -1,0 +1,431 @@
+ID 1: Pollo Kung Pao Auténtico -> Trozos de pollo crujientes salteados al wok con chiles secos, cacahuates tostados y la clásica salsa agridulce-picante de Sichuan. Un plato explosivo con el adictivo sabor del málà.
+
+ID 2: Mapo Tofu Tradicional -> Cubos de tofu sedoso nadando en una salsa roja y ardiente de doubanjiang, carne de cerdo picada y pimienta de Sichuan que adormece la lengua. Comida reconfortante picante de Chengdu.
+
+ID 3: Pato Pekín Imperial -> Pato entero lacado con miel y especias, asado hasta obtener una piel ultra crujiente y carne tierna. Se trincha en la mesa y se sirve en crepas finas con cebollín y salsa hoisin.
+
+ID 4: Dumplings Jiaozi Artesanales -> Empanadillas chinas rellenas de verduras y cerdo, envueltas a mano con masa delgada. Se pueden hervir, freír o cocer al vapor — el dumpling perfecto para compartir.
+
+ID 5: Cerdo Agridulce Clásico -> Trozos de cerdo rebozados y fritos hasta quedar crujientes, bañados en una salsa agridulce vibrante con piña, pimiento y cebolla. El clásico cantonés que todos aman.
+
+ID 6: Fideos Lo Mein Tradicionales -> Fideos de trigo salteados al wok con vegetales crujientes, proteína y una salsa oscura de soya y aceite de sésamo. Street food chino en su máxima expresión.
+
+ID 7: Arroz Frito Yangzhou -> Arroz salteado al wok a fuego alto con huevo, camarones, jamón chino (char siu), chícharos y cebollín. El arroz frito original de la ciudad de Yangzhou.
+
+ID 8: Dim Sum de Cerdo (Siu Mai) -> Pequeñas cestas abiertas de masa wonton rellenas de cerdo y camarón, coronadas con una gamba. Cocidas al vapor en vaporera de bambú — el rey del dim sum cantonés.
+
+ID 10: Berenjenas Yu Xiang -> Berenjenas fritas y salteadas en la salsa Yu Xiang de Sichuan: una mezcla adictiva de pasta de chile, vinagre, soya y azúcar con cerdo picado. Sabor agridulce-picante irresistible.
+
+ID 11: Sinfonía de Dim Sum al Vapor -> Selección de bocados al vapor en vaporeras de bambú: har gow de camarón, siu mai de cerdo y dumplings de verduras. Una experiencia compartida de la tradición cantonesa.
+
+ID 12: Rollitos de Primavera Crujientes -> Rollitos rellenos de col, zanahoria y champiñones en juliana fina, envueltos en masa crujiente y fritos hasta quedar dorados y crocantes. Se sirven con salsa agridulce.
+
+ID 13: Rollitos Dulces de Primavera -> Rollitos de masa crujiente rellenos de plátano maduro con canela y azúcar morena. Fritos y espolvoreados con azúcar glass — el postre callejero asiático más adictivo.
+
+ID 15: Tonkotsu Ramen Auténtico -> Caldo de huesos de cerdo hervido durante horas hasta obtener un broth cremoso y lechoso. Servido con fideos ramen, chashu de cerdo, huevo marinado y nori.
+
+ID 16: Sushi Nigiri & Maki Premium -> Bol de arroz cubierto con tonkatsu — chuleta de cerdo empanizada y frita — bañada en salsa de huevo semicuajado. Comida reconfortante japonesa por excelencia.
+
+ID 17: Okonomiyaki Estilo Osaka -> Tortilla espesa de masa con col rallada, panceta de cerdo, salsa okonomiyaki, mayonesa japonesa, bonito danzante y alga aonori. El "pancake salado" de Osaka.
+
+ID 18: Gyoza (Empanadillas) -> Filete de salmón marinado en miso blanco durante 48 horas, asado al horno hasta que caramelice. La técnica que transforma el pescado en mantequilla.
+
+ID 19: Katsudon Tradicional -> Bol de arroz cubierto con ternera cortada en láminas finas, cocida en un caldo dulce de dashi, soya y mirin con cebolla caramelizada. Fast food japonés desde 1899.
+
+ID 20: Takoyaki Callejero -> Bolitas crujientes de masa rellenas de pulpo tierno, cubiertas con salsa takoyaki, mayonesa, bonito y aonori. El snack callejero icónico de Osaka.
+
+ID 21: Yakitori de Pollo -> Arroz al vinagre prensado a mano con una lámina de pescado fresco encima: atún, salmón, hamachi o camarón. La forma más pura del sushi, donde brilla el producto.
+
+ID 22: Onigiri de Salmón -> Fideos de trigo sarraceno servidos fríos sobre una estera de bambú con salsa tsuyu para mojar, wasabi y cebollín. Refrescante y elegante — ideal para el verano japonés.
+
+ID 23: Omurice Clásico -> Arroz frito con ketchup envuelto en una tortilla de huevo cremosa y sedosa. Se abre en la mesa para cubrir el arroz. Comfort food japonés con influencia occidental.
+
+ID 24: Tempura Mixto -> Vegetales y mariscos rebozados en una masa ligera y helada, fritos en aceite caliente hasta quedar crujientes y aireados. Se sirve con tentsuyu y daikon rallado.
+
+ID 26: Sashimi de Salmón y Atún -> Láminas ultrafinas de salmón y atún crudos de grado sashimi, servidas sobre hielo con daikon rallado, shiso y wasabi fresco. Frescura japonesa en su máxima expresión.
+
+ID 27: Katsu Curry Japonés -> Fideos finos de trigo sarraceno en un caldo caliente de dashi con soya y mirin, coronados con tempura de camarón crujiente. El bol reconfortante de Tokio.
+
+ID 28: Shabu-Shabu Hot Pot -> Chuleta de cerdo gruesa empanizada con panko y frita hasta dorar, servida con col rallada, arroz y salsa tonkatsu espesa. Crujiente por fuera, jugoso por dentro.
+
+ID 29: Sukiyaki Tradicional -> Curry japonés espeso y dulce con trozos de carne, papas y zanahoria, servido sobre arroz blanco. Más suave que el curry indio — comfort food de todo Japón.
+
+ID 30: Unagi Don (Anguila) -> Anguila de agua dulce fileteada, glaseada con tare de soya dulce y asada a la parrilla sobre carbón. Servida sobre arroz caliente con sansho. Delicadeza japonesa de verano.
+
+ID 31: Yakisoba con Vegetales -> Caldo claro de dashi con tofu sedoso, wakame y pasta de miso disuelta. La sopa que acompaña cada comida japonesa — umami en su forma más simple.
+
+ID 32: Pollo Karaage Frito -> Trozos de muslo de pollo marinados en soya, sake y jengibre, rebozados en fécula de papa y doble-fritos al estilo japonés. Extra crujientes con mayonesa Kewpie.
+
+ID 33: Matcha Mochi Premium -> Bolitas de mochi elástico hechas con harina de arroz glutinoso y polvo de matcha, rellenas de pasta dulce de frijol rojo (anko). Postre japonés verde y elegante.
+
+ID 34: Dorayaki de Anko -> Dos esponjosos pancakes japoneses rellenos de anko (pasta de frijol rojo dulce). El snack favorito del gato cósmico Doraemon — dulce, suave y reconfortante.
+
+ID 35: Tacos al Pastor -> Tortillas de maíz rellenas de carne al pastor marinada en achiote y chiles, asada en trompo vertical. Servidos con piña, cilantro, cebolla y salsa verde.
+
+ID 36: Mole Poblano -> Tortillas de maíz bañadas en salsa de chile guajillo y ancho, rellenas de pollo deshebrado, cubiertas con crema, queso fresco y cebolla. Tradición mexicana en cada capa.
+
+ID 37: Enchiladas Suizas -> Masa de maíz nixtamalizado rellena de diversos guisados, envuelta en hoja de plátano o maíz y cocida al vapor. El regalo envuelto de la cocina mexicana.
+
+ID 38: Pozole Rojo -> Chile poblano relleno de picadillo de carne con frutas, capeado en huevo batido y frito. Bañado en salsa de nogada (nuez de castilla) y granada. Los colores de México.
+
+ID 39: Cochinita Pibil -> Salsa espesa y compleja hecha con más de 20 ingredientes: chiles secos, chocolate, especias y semillas. Bañando piezas de pollo o guajolote — el plato barroco de Puebla.
+
+ID 40: Chiles en Nogada -> Trozos de cerdo cocidos lentamente en su propia grasa con naranja y especias hasta quedar dorados y crujientes. El rey de la taquería mexicana.
+
+ID 41: Tamales Oaxaqueños -> Tortilla de maíz crujiente cubierta con frijoles refritos, lechuga, pollo o res deshebrada, crema, queso y salsa. El antojito mexicano más versátil.
+
+ID 42: Carnitas Michoacanas -> Caldo rojo intenso con chiles guajillo y ancho, res cocida hasta deshebrarse, garbanzos, col, rábano y orégano. La sopa que cura todo en México.
+
+ID 43: Sopa de Tortilla -> Masa de maíz gruesa pellizcada con bordes levantados, cubierta con frijoles, crema, lechuga, queso y salsa. Antojito callejero del centro de México.
+
+ID 44: Guacamole Tradicional -> Aguacate machacado con trozos, mezclado con tomate, cebolla, chile serrano, cilantro y limón. Preparado en molcajete — la salsa mexicana más famosa del mundo.
+
+ID 45: Arroz con Leche -> Arroz cocido lentamente en leche con canela, vainilla y azúcar hasta quedar cremoso y perfumado. Postre casero mexicano que sabe a hogar y abuela.
+
+ID 46: Flan de Cajeta -> Flan cremoso de huevo bañado en cajeta (dulce de leche de cabra) con caramelo dorado. La textura sedosa y el sabor acaramelado lo hacen irresistible.
+
+ID 47: Pan de Muerto -> Pan dulce esponjoso con forma de domo y decoración en forma de huesos, aromatizado con azahar y anís. Se prepara para honrar a los difuntos el 1 y 2 de noviembre.
+
+ID 48: Chilaquiles Rojos -> Tortillas crujientes cubiertas con frijoles negros, tinga de pollo en chipotle, crema, queso Oaxaca y aguacate. Capas de sabor mexicano apiladas.
+
+ID 49: Aguachile Verde -> Camarones crudos "cocidos" en jugo de limón con chile serrano, pepino, cebolla morada y cilantro. Picante, ácido y refrescante — ceviche sinaloense con actitud.
+
+ID 50: Esquites con Tuétano -> La hamburguesa americana clásica: carne de res jugosa a la parrilla, queso cheddar derretido, lechuga, tomate, cebolla y pickles en un pan brioche tostado.
+
+ID 51: Gorditas de Chicharrón -> Costillas de cerdo ahumadas lentamente durante horas con madera de nogal, bañadas en salsa BBQ dulce y ahumada. La carne se despega del hueso con un tirón.
+
+ID 52: Sopes de Chorizo -> Tiras de pechuga de res (brisket) ahumada durante 12-14 horas a baja temperatura hasta que la grasa se derrite y la carne se corta como mantequilla. BBQ texano puro.
+
+ID 53: Tacos de Suadero -> Costillas de cerdo cocidas a fuego bajo y lento, glaseadas con salsa barbacoa espesa, dulce y con un toque de humo. Se caen del hueso — así de tiernas.
+
+ID 54: Torta Ahogada -> Langosta de Maine entera, hervida en agua de mar y servida con mantequilla clarificada derretida, mazorca de maíz y papas rojas. Lujo sencillo de Nueva Inglaterra.
+
+ID 55: Smashburger con Bacon -> Hot dog estilo Chicago: salchicha de res en pan de semillas de amapola con mostaza, relish verde, cebolla, tomate, pepinillo, sal de apio y chile deportivo. ¡Nunca con ketchup!
+
+ID 56: Fried Chicken Sureño -> Pollo marinado en buttermilk y empanizado con harina especiada, frito dos veces hasta quedar extra crujiente por fuera y jugosísimo por dentro. El soul food del sur americano.
+
+ID 57: Texas Smoked Brisket -> Sándwich de cerdo deshebrado ahumado lentamente, bañado en salsa vinagreta de Carolina y coronado con coleslaw cremoso. Servido en pan brioche suave.
+
+ID 58: Mac & Cheese Horneado -> Pasta de codo horneada en una salsa cremosa de tres quesos (cheddar, gruyère y parmesano) con costra dorada de pan rallado. El comfort food americano definitivo.
+
+ID 59: NYC Cheesecake -> Cheesecake denso y cremoso de queso crema sobre base de galleta graham, horneado en baño maría. La textura aterciopelada que hizo famosa a Nueva York.
+
+ID 61: Buffalo Wings -> Filete de salmón salvaje de Alaska asado al horno con limón y eneldo, con piel crujiente y centro rosado. Elegante y lleno de omega-3.
+
+ID 62: Philly Cheesesteak -> Sopa espesa de almejas con papas, tocino, cebolla y crema en un bol de pan sourdough. El clásico que calienta los inviernos de Nueva Inglaterra desde 1800.
+
+ID 65: Pulled Pork Sandwich -> Sándwich de carne en conserva (corned beef) y chucrut con queso suizo derretido y aderezo ruso, prensado en pan de centeno tostado. El deli de Nueva York.
+
+ID 67: Maine Lobster Roll -> Panecillo tostado en mantequilla relleno de carne de langosta de Maine fresca, mezclada con un toque de mayonesa, limón y cebollín. Lujo simple del noreste americano.
+
+ID 69: Biscuits & Gravy -> Rebanada generosa de apple pie con manzanas Granny Smith especiadas con canela y nuez moscada, entre dos capas de masa mantequillosa y dorada. América en un plato.
+
+ID 71: Pumpkin Pie -> Pay de calabaza especiada con canela, nuez moscada y jengibre sobre base de masa crujiente. El postre obligatorio de Thanksgiving en cada mesa americana.
+
+ID 73: New England Clam Bake -> Festín costero cocinado en un hoyo en la playa con algas: langosta, almejas, mejillones, maíz, papas y salchichas. La tradición veraniega de Nueva Inglaterra.
+
+ID 76: Pizza Margherita -> La pizza en su forma más pura: masa fina y elástica con salsa de tomate San Marzano, mozzarella di bufala fresca y albahaca. Horneada en horno de leña a 450°C por 90 segundos.
+
+ID 77: Risotto Porcini -> Arroz arborio tostado y cocido lentamente con caldo, vino blanco y hongos porcini secos rehidratados. Terminado con mantequilla y parmesano (mantecatura) para una textura sedosa.
+
+ID 78: Tiramisú -> Capas de bizcochos savoiardi empapados en espresso, alternadas con crema de mascarpone, yemas y claras batidas. Espolvoreado con cacao amargo. El postre italiano sin horno más famoso.
+
+ID 79: Gnocchi al Pesto -> Ñoquis suaves de papa hechos a mano, servidos con pesto genovés fresco de albahaca, piñones, ajo, parmesano y aceite de oliva. Ligereza italiana en cada bocado.
+
+ID 80: Gelato Artesanal -> Helado italiano artesanal con base de crema pastelera (leche, yemas y azúcar), churneado lentamente para una textura densa y cremosa. Más intenso que el ice cream americano.
+
+ID 81: Cannoli Siciliani -> Tubos de masa crujiente frita rellenos de crema de ricotta dulce con chips de chocolate y pistachos. El postre siciliano que cruje al morderlo.
+
+ID 82: Focaccia de Romero -> Pan plano italiano esponjoso y aceitoso, con hoyuelos que atrapan aceite de oliva y sal gruesa, aromatizado con romero fresco. Crujiente por fuera, suave como una nube por dentro.
+
+ID 83: Ossobuco a la Milanesa -> Corte de caña de ternera con hueso y tuétano, estofado lentamente en vino blanco, caldo y gremolata de limón. El tuétano se come con cuchara — eso es Milán.
+
+ID 84: Spaghetti Carbonara -> Spaghetti con salsa de yemas de huevo, pecorino romano, guanciale crujiente y pimienta negra. Sin crema — la cremosidad viene solo del huevo y el queso. Roma auténtica.
+
+ID 85: Arancini Siciliani -> Bolas de arroz rellenas de ragú y mozzarella, empanizadas y fritas hasta dorar. Crujientes por fuera, con un corazón de queso derretido. Street food siciliano.
+
+ID 86: Bruschetta Pomodoro -> Rebanadas de pan rústico tostado frotadas con ajo, cubiertas con tomates frescos picados, albahaca, aceite de oliva virgen extra y sal. La simplicidad toscana perfecta.
+
+ID 87: Cacio e Pepe -> Pasta con solo dos ingredientes de sabor: pecorino romano y pimienta negra recién molida. La grasa del queso y el agua de pasta crean una salsa cremosa. Minimalismo romano.
+
+ID 88: Calzone Relleno -> Masa de pizza plegada sobre sí misma rellena de mozzarella, ricotta, salami y albahaca, sellada y horneada hasta que se infle dorada. La pizza cerrada napolitana.
+
+ID 89: Ensalada Griega (Horiatiki) -> Ensalada griega clásica con tomate, pepino, cebolla morada, aceitunas kalamata y un bloque de queso feta, aliñada solo con aceite de oliva y orégano. Mediterráneo puro.
+
+ID 90: Carpaccio di Manzo -> Láminas ultrafinas de res cruda de primera calidad, bañadas en aceite de oliva y limón, con escamas de parmesano y rúcula. Elegancia italiana en su forma más minimalista.
+
+ID 91: Fettuccine Alfredo -> Fettuccine bañados en una salsa cremosa de mantequilla y parmesano. Inventado en Roma en 1914 por Alfredo di Lelio — simple, rico e irresistiblemente indulgente.
+
+ID 92: Melanzane Parmigiana -> Capas de berenjena frita, salsa de tomate casera y mozzarella gratinada al horno. El plato vegetariano del sur de Italia que rivaliza con cualquier lasaña.
+
+ID 93: Sopa Minestrone -> Sopa rústica italiana cargada de verduras de temporada, pasta corta, frijoles y caldo de tomate. Cada región y cada abuela tiene su propia versión.
+
+ID 94: Panettone Navideño -> Pan dulce alto y esponjoso con frutas confitadas y pasas, fermentado con levadura natural durante horas. El regalo navideño milanés que perfuma toda la casa.
+
+ID 95: Panna Cotta -> Crema de nata cocida con azúcar y vainilla, cuajada con gelatina hasta obtener una textura temblorosa y sedosa. Se desmolda y baña en coulis de frutos rojos.
+
+ID 96: Polenta con Ragú -> Polenta de maíz cocida lentamente hasta quedar cremosa, servida con un ragú de carne lento y parmesano. Comida de montaña del norte de Italia.
+
+ID 97: Pollo Cacciatore -> Pollo troceado dorado en sartén y cocido en salsa de tomate con aceitunas, alcaparras, vino blanco y romero. El guiso de pollo rústico de la campiña italiana.
+
+ID 98: Prosciutto e Melone -> Láminas de prosciutto crudo curado envolviendo gajos de melón cantalupo fresco. El antipasto italiano más elegante — dulce y salado en armonía perfecta.
+
+ID 99: Paella Valenciana -> Arroz cocinado en paellera ancha con pollo, conejo, judía verde, garrofón, azafrán y el preciado socarrat del fondo. El plato que define Valencia y toda España.
+
+ID 100: Tortilla de Patatas -> Tortilla gruesa y jugosa de huevos y patatas confitadas en aceite de oliva. Cuajada por fuera, ligeramente cremosa por dentro. La tapa española por excelencia — con o sin cebolla.
+
+ID 101: Gazpacho Andaluz -> Sopa fría de tomates maduros, pimiento, pepino, ajo, vinagre de Jerez y aceite de oliva, triturada hasta quedar sedosa. Andalucía embotellada — se sirve helada en verano.
+
+ID 102: Pulpo a la Gallega -> Pulpo cocido y cortado en rodajas gruesas, servido sobre papas cocidas con pimentón de la Vera, sal gruesa y aceite de oliva virgen extra. Galicia en un plato de madera.
+
+ID 103: Patatas Bravas -> Cubos de papa frita crujientes bañados en salsa brava picante (tomate con pimentón y cayena) y alioli. La tapa madrileña que nunca falta en el bar.
+
+ID 104: Jamón Ibérico -> Jamón ibérico de bellota cortado a mano en láminas finas y translúcidas, servido en tabla con picos de pan, aceite de oliva y tomate. El rey de la charcutería española.
+
+ID 105: Gambas al Ajillo -> Gambas enteras salteadas en abundante aceite de oliva con láminas de ajo dorado y guindilla picante. Se sirven chisporroteando en cazuela de barro con pan para mojar.
+
+ID 106: Fabada Asturiana -> Guiso asturiano de judiones blancos gigantes con chorizo, morcilla, lacón y panceta, cocido lentamente hasta que los frijoles absorben todo el sabor del cerdo.
+
+ID 108: Crema Catalana -> Crema de yemas con leche, azúcar, canela y ralladura de limón, cuajada y cubierta con una capa de azúcar caramelizado con hierro candente. La prima catalana del crème brûlée.
+
+ID 109: Churros con Chocolate -> Masa de agua y harina extruida en forma de estrella y frita hasta dorar, rebozada en azúcar con canela. Se mojan en chocolate espeso y caliente. Desayuno y merienda española.
+
+ID 110: Tarta de Santiago -> Tarta densa de almendras molidas sin harina de trigo, perfumada con limón y canela. Decorada con la Cruz de Santiago en azúcar glass. Postre medieval gallego.
+
+ID 111: Cocido Madrileño -> Guiso madrileño de garbanzos con múltiples carnes (pollo, ternera, tocino, chorizo, morcilla), verduras y fideos. Se sirve en tres vuelcos: sopa, verduras y carnes.
+
+ID 112: Cochinillo Asado -> Lechón entero asado lentamente en horno de leña hasta que la piel queda crujiente como cristal y la carne tierna. Se parte con un plato — tradición segoviana.
+
+ID 113: Bacalao al Pil-Pil -> Lomo de bacalao confitado a baja temperatura en aceite de oliva, que al agitar la cazuela suelta su gelatina y crea una salsa emulsionada brillante. Técnica vasca ancestral.
+
+ID 114: Escalivada Catalana -> Verduras mediterráneas (berenjena, pimiento, cebolla, tomate) asadas enteras al horno o brasas, peladas y aliñadas con aceite de oliva y ajo. Sencillez catalana pura.
+
+ID 115: Pimientos de Padrón -> Pimientos verdes pequeños de Padrón fritos en aceite de oliva caliente y espolvoreados con sal gruesa. Unos pican, otros no — la ruleta rusa gallega más deliciosa.
+
+ID 116: Arroz Negro -> Arroz teñido de negro intenso con tinta de calamar, cocido con calamares, gambas, ajo y caldo de pescado. Dramático en apariencia, profundo en sabor a mar.
+
+ID 117: Calamares a la Romana -> Anillos de calamar rebozados en harina y fritos en aceite de oliva caliente hasta quedar crujientes y dorados. Servidos con limón — la tapa de bar español más universal.
+
+ID 118: Salmorejo Cordobés -> Crema fría de tomate, pan duro, ajo, aceite de oliva y vinagre de Jerez, más espesa que el gazpacho. Coronada con jamón ibérico y huevo duro. Joya cordobesa.
+
+ID 119: Ratatouille Provenzal -> Guiso provenzal de verduras mediterráneas (berenjena, calabacín, pimiento, tomate) cocidas lentamente en aceite de oliva con hierbas de Provenza. La huerta francesa en un plato.
+
+ID 120: Quiche Lorraine -> Tarta salada de masa quebrada rellena de una mezcla cremosa de huevos, crema, queso gruyère y lardones de tocino ahumado. Lorraine compartida en cada brunch.
+
+ID 121: Coq au Vin -> Pollo troceado cocido lentamente en vino tinto de Borgoña con champiñones, cebollitas perla, tocino y un bouquet garni. El guiso campestre francés por excelencia.
+
+ID 123: Boeuf Bourguignon -> Estofado de res cocido durante horas en vino tinto de Borgoña con zanahorias, cebollitas perla y champiñones. La carne se deshace con el tenedor — alta cocina de origen campesino.
+
+ID 124: Bouillabaisse Marsellesa -> Sopa de pescadores marsellesa con múltiples pescados y mariscos cocidos en caldo de tomate azafranado, servida con rouille (mayonesa de ajo y azafrán) y crutones. El mar Mediterráneo en un bol.
+
+ID 125: Confit de Canard -> Muslo de pato curado en sal y especias, cocido lentamente en su propia grasa hasta quedar ultra tierno. La piel se crispa al final. Preservación francesa convertida en lujo.
+
+ID 126: Croissants de Mantequilla -> Masa laminada con mantequilla francesa doblada en 27 capas, fermentada y horneada hasta explotar en capas doradas y mantequillosas. La cumbre de la panadería francesa.
+
+ID 127: Macarons de Colores -> Galletas de merengue de almendras con superficie lisa y "pies" rugosos, unidas con ganache de chocolate o buttercream. Colores vibrantes y textura crujiente-chiclosa.
+
+ID 128: Mousse de Chocolate -> Chocolate negro derretido y combinado con claras batidas a punto de nieve, sin harina ni crema. Textura aireada, intensa y aterciopelada — el postre francés de 3 ingredientes.
+
+ID 129: Crème Brûlée -> Crema de vainilla horneada a baja temperatura hasta cuajar, cubierta con una capa de azúcar caramelizado al soplete. Al romper la costra suena un crack satisfactorio.
+
+ID 130: Cassoulet Languedoc -> Guiso rústico de Languedoc con judiones blancos, salchicha de Toulouse, confit de pato y pan rallado gratinado. Se cocina lento y se gratina varias veces. Comida de invierno francesa.
+
+ID 131: Steak Frites -> Filete grueso de carne de res sellado en sartén de hierro con mantequilla y tomillo, acompañado de papas fritas dobles (blanqueadas y fritas). La brasserie parisina clásica.
+
+ID 132: Coquilles Saint-Jacques -> Vieiras doradas en mantequilla con costra caramelizada, servidas en su concha con salsa de vino blanco, crema y gruyère gratinado. Elegancia de la costa bretona.
+
+ID 133: Croque Monsieur -> Sándwich de pan de molde con jamón y queso gruyère, cubierto con bechamel y gratinado al horno. El croque monsieur: el sándwich caliente más indulgente de Francia.
+
+ID 134: Tarte Tatin -> Tarta invertida de manzanas caramelizadas en mantequilla y azúcar, cubierta con masa que al voltear queda abajo. Creada por accidente en el Hotel Tatin — error delicioso.
+
+ID 135: Profiteroles con Chocolate -> Bolitas de masa choux hueca horneada, rellenas de helado de vainilla y bañadas en ganache de chocolate caliente. Contraste de temperaturas y texturas en cada bocado.
+
+ID 136: Crêpes Suzette -> Crêpes finas flameadas en salsa de mantequilla, azúcar, jugo de naranja y Grand Marnier encendido en la mesa. El espectáculo dulce de la cocina francesa.
+
+ID 137: Escargots de Bourgogne -> Caracoles de Borgoña al horno en sus conchas, rellenos de mantequilla de ajo, perejil y chalota. Se extraen con pinza y tenedor especial — ritual gastronómico francés.
+
+ID 138: Butter Chicken (Murgh Makhani) -> Pollo en salsa cremosa de tomate con mantequilla, crema y especias suaves como garam masala, cardamomo y fenogreco. El plato que conquistó el mundo desde los tandoors de Delhi.
+
+ID 139: Chicken Tikka Masala -> Trozos de pollo marinados en yogur y especias, asados al tandoor y servidos en una salsa cremosa de tomate con garam masala. Nacido en Glasgow, perfeccionado globalmente.
+
+ID 140: Biryani de Cordero -> Arroz basmati perfumado con azafrán y especias enteras, cocinado en capas con cordero tierno marinado en yogur. Sellado y cocido al dum hasta que los aromas se fusionan.
+
+ID 141: Palak Paneer -> Cubos de paneer (queso indio) flotando en una salsa vibrante de espinacas frescas con ajo, jengibre y garam masala. Vegetariano y lleno de sabor.
+
+ID 142: Samosas de Vegetales -> Triángulos de masa crujiente rellenos de papa especiada con chícharos, cilantro y comino, fritos hasta dorar. El snack callejero indio que se come con chutney de menta.
+
+ID 143: Gulab Jamun -> Bolitas de leche en polvo y harina fritas, empapadas en almíbar perfumado con cardamomo y agua de rosas. Dulces, esponjosos y empapados — el postre indio más festivo.
+
+ID 144: Mango Lassi -> Bebida refrescante de yogur batido con pulpa de mango fresco, azúcar y un toque de cardamomo. Cremoso, dulce y tropical — el smoothie indio perfecto para el calor.
+
+ID 145: Pollo Tandoori -> Pollo marinado en yogur, pasta de chile de Cachemira, jengibre y garam masala, asado en horno tandoor a 480°C. Exterior carbonizado, interior jugoso y rojo brillante.
+
+ID 146: Rogan Josh -> Cordero cocido lentamente en salsa de yogur con chiles de Cachemira, cardamomo, clavo y canela. Guiso aromático y profundo de la cocina mogol de Cachemira.
+
+ID 147: Chana Masala -> Garbanzos cocidos en salsa espesa de tomate con cebolla caramelizada, jengibre, ajo y especias como amchur y garam masala. Proteína vegetal con sabor intenso del norte de India.
+
+ID 148: Dal Makhani -> Lentejas negras (urad dal) cocidas toda la noche a fuego lento con mantequilla, crema, tomate y especias. Cremosa y ahumada — la reina de los dals del Punjab.
+
+ID 149: Aloo Gobi -> Coliflor y papa cocidas en seco con cúrcuma, comino, cilantro y chile verde. Un clásico vegetariano del norte de India — sencillo, reconfortante y aromático.
+
+ID 150: Pad Thai Tradicional -> Fideos de arroz salteados al wok con salsa de tamarindo, salsa de pescado, azúcar de palma, huevo, brotes de soya, cacahuates y camarones secos. El plato nacional tailandés.
+
+ID 151: Curry Verde Tailandés -> Curry de pasta verde hecho con chiles verdes, hierba limón, galanga y albahaca tailandesa en leche de coco. Picante, fragante y herbáceo — Tailandia en un bol.
+
+ID 153: Mango Sticky Rice -> Arroz glutinoso cocido al vapor e impregnado en leche de coco dulce, servido con láminas de mango maduro y semillas de sésamo. El postre tailandés más icónico.
+
+ID 154: Som Tum (Papaya Salad) -> Ensalada tailandesa de papaya verde rallada machacada en mortero con tomates cherry, ejotes, cacahuates, chile, limón y salsa de pescado. Crujiente, ácida y explosivamente picante.
+
+ID 155: Massaman Curry -> Curry tailandés dulce y aromático con carne de res, papas, cacahuates tostados, leche de coco y pasta massaman con cardamomo, canela y clavo. Influencia persa en Tailandia.
+
+ID 156: Satay de Pollo -> Brochetas de pollo marinado en leche de coco, cúrcuma y hierba limón, asadas sobre carbón y servidas con salsa de cacahuate cremosa. Street food tailandés adictivo.
+
+ID 157: Pad Kra Pao -> Carne picada de cerdo salteada al wok con chiles, ajo, albahaca santa (holy basil) y salsa de pescado, coronada con huevo frito. Comida callejera picante de Bangkok.
+
+ID 158: Khao Pad (Arroz Frito) -> Arroz frito tailandés al wok con huevo, ajo, salsa de pescado, azúcar y un toque de limón. Simple pero perfecto con camarones, cangrejo o pollo. Cada puesto lo hace diferente.
+
+ID 159: Tom Kha Gai -> Sopa cremosa de leche de coco con galanga, hierba limón, hojas de lima kaffir, champiñones y pollo. Aromática y reconfortante — la hermana suave del tom yum.
+
+ID 160: Khao Soi -> Sopa de fideos de huevo del norte de Tailandia con curry cremoso de coco, pollo tierno y fideos crujientes encima. Influencia birmana en Chiang Mai — dulce, picante y cremoso.
+
+ID 161: Pad See Ew -> Fideos de arroz anchos salteados al wok con salsa de soya oscura, huevo, brócoli chino y cerdo. Ahumados por el wok a fuego alto — el wok hei tailandés.
+
+ID 162: Larb Moo -> Ensalada picante tailandesa de carne de cerdo picada con menta, cilantro, chalota, chile molido, limón y arroz tostado en polvo. Refrescante y explosivamente picante.
+
+ID 163: Pla Goong -> Ensalada tailandesa de camarones con hierba limón fresca picada, chalotas, menta, chile y jugo de limón. Ácida, picante y fragante — frescura marina del golfo de Tailandia.
+
+ID 164: Pollo con Anacardos -> Pollo salteado al wok con anacardos tostados, chile seco, cebolla y salsa de ostión. Crujiente, dulce-salado y ligeramente picante — street food thai rápido y satisfactorio.
+
+ID 165: Moussaka Tradicional -> Capas de berenjena frita, carne picada de cordero con tomate y canela, coronadas con bechamel espesa y gratinada. El lasagna griego — sustancioso y reconfortante.
+
+ID 167: Gyros de Pollo -> Tiras de pollo marinado en yogur, orégano y limón, asadas al grill y servidas en pan pita con tzatziki, tomate, cebolla y papas fritas. Street food de Atenas.
+
+ID 168: Baklava de Pistacho -> Capas de masa filo crujiente con nueces y pistachos triturados, bañadas en almíbar perfumado con miel y agua de rosas. Dulce, crujiente y pegajoso — herencia otomana.
+
+ID 169: Spanakopita -> Triángulos de masa filo crujiente rellenos de espinacas frescas, queso feta desmenuzado, eneldo y cebolleta. Dorados al horno — el snack griego de toda abuela.
+
+ID 170: Dolmades (Hojas de Parra) -> Hojas de parra rellenas de arroz con hierbas, piñones, menta y eneldo, cocidas lentamente con limón y aceite de oliva. Bocados mediterráneos envueltos en verde.
+
+ID 171: Salsa Tzatziki -> Salsa griega espesa de yogur colado con pepino rallado, ajo, eneldo, aceite de oliva y limón. Fresca y cremosa — acompaña desde gyros hasta verduras asadas.
+
+ID 172: Pastitsio -> Pasta tubular horneada con ragú de carne de res y canela, cubierta con bechamel espesa y gratinada. El primo griego de la lasaña — reconfortante y especiado.
+
+ID 173: Galaktoboureko -> Pastel griego de crema de sémola con ralladura de naranja y vainilla, envuelta en capas de masa filo mantequillosa. Bañada en almíbar de limón. Textura crujiente-cremosa.
+
+ID 174: Keftedes (Albóndigas) -> Albóndigas griegas de carne de cordero y res con menta, orégano, cebolla y pan remojado, fritas hasta dorar. Servidas con tzatziki frío — contraste delicioso.
+
+ID 175: Queso Saganaki -> Bloque grueso de queso graviera o kasseri rebozado en harina y frito en aceite de oliva caliente hasta que el exterior es crujiente y el interior fundido. Se flamea con ouzo y limón.
+
+ID 176: Gemista (Vegetales Rellenos) -> Tomates y pimientos vaciados y rellenos de arroz con hierbas, piñones y pasas, horneados lentamente en aceite de oliva. Plato de verano griego colorido y aromático.
+
+ID 177: Fasolada (Sopa de Frijol) -> Sopa griega rústica de judiones blancos con tomate, zanahoria, apio y aceite de oliva. El plato nacional griego — sencillo y reconfortante. Mejor al día siguiente.
+
+ID 178: Youvetsi de Ternera -> Ternera cocida lentamente en salsa de tomate con canela y hierbas, con pasta orzo horneada hasta que absorbe todos los jugos. Guiso griego de olla a horno.
+
+ID 181: Camarones a la Diabla -> Camarones salteados en salsa de chiles guajillo, morita y de árbol bien picante con ajo y tomate. Picor intenso que arde y satisface — mariscos con fuego mexicano.
+
+ID 182: Ceviche de Pescado -> Cubos de pescado blanco fresco "cocidos" en jugo de limón con cebolla morada, chile, cilantro y camote. Ácido, fresco y marino — la costa peruana en un plato.
+
+ID 183: Barbacoa de Borrego -> Borrego cocido durante horas en pencas de maguey o envuelto en hojas, hasta que la carne se deshebra con los dedos. Jugosa y perfumada — la fiesta mexicana del domingo.
+
+ID 184: Flautas de Pollo -> Tortillas de maíz rellenas de pollo deshebrado, enrolladas apretadas y fritas hasta quedar crujientes. Servidas con crema, lechuga, salsa verde y queso fresco.
+
+ID 185: Huevos Rancheros -> Huevos estrellados sobre tortilla de maíz frita, bañados en salsa roja o verde picante, con frijoles refritos al lado. El desayuno mexicano que te levanta de cualquier cruda.
+
+ID 186: Menudo Tradicional -> Caldo rojo intenso de estómago de res (pancita) cocido durante horas con chiles guajillo y ancho, orégano y cebolla. Se come con limón, orégano y chile. Medicina mexicana.
+
+ID 187: Quesadillas de Comal -> Tortillas de maíz hechas a mano rellenas de queso Oaxaca derretido, cocinadas en comal hasta quedar crujientes. Se comen con epazote, flor de calabaza y salsa.
+
+ID 188: Tlayuda Oaxaqueña -> Tortilla de maíz gigante y crujiente de Oaxaca cubierta con frijoles negros, asiento (grasa de cerdo), tasajo o cecina, quesillo, lechuga y salsa. La pizza mexicana oaxaqueña.
+
+ID 189: Lasaña Boloñesa -> Capas de pasta ancha con ragú boloñés de carne cocido durante horas, bechamel cremosa y parmesano gratinado. El plato dominical de Emilia-Romaña.
+
+ID 193: Bistecca Fiorentina -> Chuletón de ternera chianina de 4cm de grosor, asado sobre brasas de encina. Sellado por fuera, rojo por dentro, sazonado solo con sal, pimienta y aceite de oliva. Florencia en un plato.
+
+ID 194: Ravioli de Ricota -> Pasta fresca rellena de ricotta cremosa, espinacas y nuez moscada, servida con salsa de mantequilla y salvia dorada. La delicadeza de la pasta rellena italiana.
+
+ID 200: Affogato al Caffè -> Una bola de gelato de vainilla "ahogada" en un shot de espresso caliente. El postre-café italiano de dos ingredientes que se prepara en 10 segundos.
+
+ID 201: Biscotti Cantucci -> Galletas italianas crujientes horneadas dos veces con almendras enteras, perfectas para mojar en Vin Santo. Originarias de Prato, Toscana — duran semanas sin perder crocancia.
+
+ID 202: Ensalada Caprese -> Rodajas de tomate fresco, mozzarella di bufala y hojas de albahaca, rociadas con aceite de oliva virgen extra y sal. Los colores de la bandera italiana en un plato.
+
+ID 203: Panzanella -> Ensalada toscana de pan duro remojado en vinagre, mezclado con tomates maduros, pepino, cebolla roja, albahaca y aceite de oliva. La forma toscana de no desperdiciar pan.
+
+ID 205: Sfogliatella -> Masa hojaladrada en forma de concha rellena de crema de ricotta con naranja confitada y canela. Pastelería napolitana de capas crujientes y centro cremoso.
+
+ID 206: Spaghetti Bolognese -> El plato de pasta más famoso del mundo: spaghetti con ragú boloñés de carne cocido a fuego lento con tomate, zanahoria, apio y vino tinto. Sabor profundo y reconfortante.
+
+ID 207: Tortellini in Brodo -> Pasta rellena en forma de anillo con carne y parmesano, servida en un caldo de pollo y res cristalino y perfumado. El abrazo italiano en forma de sopa.
+
+ID 208: Veal Milanese -> Milanesa de ternera empanizada en pan rallado fino, frita en mantequilla clarificada hasta dorar. Crujiente, dorada y jugosa — el orgullo de la cocina milanesa.
+
+ID 209: Zabaione -> Crema caliente y espumosa de yemas batidas con azúcar y vino Marsala. Postre decadente que se prepara en 5 minutos y se sirve en copas elegantes.
+
+ID 210: Zeppole di San Giuseppe -> Bolitas de masa choux fritas, rellenas de crema pastelera y espolvoreadas con azúcar glass. El dulce napolitano del Día de San José (19 de marzo).
+
+ID 214: Costillas BBQ Ahumadas -> Costillas de cerdo ahumadas lentamente a baja temperatura con madera de roble o nogal, barnizadas con salsa BBQ dulce y ahumada. Se caen del hueso — tradición sureña.
+
+ID 218: Clam Chowder de Nueva Inglaterra -> Sopa cremosa de almejas con papa, tocino, cebolla y crema espesa en un bol de pan sourdough. El plato que calienta los inviernos de Nueva Inglaterra desde el siglo XVIII.
+
+ID 219: Jambalaya de Luisiana -> Arroz cajún cocido en un solo sartén con salchicha andouille, camarones, pollo y la "santísima trinidad" de Louisiana: apio, pimiento y cebolla. Sabor del bayou.
+
+ID 221: Hot Dog Estilo NY -> Salchicha de res en pan suave cubierta con mostaza amarilla, chucrut, salsa de tomate y cebolla crujiente frita. El hot dog neoyorquino de los carritos callejeros.
+
+ID 223: Pancakes con Mantequilla -> Pancakes esponjosos y gruesos apilados con mantequilla derretida y maple syrup real, acompañados de tocino crujiente. El desayuno americano clásico de los diners.
+
+ID 224: Ensalada Cobb -> Ensalada abundante con pollo, tocino crujiente, huevo duro, aguacate, queso azul, tomate y maíz, todo en filas ordenadas sobre lechuga. Nacida en el Hollywood Brown Derby en 1937.
+
+ID 225: Meatloaf Tradicional -> Pan de carne molida mezclada con cebolla, pan rallado, huevo y ketchup, horneado en forma de barra con glaseado de ketchup dulce. Comfort food americano que sabe a hogar.
+
+ID 227: Apple Pie Clásico -> Pay de manzanas Granny Smith especiadas con canela y nuez moscada entre dos capas de masa mantequillosa y dorada. El postre que define a América — mejor con helado de vainilla.
+
+ID 229: Brownies de Chocolate -> Brownies densos y fudgy de chocolate oscuro con centro húmedo y costra crackelada. No son pastel — son chocolate concentrado en forma cuadrada. Irresistibles tibios.
+
+ID 230: Pan de Maíz (Cornbread) -> Pan de maíz esponjoso y ligeramente dulce, horneado en sartén de hierro hasta que la costra queda dorada y crujiente. Acompañante del BBQ y del chili del sur americano.
+
+ID 242: Udon Tradicional -> Fideos gruesos y elásticos de trigo en un caldo dashi caliente con soya y mirin, coronados con cebollín, kamaboko y tempura de camarón. Reconfortante bol japonés.
+
+ID 243: Sopa de Miso -> Caldo claro de dashi con pasta de miso disuelta, tofu suave, alga wakame y cebollín. La sopa que acompaña cada comida japonesa — umami puro en cada sorbo.
+
+ID 248: Tamagoyaki -> Tortilla japonesa enrollada en múltiples capas finas, ligeramente dulce con dashi y mirin. Suave y esponjosa — presente en cada bento box y como sushi de desayuno.
+
+ID 249: Chawanmushi -> Flan salado japonés cocido al vapor con caldo dashi, huevo y pequeños trozos de pollo, camarón y seta shiitake. Textura sedosa y temblorosa — elegancia al vapor.
+
+ID 254: Croquetas de Jamón Ibérico -> Croquetas de bechamel ultracremosa con cubitos de jamón ibérico de bellota, doble empanizado y fritas hasta la perfección. El interior debe fluir al morderlas. Premium español.
+
+ID 256: Cordero Asado -> Pierna o paletilla de cordero asada lentamente con ajo, romero y vino blanco hasta que la carne se cae del hueso. Aroma que llena la casa — la mesa dominical castellana.
+
+ID 258: Pescado Frito Malagueño -> Boquerones, chanquetes y calamares enharinados y fritos en aceite de oliva muy caliente, servidos en cucurucho de papel con limón. El chiringuito malagueño en su máxima expresión.
+
+ID 261: Soupe à l'Oignon -> Cebolla caramelizada largo rato en mantequilla, con caldo de res, vino blanco y gratinada con pan crujiente y queso gruyère derretido. La sopa que calienta el alma de París.
+
+ID 263: Salade Niçoise -> Ensalada de Niza con atún, huevo duro, judías verdes, aceitunas niçoise, anchoas, tomate y papa, aliñada con vinagreta de aceite de oliva. La Côte d'Azur en un plato.
+
+ID 264: Soufflé de Fromage -> Suflé esponjoso y aireado de queso gruyère que sube dramáticamente en el horno. Dorado por fuera, cremoso y tembloroso por dentro. Debe servirse inmediatamente.
+
+ID 265: Pissaladière -> Coca plana de masa de pan cubierta con cebolla caramelizada lentamente, anchoas y aceitunas negras de Niza. La "pizza" provenzal del sur de Francia.
+
+ID 269: Soufflé au Chocolat -> Suflé de chocolate negro que sube ligero y aireado en el horno, con exterior firme y corazón fundido e intenso. Se desinfla en minutos — hay que comerlo al instante.
+
+ID 281: Sopa Wonton -> Caldo cristalino de pollo con dumplings de masa fina rellenos de cerdo y camarones picados con jengibre. Los wontons flotan como nubes — sopa reconfortante cantonesa.
+
+ID 283: Mooncakes -> Pasteles redondos de masa con relleno de pasta de semilla de loto o yema de huevo salada, decorados con sellos en relieve. Se comen durante el Festival de Medio Otoño bajo la luna llena.
+
+ID 284: Tom Yum Goong -> Sopa caliente y ácida con camarones, galanga, hierba limón, hojas de lima kaffir, chiles y jugo de limón. Picante, ácida y fragante — la sopa tailandesa que despierta los sentidos.
+
+ID 289: Panang Curry -> Curry tailandés espeso y cremoso con pasta de panang, leche de coco, hojas de lima kaffir y cacahuates. Más suave que el curry rojo, con un dulzor aromático profundo.
+
+ID 290: Tod Mun Pla -> Pasteles de pescado tailandeses moldeados a mano con pasta de curry rojo, ejotes picados y hojas de lima kaffir, fritos hasta dorar. Elásticos y aromáticos con salsa de pepino.
+
+ID 291: Yam Nua -> Ensalada tailandesa de carne de res a la parrilla cortada fina, con menta, cilantro, cebolla, chile, limón y arroz tostado. Fresca, picante y llena de texturas.
+
+ID 292: Souvlaki de Cerdo -> Brochetas de cerdo marinado en limón, orégano y aceite de oliva, asadas sobre brasas. Servidas con pita caliente, tzatziki y ensalada. El asado callejero griego.
+
+ID 297: Kleftiko de Cordero -> Pierna de cordero envuelta en papel pergamino con ajo, orégano y limón, cocida lentamente durante horas hasta que la carne se deshace. "Cordero del ladrón" — estilo cretense.
+
+ID 299: Taramosalata -> Dip griego cremoso de huevas de pescado (tarama) batidas con pan remojado, aceite de oliva, jugo de limón y cebolla. Rosado, suave y con profundo sabor a mar.
+
+ID 302: Loukoumades -> Bolitas de masa frita esponjosas bañadas en miel caliente y espolvoreadas con canela y nueces trituradas. Los donuts griegos — crujientes por fuera, aireados por dentro.
+
+ID 30002: Galletas de limón -> Galletas mantequillosas con ralladura de limón fresco y un glaseado ácido de limón. Crujientes por fuera, suaves por dentro — el equilibrio perfecto entre dulce y cítrico.
