@@ -225,7 +225,7 @@ app.get('/api/recipes', async (req, res) => {
 
     const applyTypeFilter = (q, p, typeVal) => {
       // Regex con proteínas y nombres de platillos que son inherentemente de carne
-      const meatLand = 'pollo|chicken|carne|cerdo|beef|pork|cordero|steak|ternera|chuleta|tocino|bacon|jamon|jamón|salchicha|sausage|salami|pavo|turkey|duck|pato|meatball|albóndiga|brisket|wings|prosciutto|guanciale|pancetta|chorizo|carnitas|cochinita|pastrami|veal|lamb|ribs|costillas|ossobuco|bolognese|boloñesa|tonkotsu|menudo|barbacoa|hot.dog|perrito|hamburguesa|burger|bistecca|meatloaf|cochinillo|boeuf|escargot|katsudon|shabu|sukiyaki|yakisoba|nogada|torta.ahogada|gravy|calzone|fabada|cassoulet|croque.monsieur|rogan.josh|kra.pao|larb|pastitsio|jambalaya|wonton|tuetano|tuétano|ragú|brodo|soupe.oignon|yam.nua|tom.kha|khao.soi|pad.see.ew|moussaka|carbonara|quiche|gyoza|omurice|katsu|coq.au|chicharron|chicharrón|suadero';
+      const meatLand = 'massaman|pollo|chicken|carne|cerdo|beef|pork|cordero|steak|ternera|chuleta|tocino|bacon|jamon|jamón|salchicha|sausage|salami|pavo|turkey|duck|pato|meatball|albóndiga|brisket|wings|prosciutto|guanciale|pancetta|chorizo|carnitas|cochinita|pastrami|veal|lamb|ribs|costillas|ossobuco|bolognese|boloñesa|tonkotsu|menudo|barbacoa|hot.dog|perrito|hamburguesa|burger|bistecca|meatloaf|cochinillo|boeuf|escargot|katsudon|shabu|sukiyaki|yakisoba|nogada|torta.ahogada|gravy|calzone|fabada|cassoulet|croque.monsieur|rogan.josh|kra.pao|larb|pastitsio|jambalaya|wonton|tuetano|tuétano|ragú|brodo|soupe.oignon|yam.nua|tom.kha|khao.soi|pad.see.ew|moussaka|carbonara|quiche|gyoza|omurice|katsu|coq.au|chicharron|chicharrón|suadero';
       
       const meatSea = 'pescado|fish|camaron|camarón|shrimp|marisco|seafood|salmon|salmón|atun|atún|pulpo|octopus|calamar|squid|bacalao|lobster|langosta|crab|cangrejo|mussels|mejillones|clams|almejas|ostras|oysters|vieiras|scallops|prawns|gambas|langostinos|unagi|anchoa|anchovy|takoyaki|aguachile|clam|bouillabaisse|paella|arroz.negro|som.tum|pla.goong|miso|chawanmushi|nicoise|niçoise|pissaladiere|tod.mun.pla|taramosalata|coquilles|okonomiyaki|khao.pad';
       
@@ -236,18 +236,25 @@ app.get('/api/recipes', async (req, res) => {
       const contentCheck = (regex) => `(LOWER(r.title) REGEXP '${regex}' OR LOWER(CAST(r.ingredients AS CHAR)) REGEXP '${regex}' OR LOWER(r.image_url) REGEXP '${regex}')`;
       const notContentCheck = (regex) => `(LOWER(r.title) NOT REGEXP '${regex}' AND LOWER(CAST(r.ingredients AS CHAR)) NOT REGEXP '${regex}' AND LOWER(r.image_url) NOT REGEXP '${regex}')`;
 
+      // Excepciones explícitas para forzar recetas a Vegetariano y sacarlas de Carnes
+      const vegOverride = 'carpaccio di manzo|esquites con tu|soupe.*oignon|tortellini in brodo|ensalada caprese';
+      // Excepciones explícitas para forzar recetas a Carnes y sacarlas de Mariscos
+      const meatOverride = 'panang curry|wonton|lo mein|tom kha|kra pao|satay|larb|khao soi';
+      // Excepciones explícitas para sacar recetas de Mariscos (que son postres)
+      const dessertOverride = 'galletas de lim';
+
       if (type === 'meat' || type === 'carnes' || type === 'carne') {
-        // Carnes: Tiene carne, pero NO mariscos
-        q += ` AND ${contentCheck(meatLand)} AND ${notContentCheck(meatSea)} AND ${notContentCheck(dessertTerms)}`;
+        // Carnes: (Tiene carne, NO mariscos, NO postres, NO vegOverride) O está forzada en meatOverride
+        q += ` AND ((${contentCheck(meatLand)} AND ${notContentCheck(meatSea)} AND ${notContentCheck(dessertTerms)} AND LOWER(r.title) NOT REGEXP '${vegOverride}') OR LOWER(r.title) REGEXP '${meatOverride}')`;
       } else if (type === 'seafood' || type === 'mariscos' || type === 'marisco') {
-        // Mariscos: Tiene mariscos (incluso si lleva carne, ej. mar y tierra)
-        q += ` AND ${contentCheck(meatSea)}`;
+        // Mariscos: Tiene mariscos, pero NO está forzada en meatOverride ni en dessertOverride
+        q += ` AND ${contentCheck(meatSea)} AND LOWER(r.title) NOT REGEXP '${meatOverride}' AND LOWER(r.title) NOT REGEXP '${dessertOverride}'`;
       } else if (type === 'dessert' || type === 'desserts' || type === 'postres' || type === 'postre') {
         // Postres: Toda receta dulce
         q += ` AND ${contentCheck(dessertTerms)}`;
       } else if (type === 'vegetarian' || type === 'vegetariano') {
-        // Vegetariano: NO tiene carne, NO tiene mariscos, NO es postre (para separar platos principales dulces)
-        q += ` AND ${notContentCheck(meatLand)} AND ${notContentCheck(meatSea)} AND ${notContentCheck(dessertTerms)}`;
+        // Vegetariano: Sin carne ni mariscos (excluyendo postres), O es una de las excepciones forzadas
+        q += ` AND ((${notContentCheck(meatLand)} AND ${notContentCheck(meatSea)} AND ${notContentCheck(dessertTerms)}) OR LOWER(r.title) REGEXP '${vegOverride}')`;
       }
       return q;
     };
