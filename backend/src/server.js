@@ -237,13 +237,13 @@ app.get('/api/recipes', async (req, res) => {
       const notContentCheck = (regex) => `(LOWER(r.title) NOT REGEXP '${regex}' AND LOWER(CAST(r.ingredients AS CHAR)) NOT REGEXP '${regex}' AND LOWER(r.image_url) NOT REGEXP '${regex}')`;
 
       // Excepciones explícitas para forzar recetas a Vegetariano y sacarlas de Carnes
-      const vegOverride = 'carpaccio di manzo|esquites con tu|soupe.*oignon|tortellini in brodo|ensalada caprese';
+      const vegOverride = 'carpaccio di manzo|esquites con tu|soupe.*oignon|tortellini in brodo|ensalada caprese|mac & cheese';
       // Excepciones explícitas para forzar recetas a Carnes y sacarlas de Mariscos
       const meatOverride = 'panang curry|wonton|lo mein|tom kha|kra pao|satay|larb|khao soi|dim sum|okonomiyaki';
       // Excepciones explícitas para sacar recetas de Mariscos (que son postres) y meterlas a Postres
       const dessertOverride = 'galletas de lim|rollitos dulces';
       // Excepciones explícitas para sacar recetas de Postres (que se cuelan por ingredientes como 'galleta')
-      const notDessertOverride = 'clam chowder';
+      const notDessertOverride = 'clam chowder|mac & cheese';
 
       if (type === 'meat' || type === 'carnes' || type === 'carne') {
         // Carnes: (Tiene carne, NO mariscos, NO postres, NO vegOverride) O está forzada en meatOverride
