@@ -183,7 +183,7 @@ app.get('/api/recipes', async (req, res) => {
       words.forEach(word => {
         const expanded = [word, ...(synMap[word] || [])];
         const group = expanded.map(() =>
-          `(LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR LOWER(CAST(r.ingredients AS CHAR)) LIKE CAST(? AS BINARY) OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)`
+          `(LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)`
         ).join(' OR ');
 
         queryAdd += ` AND (${group})`;
@@ -281,7 +281,11 @@ app.get('/api/recipes', async (req, res) => {
 
   } catch (error) {
     console.error('Error fetching recipes:', error);
-    res.status(500).json({ error: 'Error al obtener las recetas' });
+    if (!process.env.VERCEL) {
+      const fs = await import('fs');
+      fs.appendFileSync('query_log.txt', `\n--- ERROR ---\nMESSAGE: ${error.message}\nSTACK: ${error.stack}\n`);
+    }
+    res.status(500).json({ error: 'Error al obtener las recetas', details: error.message });
   }
 });
 
