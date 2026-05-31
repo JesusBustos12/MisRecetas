@@ -239,7 +239,7 @@ app.get('/api/recipes', async (req, res) => {
       // Excepciones explícitas para forzar recetas a Vegetariano y sacarlas de Carnes
       const vegOverride = 'carpaccio di manzo|esquites con tu|soupe.*oignon|tortellini in brodo|ensalada caprese';
       // Excepciones explícitas para forzar recetas a Carnes y sacarlas de Mariscos
-      const meatOverride = 'panang curry|wonton|lo mein|tom kha|kra pao|satay|larb|khao soi|dim sum';
+      const meatOverride = 'panang curry|wonton|lo mein|tom kha|kra pao|satay|larb|khao soi|dim sum|okonomiyaki';
       // Excepciones explícitas para sacar recetas de Mariscos (que son postres) y meterlas a Postres
       const dessertOverride = 'galletas de lim|rollitos dulces';
 
