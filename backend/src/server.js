@@ -242,6 +242,8 @@ app.get('/api/recipes', async (req, res) => {
       const meatOverride = 'panang curry|wonton|lo mein|tom kha|kra pao|satay|larb|khao soi|dim sum|okonomiyaki';
       // Excepciones explícitas para sacar recetas de Mariscos (que son postres) y meterlas a Postres
       const dessertOverride = 'galletas de lim|rollitos dulces';
+      // Excepciones explícitas para sacar recetas de Postres (que se cuelan por ingredientes como 'galleta')
+      const notDessertOverride = 'clam chowder';
 
       if (type === 'meat' || type === 'carnes' || type === 'carne') {
         // Carnes: (Tiene carne, NO mariscos, NO postres, NO vegOverride) O está forzada en meatOverride
@@ -250,8 +252,8 @@ app.get('/api/recipes', async (req, res) => {
         // Mariscos: Tiene mariscos, pero NO está forzada en meatOverride ni en dessertOverride
         q += ` AND ${contentCheck(meatSea)} AND LOWER(r.title) NOT REGEXP '${meatOverride}' AND LOWER(r.title) NOT REGEXP '${dessertOverride}'`;
       } else if (type === 'dessert' || type === 'desserts' || type === 'postres' || type === 'postre') {
-        // Postres: Toda receta dulce, O está forzada en dessertOverride
-        q += ` AND (${contentCheck(dessertTerms)} OR LOWER(r.title) REGEXP '${dessertOverride}')`;
+        // Postres: Toda receta dulce, O está forzada en dessertOverride, PERO NO en notDessertOverride
+        q += ` AND ((${contentCheck(dessertTerms)} OR LOWER(r.title) REGEXP '${dessertOverride}') AND LOWER(r.title) NOT REGEXP '${notDessertOverride}')`;
       } else if (type === 'vegetarian' || type === 'vegetariano') {
         // Vegetariano: Sin carne ni mariscos (excluyendo postres), O es una de las excepciones forzadas
         q += ` AND ((${notContentCheck(meatLand)} AND ${notContentCheck(meatSea)} AND ${notContentCheck(dessertTerms)}) OR LOWER(r.title) REGEXP '${vegOverride}')`;
