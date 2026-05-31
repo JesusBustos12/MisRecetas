@@ -170,18 +170,30 @@ export default function Navbar() {
             {/* Componente de Autocompletado Predictivo */}
             {showSuggestions && suggestions.length > 0 && (
               <div className="autocomplete-dropdown">
-                {suggestions.map((s) => (
-                  <div
-                    key={s.id}
-                    className="autocomplete-item"
-                    onClick={() => {
-                      setSearchTerm(s.title);
-                      setShowSuggestions(false);
-                    }}
-                  >
-                    <span>🔍</span> {s.title}
-                  </div>
-                ))}
+                {suggestions.map((s) => {
+                  let displayTitle = s.title;
+                  if (typeof displayTitle === 'string' && displayTitle.startsWith('{')) {
+                    try {
+                      const p = JSON.parse(displayTitle);
+                      displayTitle = p[language] || p['es'] || p['en'] || '';
+                    } catch (e) {}
+                  } else if (typeof displayTitle === 'object' && displayTitle !== null) {
+                    displayTitle = displayTitle[language] || displayTitle['es'] || displayTitle['en'] || '';
+                  }
+
+                  return (
+                    <div
+                      key={s.id}
+                      className="autocomplete-item"
+                      onClick={() => {
+                        setSearchTerm(displayTitle);
+                        setShowSuggestions(false);
+                      }}
+                    >
+                      <span>🔍</span> {displayTitle}
+                    </div>
+                  );
+                })}
               </div>
             )}
           </div>
