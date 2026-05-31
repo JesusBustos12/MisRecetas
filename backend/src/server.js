@@ -183,7 +183,7 @@ app.get('/api/recipes', async (req, res) => {
       words.forEach(word => {
         const expanded = [word, ...(synMap[word] || [])];
         const group = expanded.map(() =>
-          `(LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)`
+          `(LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR LOWER(CAST(r.ingredients AS CHAR)) LIKE CAST(? AS BINARY) OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)`
         ).join(' OR ');
 
         queryAdd += ` AND (${group})`;

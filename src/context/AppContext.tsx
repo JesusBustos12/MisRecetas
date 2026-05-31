@@ -37,9 +37,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [activeCategory, setActiveCategory] = useState('');
   const [previousCategory, setPreviousCategory] = useState('');
 
-  const setSearchTerm = (rawTerm: string) => {
-    const term = rawTerm ? rawTerm.charAt(0).toUpperCase() + rawTerm.slice(1).toLowerCase() : '';
-    
+  const setSearchTerm = (term: string) => {
     if (term.length > 0 && searchTerm === '') {
       // Al empezar a buscar, guardamos la categoría actual y pasamos a "Todas"
       setPreviousCategory(activeCategory);
