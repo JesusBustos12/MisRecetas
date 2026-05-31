@@ -21,6 +21,8 @@ interface AppContextProps {
   setSearchTerm: (term: string) => void;
   activeCategory: string;
   setActiveCategory: (cat: string) => void;
+  activeSidebarFilter: string;
+  setActiveSidebarFilter: (filter: string) => void;
   isAuthLoaded: boolean;
 }
 
@@ -36,17 +38,18 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [searchTerm, setSearchTermState] = useState('');
   const [activeCategory, setActiveCategory] = useState('');
   const [previousCategory, setPreviousCategory] = useState('');
+  
+  const [activeSidebarFilter, setActiveSidebarFilter] = useState('');
+  const [previousSidebarFilter, setPreviousSidebarFilter] = useState('');
 
   const setSearchTerm = (rawTerm: string) => {
     const term = rawTerm ? rawTerm.charAt(0).toUpperCase() + rawTerm.slice(1).toLowerCase() : '';
     
     if (term.length > 0 && searchTerm === '') {
-      // Al empezar a buscar, guardamos la categoría actual y pasamos a "Todas"
-      setPreviousCategory(activeCategory);
-      setActiveCategory('Todas');
+      setPreviousSidebarFilter(activeSidebarFilter);
+      setActiveSidebarFilter('all');
     } else if (term === '' && searchTerm !== '') {
-      // Al borrar la búsqueda, regresamos a la categoría anterior
-      setActiveCategory(previousCategory || 'Todas');
+      setActiveSidebarFilter(previousSidebarFilter || '');
     }
     setSearchTermState(term);
   };
@@ -151,6 +154,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         setSearchTerm,
         activeCategory,
         setActiveCategory,
+        activeSidebarFilter,
+        setActiveSidebarFilter,
         isAuthLoaded,
       }}
     >

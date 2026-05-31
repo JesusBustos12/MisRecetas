@@ -3,12 +3,11 @@ import { recipeService } from '@/services/recipeService';
 import { useAppContext } from '@/context/AppContext';
 
 export function useRecipes() {
-  const { searchTerm, activeCategory } = useAppContext();
+  const { searchTerm, activeCategory, activeSidebarFilter, setActiveSidebarFilter } = useAppContext();
   const [recipes, setRecipes] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-  const [activeSidebarFilter, setActiveSidebarFilter] = useState('');
 
   useEffect(() => {
     setPage(1);

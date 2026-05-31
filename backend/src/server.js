@@ -176,20 +176,29 @@ app.get('/api/recipes', async (req, res) => {
       });
 
       // 2. Dividir en palabras y expandir
-      const words = searchTerm.toLowerCase().trim().split(/\s+/).filter(w => w.length > 1);
+      // Usamos el término crudo para ingredientes (respeta mayúsculas), y lowercased para el resto
+      const rawWords = searchTerm.trim().split(/\s+/).filter(w => w.length > 1);
+      
       let queryAdd = '';
-      const paramsAdd = [];
+      let paramsAdd = [];
 
-      words.forEach(word => {
+      rawWords.forEach(rawWord => {
+        const word = rawWord.toLowerCase();
         const expanded = [word, ...(synMap[word] || [])];
-        const group = expanded.map(() =>
-          `(LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)`
-        ).join(' OR ');
+        
+        // Para cada sinónimo, necesitamos pasar los valores
+        const group = expanded.map((synWord) => {
+          return `(LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)`;
+        }).join(' OR ');
 
         queryAdd += ` AND (${group})`;
-        expanded.forEach(e => {
-          const val = `%${e}%`;
-          paramsAdd.push(val, val, val, val, val);
+
+        expanded.forEach((synWord) => {
+          const lowerVal = `%${synWord}%`;
+          const rawSyn = synWord === word ? rawWord : synWord.charAt(0).toUpperCase() + synWord.slice(1);
+          const rawVal = `%${rawSyn}%`;
+          // push lowerVal para title y desc, rawVal para ingredients, lowerVal para country y type
+          paramsAdd.push(lowerVal, lowerVal, rawVal, lowerVal, lowerVal);
         });
       });
 
