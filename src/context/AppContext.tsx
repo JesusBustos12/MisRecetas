@@ -33,8 +33,21 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [userProfile, setUserProfile] = useState<any>(null);
   const [isAuthLoaded, setIsAuthLoaded] = useState(false);
 
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTermState] = useState('');
   const [activeCategory, setActiveCategory] = useState('');
+  const [previousCategory, setPreviousCategory] = useState('');
+
+  const setSearchTerm = (term: string) => {
+    if (term.length > 0 && searchTerm === '') {
+      // Al empezar a buscar, guardamos la categoría actual y pasamos a "Todas"
+      setPreviousCategory(activeCategory);
+      setActiveCategory('Todas');
+    } else if (term === '' && searchTerm !== '') {
+      // Al borrar la búsqueda, regresamos a la categoría anterior
+      setActiveCategory(previousCategory || 'Todas');
+    }
+    setSearchTermState(term);
+  };
   const router = useRouter();
   const pathname = usePathname();
 
