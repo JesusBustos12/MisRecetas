@@ -147,6 +147,26 @@ app.post('/api/auth/login', loginLimiter, async (req, res) => {
     res.status(500).json({ error: 'Error interno durante el inicio de sesión' });
   }
 });
+// Endpoint para autocompletado
+app.get('/api/recipes/autocomplete', async (req, res) => {
+  try {
+    const { search } = req.query;
+    if (!search || search.length < 2) {
+      return res.json([]);
+    }
+    
+    // Búsqueda simple en título para autocompletado rápido
+    const searchTerm = `%${search.toLowerCase()}%`;
+    const [rows] = await pool.query(
+      `SELECT id, title FROM recipes WHERE LOWER(title) LIKE ? LIMIT 5`,
+      [searchTerm]
+    );
+    res.json(rows);
+  } catch (error) {
+    console.error('Error in autocomplete:', error);
+    res.status(500).json({ error: 'Error autocomplete' });
+  }
+});
 
 // Endpoint para obtener todas las recetas (con filtrado, búsqueda y paginación)
 app.get('/api/recipes', async (req, res) => {
@@ -167,38 +187,37 @@ app.get('/api/recipes', async (req, res) => {
       if (!searchTerm) return { queryAdd: '', paramsAdd: [] };
 
       // 1. Obtener sinónimos
-      const [synRows] = await pool.query('SELECT word, synonym FROM synonyms');
-      const synMap = {};
-      synRows.forEach(row => {
-        const w = row.word.toLowerCase();
-        if (!synMap[w]) synMap[w] = [];
-        synMap[w].push(row.synonym.toLowerCase());
-      });
+      let synMap = {};
+      try {
+        const [synRows] = await pool.query('SELECT word, synonym FROM synonyms');
+        synRows.forEach(row => {
+          const w = row.word.toLowerCase();
+          if (!synMap[w]) synMap[w] = [];
+          synMap[w].push(row.synonym.toLowerCase());
+        });
+      } catch (e) {
+        console.error('Error fetching synonyms:', e);
+      }
 
       // 2. Dividir en palabras y expandir
-      // Usamos el término crudo para ingredientes (respeta mayúsculas), y lowercased para el resto
-      const rawWords = searchTerm.trim().split(/\s+/).filter(w => w.length > 1);
+      const words = searchTerm.toLowerCase().trim().split(/\s+/).filter(w => w.length > 1);
       
       let queryAdd = '';
       let paramsAdd = [];
 
-      rawWords.forEach(rawWord => {
-        const word = rawWord.toLowerCase();
+      words.forEach(word => {
         const expanded = [word, ...(synMap[word] || [])];
         
-        // Para cada sinónimo, necesitamos pasar los valores
-        const group = expanded.map((synWord) => {
-          return `(LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ? OR CAST(r.ingredients AS CHAR) LIKE ? OR LOWER(r.category_country) LIKE ? OR LOWER(r.category_type) LIKE ?)`;
+        // Buscamos estrictamente en el título y la descripción
+        const group = expanded.map(() => {
+          return `(LOWER(r.title) LIKE ? OR LOWER(r.description) LIKE ?)`;
         }).join(' OR ');
 
         queryAdd += ` AND (${group})`;
 
         expanded.forEach((synWord) => {
           const lowerVal = `%${synWord}%`;
-          const rawSyn = synWord === word ? rawWord : synWord.charAt(0).toUpperCase() + synWord.slice(1);
-          const rawVal = `%${rawSyn}%`;
-          // push lowerVal para title y desc, rawVal para ingredients, lowerVal para country y type
-          paramsAdd.push(lowerVal, lowerVal, rawVal, lowerVal, lowerVal);
+          paramsAdd.push(lowerVal, lowerVal);
         });
       });
 
