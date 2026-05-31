@@ -229,7 +229,7 @@ app.get('/api/recipes', async (req, res) => {
       
       const meatSea = 'pescado|fish|camaron|camarón|shrimp|marisco|seafood|salmon|salmón|atun|atún|pulpo|octopus|calamar|squid|bacalao|lobster|langosta|crab|cangrejo|mussels|mejillones|clams|almejas|ostras|oysters|vieiras|scallops|prawns|gambas|langostinos|unagi|anchoa|anchovy|takoyaki|aguachile|clam|bouillabaisse|paella|arroz.negro|pla.goong|miso|chawanmushi|nicoise|niçoise|pissaladiere|tod.mun.pla|taramosalata|coquilles|okonomiyaki|khao.pad';
       
-      const dessertTerms = 'postre|dessert|helado|flan|galleta|cookie|brownie|muffin|cupcake|mermelada|mousse|creme.brulee|pudding|pudin|tiramisu|tiramisú|gelato|cannoli|panettone|panna.cotta|macaron|baklava|dorayaki|mochi|profiteroles|churros|sfogliatella|zabaione|zeppole|loukoumades|mooncakes|bizcocho|cheesecake|tartaleta|gelatina|sorbete|sorbet|pumpkin.pie|crema.catalana|tarta.santiago|tarte.tatin|crepes.suzette|gulab.jamun|mango.lassi|mango.sticky|galaktoboureko|pancakes|souffle|pan.de.muerto|alfajor|apple.pie|crepe|crêpe|croissant|affogato|biscotti';
+      const dessertTerms = 'postre|dessert|helado|flan|galleta|cookie|brownie|muffin|cupcake|mermelada|mousse|creme.brulee|pudding|pudin|tiramisu|tiramisú|gelato|cannoli|panettone|panna.cotta|macaron|baklava|dorayaki|mochi|profiteroles|churros|sfogliatella|zabaione|zeppole|loukoumades|mooncakes|bizcocho|cheesecake|tartaleta|gelatina|sorbete|sorbet|pumpkin.pie|crema.catalana|tarta.santiago|tarte.tatin|crepes.suzette|gulab.jamun|mango.lassi|mango.sticky|galaktoboureko|pancakes|souffle|pan.de.muerto|alfajor|apple.pie|crepe|crêpe|croissant|affogato|biscotti|rollitos dulces';
       
       const type = typeVal ? typeVal.toLowerCase() : '';
       
