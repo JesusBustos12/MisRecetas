@@ -126,7 +126,7 @@ export default function RecipeCard({
         style={{ textDecoration: 'none', color: 'inherit', flex: 1, display: 'flex' }}
       >
         <div className="rc-img-wrapper">
-          <img src={displayImageUrl} alt={title} />
+          <img src={displayImageUrl} alt={title} loading="lazy" />
           {/* Boton Favoritos superpuesto a la imagen (click stop propagation para no ir al link) */}
           <button
             className="rc-heart-btn"

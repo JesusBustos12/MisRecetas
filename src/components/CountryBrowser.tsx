@@ -21,7 +21,7 @@ export default function CountryBrowser() {
               setActiveSidebarFilter('all');
             }}
           >
-            <img src={country.img} alt={country.name} className="country-item-img" />
+            <img src={country.img} alt={country.name} className="country-item-img" loading="lazy" />
             <span className="country-item-name">{t.countries?.[country.name] || country.name}</span>
           </div>
         ))}

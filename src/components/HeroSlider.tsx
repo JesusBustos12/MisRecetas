@@ -84,6 +84,7 @@ export default function HeroSlider() {
           }
           alt={currentHero.title?.[language] || 'Recipe'}
           className="hero-bg"
+          loading="lazy"
         />
         <div className="hero-overlay"></div>
         <div className="hero-content">
