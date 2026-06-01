@@ -177,7 +177,7 @@ app.get('/api/recipes', async (req, res) => {
     let query = `
       SELECT 
         r.id, r.title, r.description, r.category_country, r.category_type, 
-        r.image_url, r.prep_time, r.servings, r.is_private, r.created_at, r.user_id,
+        r.image_url, r.prep_time, r.servings, r.created_at, r.user_id,
         u.full_name as author_name, u.avatar_url as author_avatar,
         (SELECT ROUND(AVG(c.rating), 1) FROM comments c WHERE c.recipe_id = r.id AND c.rating > 0) as rating
       FROM recipes r 
