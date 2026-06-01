@@ -28,8 +28,6 @@ export default function Navbar() {
     login: 'Login',
   };
   const [menuOpen, setMenuOpen] = useState(false);
-  const [suggestions, setSuggestions] = useState<any[]>([]);
-  const [showSuggestions, setShowSuggestions] = useState(false);
 
   const router = useRouter();
   const pathname = usePathname();
@@ -44,9 +42,6 @@ export default function Navbar() {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setMenuOpen(false);
-      }
-      if (searchWrapperRef.current && !searchWrapperRef.current.contains(event.target as Node)) {
-        setShowSuggestions(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -65,27 +60,6 @@ export default function Navbar() {
         // Si no estamos en el home, redirigimos al home con el término de búsqueda
         router.push('/');
       }
-
-      // Autocompletado Predictivo
-      if (searchTerm.trim().length > 1) {
-        const timer = setTimeout(async () => {
-          try {
-            const API_URL = process.env.NEXT_PUBLIC_API_URL || '/api';
-            const res = await fetch(`${API_URL}/recipes/autocomplete?search=${encodeURIComponent(searchTerm)}`);
-            if (res.ok) {
-              const data = await res.json();
-              setSuggestions(data);
-              setShowSuggestions(true);
-            }
-          } catch (e) {
-            console.error('Error fetching autocomplete:', e);
-          }
-        }, 300); // 300ms debounce
-        return () => clearTimeout(timer);
-      }
-    } else {
-      setSuggestions([]);
-      setShowSuggestions(false);
     }
   }, [searchTerm]);
 
@@ -162,40 +136,7 @@ export default function Navbar() {
               placeholder={fallbackT.nav?.search_placeholder || 'Buscar recetas...'}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              onFocus={() => {
-                if (suggestions.length > 0) setShowSuggestions(true);
-              }}
             />
-            
-            {/* Componente de Autocompletado Predictivo */}
-            {showSuggestions && suggestions.length > 0 && (
-              <div className="autocomplete-dropdown">
-                {suggestions.map((s) => {
-                  let displayTitle = s.title;
-                  if (typeof displayTitle === 'string' && displayTitle.startsWith('{')) {
-                    try {
-                      const p = JSON.parse(displayTitle);
-                      displayTitle = p[language] || p['es'] || p['en'] || '';
-                    } catch (e) {}
-                  } else if (typeof displayTitle === 'object' && displayTitle !== null) {
-                    displayTitle = displayTitle[language] || displayTitle['es'] || displayTitle['en'] || '';
-                  }
-
-                  return (
-                    <div
-                      key={s.id}
-                      className="autocomplete-item"
-                      onClick={() => {
-                        setSearchTerm(displayTitle);
-                        setShowSuggestions(false);
-                      }}
-                    >
-                      <span>🔍</span> {displayTitle}
-                    </div>
-                  );
-                })}
-              </div>
-            )}
           </div>
         )}
 
