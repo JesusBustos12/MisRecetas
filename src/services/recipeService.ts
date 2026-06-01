@@ -35,14 +35,18 @@ const parseRecipeData = (r: any) => {
   };
 };
 
+let cachedHeroRecipes: any[] | null = null;
+
 export const recipeService = {
   async getHeroRecipes() {
+    if (cachedHeroRecipes) return cachedHeroRecipes;
+
     try {
       const countries = ['italy', 'mexico', 'japan', 'spain', 'usa', 'france', 'thailand', 'greece', 'india', 'china'];
       const heroRecipes: any[] = [];
 
-      // Traemos una muestra grande de recetas para filtrar
-      const response = await fetch(`${API_URL}/recipes?limit=200`);
+      // Traemos una muestra más pequeña de recetas para filtrar (50 en lugar de 200)
+      const response = await fetch(`${API_URL}/recipes?limit=50`);
       const result = await response.json();
       const data = Array.isArray(result) ? result : result.data || [];
       const parsed = data.map(parseRecipeData);
@@ -71,7 +75,8 @@ export const recipeService = {
       }
 
       // Barajar un poco para que no salgan siempre en el mismo orden de países
-      return heroRecipes.sort(() => Math.random() - 0.5);
+      cachedHeroRecipes = heroRecipes.sort(() => Math.random() - 0.5);
+      return cachedHeroRecipes;
     } catch (error) {
       console.error('Error fetching hero recipes:', error);
       return [];

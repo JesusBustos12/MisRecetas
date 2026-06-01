@@ -36,7 +36,11 @@ export function useRecipes() {
       setLoading(false);
     };
 
-    fetchRecipes();
+    const timer = setTimeout(() => {
+      fetchRecipes();
+    }, 300);
+
+    return () => clearTimeout(timer);
   }, [page, searchTerm, activeCategory, activeSidebarFilter]);
 
   return {
