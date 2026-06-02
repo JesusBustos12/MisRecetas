@@ -1,7 +1,7 @@
 # MisRecetas - Portafolio Full-Stack
 
 ## Descripción
-**MisRecetas** es una aplicación web full-stack que permite a los usuarios buscar, filtrar y guardar recetas de cocina, así como generar nuevas recetas utilizando Inteligencia Artificial.
+**MisRecetas** es una aplicación web full-stack que permite a los usuarios buscar, filtrar y guardar recetas de cocina, así como generar nuevas recetas.
 
 El proyecto cuenta con un sistema completo de autenticación de usuarios y una interfaz moderna y responsiva. Fue diseñado siguiendo un enfoque de alto rendimiento, delegando el filtrado y la paginación a la base de datos MySQL, e integrando capacidades de IA para enriquecer la experiencia del usuario.
 
