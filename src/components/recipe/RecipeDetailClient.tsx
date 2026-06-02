@@ -528,7 +528,7 @@ export default function RecipeDetailClient({ id }: { id: string }) {
             </div>
 
             {user && user.id === recipe.user_id && (
-              <div className="rd-actions-row" style={{ marginTop: '-1.6rem' }}>
+              <div className="rd-actions-row" style={{ marginTop: '-1.6rem', gap: '1rem' }}>
                 <button
                   className="rd-btn-icon"
                   onClick={() => setIsEditModalOpen(true)}
