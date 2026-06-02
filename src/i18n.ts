@@ -127,6 +127,16 @@ export type Translations = {
       steps_placeholder: string;
       save_draft: string;
       publish_btn: string;
+      edit_title?: string;
+      image_click?: string;
+      image_select?: string;
+      formats_allowed?: string;
+      cal_ph?: string;
+      prot_ph?: string;
+      fat_ph?: string;
+      carbs_ph?: string;
+      description_label?: string;
+      description_placeholder?: string;
     };
   };
   loginPage: {
@@ -227,6 +237,12 @@ export const translations: Record<'es' | 'en', Translations> = {
       back: 'Volver',
       edit: 'Editar',
       delete: 'Eliminar',
+      cancel: 'Cancelar',
+      save: 'Guardar Cambios',
+      confirm_delete: '¿Confirmar?',
+      delete_warning: 'Esta acción no se puede deshacer.',
+      delete_btn: 'Eliminar Receta',
+      send: 'Enviar',
     },
     countries: {
       italy: 'Italia',
@@ -340,6 +356,16 @@ export const translations: Record<'es' | 'en', Translations> = {
         steps_placeholder: 'Describe cada paso claramente...',
         save_draft: 'Guardar Borrador',
         publish_btn: 'Publicar Receta',
+        edit_title: 'Editar Receta',
+        image_click: 'Click para cambiar imagen',
+        image_select: 'Selecciona una imagen',
+        formats_allowed: '(Formatos permitidos: PNG, JPG, WEBP)',
+        cal_ph: 'Calorías (ej: 250 kcal)',
+        prot_ph: 'Proteínas (ej: 15g)',
+        fat_ph: 'Grasas (ej: 5g)',
+        carbs_ph: 'Carbohidratos (ej: 30g)',
+        description_label: 'Descripción',
+        description_placeholder: 'Describe brevemente tu receta...',
       },
     },
     loginPage: {
@@ -432,6 +458,12 @@ export const translations: Record<'es' | 'en', Translations> = {
       back: 'Back',
       edit: 'Edit',
       delete: 'Delete',
+      cancel: 'Cancel',
+      save: 'Save Changes',
+      confirm_delete: 'Confirm?',
+      delete_warning: 'This action cannot be undone.',
+      delete_btn: 'Delete Recipe',
+      send: 'Send',
     },
     countries: {
       italy: 'Italy',
@@ -545,6 +577,16 @@ export const translations: Record<'es' | 'en', Translations> = {
         steps_placeholder: 'Describe each step clearly...',
         save_draft: 'Save Draft',
         publish_btn: 'Publish Recipe',
+        edit_title: 'Edit Recipe',
+        image_click: 'Click to change image',
+        image_select: 'Select an image',
+        formats_allowed: '(Allowed formats: PNG, JPG, WEBP)',
+        cal_ph: 'Calories (e.g. 250 kcal)',
+        prot_ph: 'Protein (e.g. 15g)',
+        fat_ph: 'Fat (e.g. 5g)',
+        carbs_ph: 'Carbs (e.g. 30g)',
+        description_label: 'Description',
+        description_placeholder: 'Briefly describe your recipe...',
       },
     },
     loginPage: {

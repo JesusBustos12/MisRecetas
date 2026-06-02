@@ -139,7 +139,7 @@ export default function RecipeForm({ user, onSuccess, t }: RecipeFormProps) {
               backgroundSize: '.65em auto',
             }}
           >
-            <option value="World">{t.create_form?.specify_country || 'Specify Country'}</option>
+            <option value="World">{t.common?.world || 'World'}</option>
             <option value="Italy">Italy</option>
             <option value="Mexico">Mexico</option>
             <option value="Japan">Japan</option>
@@ -209,7 +209,7 @@ export default function RecipeForm({ user, onSuccess, t }: RecipeFormProps) {
                 style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }} 
               />
               <div style={{ position: 'relative', zIndex: 1, background: 'rgba(0,0,0,0.6)', padding: '0.8rem 1.6rem', borderRadius: '4px' }}>
-                <span className="cr-upload-text" style={{ color: '#fff', fontWeight: 600 }}>Click para cambiar imagen</span>
+                <span className="cr-upload-text" style={{ color: '#fff', fontWeight: 600 }}>{t.create_form?.image_click || 'Click para cambiar imagen'}</span>
               </div>
             </>
           ) : (
@@ -217,12 +217,12 @@ export default function RecipeForm({ user, onSuccess, t }: RecipeFormProps) {
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" style={{ width: '4rem', height: '4rem', marginBottom: '1rem', color: 'var(--text-muted)' }}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
               </svg>
-              <span className="cr-upload-text" style={{ fontWeight: 600 }}>Selecciona una imagen</span>
+              <span className="cr-upload-text" style={{ fontWeight: 600 }}>{t.create_form?.image_select || 'Selecciona una imagen'}</span>
             </>
           )}
         </div>
         <span style={{ fontSize: '1.2rem', color: 'var(--text-muted)', marginTop: '0.6rem', display: 'block' }}>
-          (Formatos permitidos: PNG, JPG, WEBP)
+          {t.create_form?.formats_allowed || '(Formatos permitidos: PNG, JPG, WEBP)'}
         </span>
         <input
           type="file"
@@ -276,28 +276,28 @@ export default function RecipeForm({ user, onSuccess, t }: RecipeFormProps) {
           <input
             type="text"
             className="cr-input"
-            placeholder="Calories (ej: 250 kcal)"
+            placeholder={t.create_form?.cal_ph || 'Calories (ej: 250 kcal)'}
             value={calories}
             onChange={(e) => setCalories(e.target.value)}
           />
           <input
             type="text"
             className="cr-input"
-            placeholder="Protein (ej: 15g)"
+            placeholder={t.create_form?.prot_ph || 'Protein (ej: 15g)'}
             value={protein}
             onChange={(e) => setProtein(e.target.value)}
           />
           <input
             type="text"
             className="cr-input"
-            placeholder="Fat (ej: 5g)"
+            placeholder={t.create_form?.fat_ph || 'Fat (ej: 5g)'}
             value={fat}
             onChange={(e) => setFat(e.target.value)}
           />
           <input
             type="text"
             className="cr-input"
-            placeholder="Carbs (ej: 30g)"
+            placeholder={t.create_form?.carbs_ph || 'Carbs (ej: 30g)'}
             value={carbs}
             onChange={(e) => setCarbs(e.target.value)}
           />

@@ -219,11 +219,16 @@ export const recipeService = {
 
   async toggleFavorite(userId: number | string, recipeId: number | string) {
     try {
+      const token = localStorage.getItem('app_token');
       const response = await fetch(`${API_URL}/favorites/toggle`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}` 
+        },
         body: JSON.stringify({ user_id: userId, recipe_id: recipeId }),
       });
+      if (!response.ok) throw new Error('Error toggling favorite');
       return await response.json();
     } catch (error) {
       console.error('Error toggling favorite:', error);

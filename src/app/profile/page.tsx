@@ -685,28 +685,28 @@ function ProfileHubContent() {
                 <input
                   type="text"
                   className="cr-input"
-                  placeholder="Calories (ej: 250 kcal)"
+                  placeholder={t.profile.create_form.cal_ph || 'Calories (ej: 250 kcal)'}
                   value={newCalories}
                   onChange={(e) => setNewCalories(e.target.value)}
                 />
                 <input
                   type="text"
                   className="cr-input"
-                  placeholder="Protein (ej: 15g)"
+                  placeholder={t.profile.create_form.prot_ph || 'Protein (ej: 15g)'}
                   value={newProtein}
                   onChange={(e) => setNewProtein(e.target.value)}
                 />
                 <input
                   type="text"
                   className="cr-input"
-                  placeholder="Fat (ej: 5g)"
+                  placeholder={t.profile.create_form.fat_ph || 'Fat (ej: 5g)'}
                   value={newFat}
                   onChange={(e) => setNewFat(e.target.value)}
                 />
                 <input
                   type="text"
                   className="cr-input"
-                  placeholder="Carbs (ej: 30g)"
+                  placeholder={t.profile.create_form.carbs_ph || 'Carbs (ej: 30g)'}
                   value={newCarbs}
                   onChange={(e) => setNewCarbs(e.target.value)}
                 />
