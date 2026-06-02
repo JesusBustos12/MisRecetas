@@ -9,6 +9,7 @@ import EditRecipeModal from '@/components/profile/EditRecipeModal';
 import Toast from '@/components/Toast';
 
 import { Suspense } from 'react';
+import { compressImageToWebp } from '@/lib/imageUtils';
 
 function ProfileHubContent() {
   const { user, userProfile, setUserProfile, t, isAuthLoaded } = useAppContext();
@@ -190,41 +191,41 @@ function ProfileHubContent() {
     }
   };
 
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      const result = event.target?.result as string;
-      setNewImgUrl(result);
-    };
-    reader.readAsDataURL(file);
+    
+    try {
+      const compressedWebpUrl = await compressImageToWebp(file, 1200, 1200, 0.8);
+      setNewImgUrl(compressedWebpUrl);
+    } catch (error) {
+      console.error('Error comprimiendo imagen:', error);
+      showToast('Error al procesar la imagen.', 'error');
+    }
   };
 
   const handleAvatarUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file || !user) return;
     setAvatarUploading(true);
-    const reader = new FileReader();
-    reader.onload = async (event) => {
-      const base64Url = event.target?.result as string;
-      try {
-        await userService.uploadAvatar(user.id, base64Url);
-        if (setUserProfile) {
-          setUserProfile(
-            userProfile
-              ? { ...userProfile, avatar_url: base64Url }
-              : { id: user.id, avatar_url: base64Url },
-          );
-        }
-        setProfile((prev: any) => (prev ? { ...prev, avatar_url: base64Url } : prev));
-      } catch (error) {
-        showToast('Error uploading avatar', 'error');
-      } finally {
-        setAvatarUploading(false);
+
+    try {
+      const base64Url = await compressImageToWebp(file, 800, 800, 0.8);
+      await userService.uploadAvatar(user.id, base64Url);
+      if (setUserProfile) {
+        setUserProfile(
+          userProfile
+            ? { ...userProfile, avatar_url: base64Url }
+            : { id: user.id, avatar_url: base64Url },
+        );
       }
-    };
-    reader.readAsDataURL(file);
+      setProfile((prev: any) => (prev ? { ...prev, avatar_url: base64Url } : prev));
+    } catch (error) {
+      console.error('Error subiendo avatar:', error);
+      showToast('Error uploading avatar', 'error');
+    } finally {
+      setAvatarUploading(false);
+    }
   };
 
   const openEditModal = () => {
@@ -269,19 +270,25 @@ function ProfileHubContent() {
     }
   };
 
-  const handleEditAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleEditAvatarUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
-    if (file.size > 2 * 1024 * 1024) {
-      showToast('El archivo es muy pesado. Máximo 2MB.', 'error');
-      return;
+    
+    // El límite de tamaño se puede relajar un poco antes de la compresión, o mantenerlo.
+    // Vamos a comprimirlo independientemente.
+    try {
+      const compressedWebpUrl = await compressImageToWebp(file, 800, 800, 0.8);
+      // Validar si AÚN comprimida supera 2MB (muy raro con webp al 80%)
+      const sizeInBytes = Math.round((compressedWebpUrl.length * 3) / 4);
+      if (sizeInBytes > 2 * 1024 * 1024) {
+        showToast('El archivo sigue siendo muy pesado. Intenta otra imagen.', 'error');
+        return;
+      }
+      setEditAvatarUrl(compressedWebpUrl);
+    } catch (error) {
+      console.error('Error comprimiendo avatar:', error);
+      showToast('Error al procesar el avatar.', 'error');
     }
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      const result = event.target?.result as string;
-      setEditAvatarUrl(result);
-    };
-    reader.readAsDataURL(file);
   };
 
   if (loading) {

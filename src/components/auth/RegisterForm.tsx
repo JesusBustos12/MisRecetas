@@ -8,6 +8,8 @@ interface RegisterFormProps {
   onSwitchToLogin: () => void;
 }
 
+import { compressImageToWebp } from '@/lib/imageUtils';
+
 export default function RegisterForm({ t, onSwitchToLogin }: RegisterFormProps) {
   const router = useRouter();
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -72,15 +74,18 @@ export default function RegisterForm({ t, onSwitchToLogin }: RegisterFormProps) 
     }
   };
 
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      const result = event.target?.result as string;
-      setAvatarUrl(result);
-    };
-    reader.readAsDataURL(file);
+    
+    try {
+      // Comprimir y convertir a WEBP antes de guardar en estado
+      const compressedWebpUrl = await compressImageToWebp(file, 800, 800, 0.8);
+      setAvatarUrl(compressedWebpUrl);
+    } catch (error) {
+      console.error('Error compressing image:', error);
+      showToast('Error procesando la imagen', 'error');
+    }
   };
 
   return (
