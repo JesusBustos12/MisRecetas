@@ -252,11 +252,30 @@ h6 {
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--text-color);
-  transition: color 0.2s;
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 0.4rem 0;
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--primary-color);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(-50%);
+  border-radius: 2px;
 }
 
 .navbar-links a:hover {
   color: var(--primary-color);
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
 }
 
 .navbar-right {
@@ -310,6 +329,8 @@ h6 {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  animation: slideFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-origin: top center;
 }
 
 [data-theme="dark"] .autocomplete-dropdown {
@@ -358,28 +379,38 @@ input[type=number] {
   border-radius: 0.6rem;
   border: none;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
 }
 
 .btn:active {
-  transform: scale(0.98);
+  transform: scale(0.96);
 }
 
 .btn-primary {
   background-color: var(--primary-color);
   color: #ffffff;
+  box-shadow: 0 2px 4px rgba(234, 112, 21, 0.2);
 }
 
 .btn-primary:hover {
   background-color: var(--primary-hover);
-  box-shadow: 0 4px 10px rgba(234, 112, 21, 0.3);
+  box-shadow: 0 4px 12px rgba(234, 112, 21, 0.4);
+  transform: translateY(-1px);
 }
 
 .btn-primary:disabled {
   opacity: 0.6;
   cursor: not-allowed;
   box-shadow: none;
+  transform: none;
 }
 
 .btn-secondary {
@@ -390,15 +421,22 @@ input[type=number] {
 
 .btn-secondary:hover {
   background-color: var(--secondary-color);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 .btn-dark {
   background-color: #111827;
   color: white;
+  box-shadow: 0 2px 4px rgba(17, 24, 39, 0.2);
 }
 
 .btn-dark:hover {
   background-color: #1f2937;
+  box-shadow: 0 4px 12px rgba(17, 24, 39, 0.4);
+  transform: translateY(-1px);
 }
 
 /* User Avatar en Navbar */
@@ -443,6 +481,19 @@ input[type=number] {
   flex-direction: column;
   min-width: 200px;
   z-index: 100;
+  animation: slideFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-origin: top right;
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .user-dropdown a,
@@ -677,7 +728,7 @@ input[type=number] {
 .auth-input:focus {
   outline: none;
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(234, 112, 21, 0.1);
+  box-shadow: 0 0 0 4px rgba(234, 112, 21, 0.15);
 }
 
 .auth-checkbox-group {
@@ -1363,6 +1414,7 @@ input[type=number] {
   width: 66.6%;
   /* Two thirds of the card */
   height: 100%;
+  overflow: hidden;
 }
 
 .rc-img-wrapper img {
@@ -1370,6 +1422,11 @@ input[type=number] {
   /* Fill the wrapper */
   height: 100%;
   object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.recipe-card-m:hover .rc-img-wrapper img {
+  transform: scale(1.05);
 }
 
 .rc-heart-btn {

@@ -1,0 +1,554 @@
+🔍 ANÁLISIS DE COMENTARIOS
+=================================
+
+🔴 COMENTARIOS REPETIDOS EXACTAMENTE MÁS DE 3 VECES:
+
+- "Sabor delicioso. La próxima vez probaré agregándole algunas hierbas frescas extra." (Aparece 39 veces)
+  Se usa en: Pato Pekín Imperial, Rollitos de Primavera Crujientes, Takoyaki Callejero, Sashimi de Salmón y Atún, Unagi Don (Anguila) ...
+
+- "Muy fácil de preparar y el resultado es de restaurante. La guardo en favoritos." (Aparece 38 veces)
+  Se usa en: Cerdo Agridulce Clásico, Rollitos de Primavera Crujientes, Tempura Mixto, Matcha Mochi Premium, Dorayaki de Anko ...
+
+- "¡Magia pura en la cocina! Quedé como un chef profesional con esta preparación." (Aparece 38 veces)
+  Se usa en: Rollitos de Primavera Crujientes, Tempura Mixto, Arroz con Leche, NYC Cheesecake, Maine Lobster Roll ...
+
+- "Nos gustó bastante. Una receta sólida y confiable para cualquier día." (Aparece 36 veces)
+  Se usa en: Rollitos de Primavera Crujientes, Sushi Nigiri & Maki Premium, Onigiri de Salmón, Tempura Mixto, Sashimi de Salmón y Atún ...
+
+- "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua." (Aparece 36 veces)
+  Se usa en: Okonomiyaki Estilo Osaka, Onigiri de Salmón, Unagi Don (Anguila), Matcha Mochi Premium, Dorayaki de Anko ...
+
+- "Gran opción para salir de la rutina, el resultado final fue muy satisfactorio." (Aparece 35 veces)
+  Se usa en: Rollitos Dulces de Primavera, Sushi Nigiri & Maki Premium, Takoyaki Callejero, Sashimi de Salmón y Atún, Dorayaki de Anko ...
+
+- "Muy rica, pero le tuve que ajustar un poco la sal para mi gusto personal." (Aparece 34 veces)
+  Se usa en: Cerdo Agridulce Clásico, Sushi Nigiri & Maki Premium, Okonomiyaki Estilo Osaka, Onigiri de Salmón, Arroz con Leche ...
+
+- "Me convenció. No es la receta más rápida, pero vale la pena el esfuerzo." (Aparece 34 veces)
+  Se usa en: Rollitos de Primavera Crujientes, Sushi Nigiri & Maki Premium, Okonomiyaki Estilo Osaka, Matcha Mochi Premium, Dorayaki de Anko ...
+
+- "Excelente receta, las instrucciones son súper claras y precisas." (Aparece 34 veces)
+  Se usa en: Sushi Nigiri & Maki Premium, Okonomiyaki Estilo Osaka, Onigiri de Salmón, Tempura Mixto, Sashimi de Salmón y Atún ...
+
+- "Buena receta, aunque tardé un poco más de lo que indica el tiempo de preparación." (Aparece 33 veces)
+  Se usa en: Cerdo Agridulce Clásico, Tempura Mixto, Matcha Mochi Premium, Guacamole Tradicional, Pan de Muerto ...
+
+- "Una joya de la gastronomía. Me transportó a los sabores tradicionales, 10/10." (Aparece 33 veces)
+  Se usa en: Matcha Mochi Premium, Dorayaki de Anko, NYC Cheesecake, Maine Lobster Roll, Pizza Margherita ...
+
+- "A mi familia le encantó. Definitivamente la haré seguido." (Aparece 31 veces)
+  Se usa en: Pato Pekín Imperial, Tempura Mixto, Dorayaki de Anko, Pan de Muerto, Tacos de Suadero ...
+
+- "¡Increíble! Nunca pensé que cocinar esto fuera tan sencillo y quedara tan rico." (Aparece 31 veces)
+  Se usa en: Rollitos de Primavera Crujientes, Sushi Nigiri & Maki Premium, Okonomiyaki Estilo Osaka, Tempura Mixto, Sashimi de Salmón y Atún ...
+
+- "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante." (Aparece 26 veces)
+  Se usa en: Rollitos de Primavera Crujientes, Okonomiyaki Estilo Osaka, Onigiri de Salmón, Unagi Don (Anguila), Matcha Mochi Premium ...
+
+- "El sabor es de otro mundo, el equilibrio de ingredientes es perfecto." (Aparece 25 veces)
+  Se usa en: Rollitos Dulces de Primavera, Sushi Nigiri & Maki Premium, Okonomiyaki Estilo Osaka, Onigiri de Salmón, Tempura Mixto ...
+
+- "¡Simplemente espectacular! La receta me quedó igual a la foto." (Aparece 23 veces)
+  Se usa en: Takoyaki Callejero, Sashimi de Salmón y Atún, Matcha Mochi Premium, Tacos de Suadero, Mac & Cheese Horneado ...
+
+- "Receta decente. Cumple su función pero no es la mejor versión que he probado." (Aparece 21 veces)
+  Se usa en: Cerdo Agridulce Clásico, Okonomiyaki Estilo Osaka, Takoyaki Callejero, Onigiri de Salmón, NYC Cheesecake ...
+
+- "Está bien, pero le faltaba algo de intensidad en los sabores, quizás más especias." (Aparece 20 veces)
+  Se usa en: Rollitos Dulces de Primavera, Sashimi de Salmón y Atún, Matcha Mochi Premium, Guacamole Tradicional, Tacos de Suadero ...
+
+- "Ni fú ni fa. Se deja comer pero no creo que entre a mi menú habitual." (Aparece 20 veces)
+  Se usa en: Okonomiyaki Estilo Osaka, Tempura Mixto, Sashimi de Salmón y Atún, Maine Lobster Roll, Gnocchi al Pesto ...
+
+- "Normal, me sirvió para salir del paso en la cena pero no sé si la repita." (Aparece 19 veces)
+  Se usa en: Rollitos de Primavera Crujientes, Sushi Nigiri & Maki Premium, Sashimi de Salmón y Atún, Pizza Margherita, Melanzane Parmigiana ...
+
+- "Pasable, tuve que improvisar un poco en algunos pasos porque no me quedaba igual." (Aparece 19 veces)
+  Se usa en: Tempura Mixto, Dorayaki de Anko, Aguachile Verde, Tiramisú, Cacio e Pepe ...
+
+- "¡Me encantó esta receta! El paso a paso es muy claro." (Aparece 19 veces)
+  Se usa en: Tacos al Pastor, Carnitas Michoacanas, Tlayuda Oaxaqueña, Mousse de Chocolate, Steak Frites ...
+
+- "Regular. Quizás cometí algún error, pero no me deslumbró el sabor final." (Aparece 17 veces)
+  Se usa en: Rollitos de Primavera Crujientes, Sushi Nigiri & Maki Premium, Okonomiyaki Estilo Osaka, Pan de Muerto, Pumpkin Pie ...
+
+- "Bien a secas. Los ingredientes son buenos pero el método podría mejorar." (Aparece 17 veces)
+  Se usa en: Takoyaki Callejero, Tempura Mixto, Risotto Porcini, Gelato Artesanal, Fettuccine Alfredo ...
+
+- "A mi familia le fascinó, 100% recomendado." (Aparece 11 veces)
+  Se usa en: Carnitas Michoacanas, Menudo Tradicional, Brownies de Chocolate, Gyoza (Empanadillas), Omurice Clásico ...
+
+- "Un platillo aceptable. Es una base buena, pero requiere modificaciones personales." (Aparece 10 veces)
+  Se usa en: Tiramisú, Cannoli Siciliani, Fettuccine Alfredo, Panna Cotta, Jamón Ibérico ...
+
+- "Muy buena explicación, me quedó riquísimo." (Aparece 9 veces)
+  Se usa en: Esquites con Tuétano, Quesadillas de Comal, Ratatouille Provenzal, Bistecca Fiorentina, Cordero Asado ...
+
+- "¡Delicioso! Definitivamente lo volveré a preparar." (Aparece 9 veces)
+  Se usa en: Huevos Rancheros, Ratatouille Provenzal, Boeuf Bourguignon, Katsudon Tradicional, Katsu Curry Japonés ...
+
+- "Excelente aporte. Ya lo guardé en mis favoritos." (Aparece 9 veces)
+  Se usa en: Menudo Tradicional, Tlayuda Oaxaqueña, Polenta con Ragú, Gorditas de Chicharrón, Sopes de Chorizo ...
+
+- "El resultado final es exactamente como se ve en la foto." (Aparece 8 veces)
+  Se usa en: Enchiladas Suizas, Soufflé de Fromage, Spaghetti Bolognese, Katsudon Tradicional, Shabu-Shabu Hot Pot ...
+
+- "Muy rico, solo recuerden servirlo inmediatamente porque se desinfla rápido. ¡Con crema batida es un 10!" (Aparece 5 veces)
+  Se usa en: Churros con Chocolate, Mousse de Chocolate, Profiteroles con Chocolate, Brownies de Chocolate, Soufflé au Chocolat
+
+- "Absolutely decadent. Using high quality 70% dark chocolate makes this soufflé incredibly rich." (Aparece 5 veces)
+  Se usa en: Churros con Chocolate, Mousse de Chocolate, Profiteroles con Chocolate, Brownies de Chocolate, Soufflé au Chocolat
+
+- "Riquísimo. Espolvorear azúcar en el ramequín ayuda a que la masa 'trepe' por las paredes y suba bien alto." (Aparece 5 veces)
+  Se usa en: Churros con Chocolate, Mousse de Chocolate, Profiteroles con Chocolate, Brownies de Chocolate, Soufflé au Chocolat
+
+- "A bit tricky to get the egg whites folded just right without losing the air, but the result is spectacular." (Aparece 4 veces)
+  Se usa en: Churros con Chocolate, Mousse de Chocolate, Brownies de Chocolate, Soufflé au Chocolat
+
+- "Un postre de restaurante fino hecho en casa. El centro quedó ligeramente tembloroso y delicioso." (Aparece 4 veces)
+  Se usa en: Churros con Chocolate, Mousse de Chocolate, Brownies de Chocolate, Soufflé au Chocolat
+
+
+🔴 ANÁLISIS DE POSIBLES INCONGRUENCIAS (Palabras clave en recetas no compatibles):
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Rollitos de Primavera Crujientes
+  Comentario: "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Okonomiyaki Estilo Osaka
+  Comentario: "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Okonomiyaki Estilo Osaka
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Onigiri de Salmón
+  Comentario: "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Onigiri de Salmón
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Unagi Don (Anguila)
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Unagi Don (Anguila)
+  Comentario: "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Matcha Mochi Premium
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Matcha Mochi Premium
+  Comentario: "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Dorayaki de Anko
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Dorayaki de Anko
+  Comentario: "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Guacamole Tradicional
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Aguachile Verde
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Aguachile Verde
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Tacos de Suadero
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Pumpkin Pie
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Pizza Margherita
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Pizza Margherita
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Cannoli Siciliani
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Cannoli Siciliani
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Cannoli Siciliani
+  Comentario: "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Bruschetta Pomodoro
+  Comentario: "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Cacio e Pepe
+  Comentario: "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Ensalada Griega (Horiatiki)
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Ensalada Griega (Horiatiki)
+  Comentario: "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Panettone Navideño
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Panettone Navideño
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Paella Valenciana
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Paella Valenciana
+  Comentario: "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Paella Valenciana
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Tortilla de Patatas
+  Comentario: "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Gazpacho Andaluz
+  Comentario: "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Gazpacho Andaluz
+  Comentario: "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Patatas Bravas
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Jamón Ibérico
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Jamón Ibérico
+  Comentario: "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Gambas al Ajillo
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Tarta de Santiago
+  Comentario: "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Calamares a la Romana
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Salmorejo Cordobés
+  Comentario: "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Bouillabaisse Marsellesa
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Crêpes Suzette
+  Comentario: "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Crêpes Suzette
+  Comentario: "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Moussaka Tradicional
+  Comentario: "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Dolmades (Hojas de Parra)
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Salsa Tzatziki
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Queso Saganaki
+  Comentario: "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Ravioli de Ricota
+  Comentario: "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Ravioli de Ricota
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Sfogliatella
+  Comentario: "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Sfogliatella
+  Comentario: "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Zeppole di San Giuseppe
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Pescado Frito Malagueño
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Souvlaki de Cerdo
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Souvlaki de Cerdo
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Kleftiko de Cordero
+  Comentario: "Buena explicación, la salsa quedó muy espesa así que le puse un poco de agua."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Taramosalata
+  Comentario: "Quedó muy bien. Las texturas son excelentes, pero le faltó un toquecito de picante."
+
+- ⚠️ REGLA: Habla de 'dulce' en receta salada
+  Receta: Tacos al Pastor
+  Comentario: "¡Increíbles! El adobo de achiote quedó perfecto y la piña asada le da el toque dulce exacto a la carne. 100% recomendados."
+
+- ⚠️ REGLA: Habla de 'dulce' en receta salada
+  Receta: Mole Poblano
+  Comentario: "Me encantó el sabor, aunque me pasé un poco de dulce con el chocolate. Definitivamente la volveré a hacer ajustando el azúcar."
+
+- ⚠️ REGLA: Habla de 'horno' en receta de sartén/fría
+  Receta: Enchiladas Suizas
+  Comentario: "La crema con el tomate verde es una delicia. Y el queso gratinado burbujeando del horno es un espectáculo."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Tamales Oaxaqueños
+  Comentario: "La masa quedó ultra esponjosa, el tip de batir la manteca hasta que flote en agua es oro puro."
+
+- ⚠️ REGLA: Habla de 'caldo' pero no es sopa
+  Receta: Tamales Oaxaqueños
+  Comentario: "Me quedaron un poquito secos por no hidratar bien la masa con el caldo, pero el sabor del mole lo salvó."
+
+- ⚠️ REGLA: Habla de 'caldo' pero no es sopa
+  Receta: Esquites con Tuétano
+  Comentario: "Muy buena receta base. Sugiero agregar un poquito de tuétano al caldo si quieren llevarlos a un nivel superior."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Torta Ahogada
+  Comentario: "¡Sabe a Guadalajara puro! La salsa está picosísima, pero no puedes dejar de comerla. El birote aguantó perfecto."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Barbacoa de Borrego
+  Comentario: "La carne se deshacía sola. La hoja de maguey y las hojas de aguacate le dieron ese olor a humo de tierra inolvidable."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Huevos Rancheros
+  Comentario: "Muy ricos y rápidos de hacer. El truco es freír la tortilla lo suficiente para que aguante la salsa sin romperse."
+
+- ⚠️ REGLA: Habla de 'dulce' en receta salada
+  Receta: Coq au Vin
+  Comentario: "Delicioso, el contraste de las cebollitas perla dulces con la salsa de vino es espectacular."
+
+- ⚠️ REGLA: Habla de 'horno' en receta de sartén/fría
+  Receta: Boeuf Bourguignon
+  Comentario: "¡Magnífico! La carne de res se deshace con el tenedor después de las 3 horas en el horno. Un guiso perfecto."
+
+- ⚠️ REGLA: Habla de 'horno' en receta de sartén/fría
+  Receta: Croissants de Mantequilla
+  Comentario: "Es un proceso largo de laminado, pero ver las capas de hojaldre en el horno y el olor a mantequilla lo justifica todo."
+
+- ⚠️ REGLA: Habla de 'horno' en receta de sartén/fría
+  Receta: Croque Monsieur
+  Comentario: "Delicioso. Hay que tener cuidado con no quemar la bechamel en el horno al final, solo debe burbujear."
+
+- ⚠️ REGLA: Habla de 'dulce' en receta salada
+  Receta: Soupe à l'Oignon
+  Comentario: "Excelente receta. Desglasar la olla con el vino blanco le da una acidez que balancea lo dulce de la cebolla."
+
+- ⚠️ REGLA: Habla de 'caldo' pero no es sopa
+  Receta: Soupe à l'Oignon
+  Comentario: "Muy rica, pero no apresuren el paso de la cebolla. Si suben el fuego se quema y amarga el caldo."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Salade Niçoise
+  Comentario: "Muy buena, es importante usar atún en aceite de oliva y no en agua, la textura cambia por completo."
+
+- ⚠️ REGLA: Habla de 'dulce' en receta salada
+  Receta: Pissaladière
+  Comentario: "Como una pizza francesa superior. Las cebollas súper dulces contrastan perfectamente con las anchoas saladas."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Spaghetti Carbonara
+  Comentario: "El truco de guardar agua de cocción es todo lo que necesitas para que la salsa quede sedosa."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Pollo Cacciatore
+  Comentario: "Muy rico. Yo le agregué un poquito de peperoncino picante y lo serví sobre pasta. 10/10."
+
+- ⚠️ REGLA: Habla de 'dulce' en receta salada
+  Receta: Prosciutto e Melone
+  Comentario: "La prueba de que con 2 ingredientes de altísima calidad no necesitas más. Dulce y salado perfecto."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Fabada Asturiana
+  Comentario: "Las fabes quedaron enteras pero como mantequilla por dentro. El truco de asustarlas con agua fría funciona perfecto."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Gyoza (Empanadillas)
+  Comentario: "La técnica de freír y luego poner agua para cocinar al vapor deja la base ultra crujiente. Riquísimas."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Gyoza (Empanadillas)
+  Comentario: "Exprimir el agua de la col es el truco definitivo para que el relleno quede compacto y sabroso."
+
+- ⚠️ REGLA: Habla de 'dulce' en receta salada
+  Receta: Omurice Clásico
+  Comentario: "El contraste del arroz dulce con la tortilla sedosa es increíble. Cuidado de no sobrecocer el huevo."
+
+- ⚠️ REGLA: Habla de 'dulce' en receta salada
+  Receta: Sukiyaki Tradicional
+  Comentario: "Cocinar todo en esa salsa warishita dulce y salada hace que el tofu y los fideos sean irresistibles."
+
+- ⚠️ REGLA: Habla de 'dulce' en receta salada
+  Receta: Yakisoba con Vegetales
+  Comentario: "Rápido y lleno de sabor. La salsa agridulce impregna todo perfecto."
+
+- ⚠️ REGLA: Habla de 'dulce' en receta salada
+  Receta: Philly Cheesesteak
+  Comentario: "Yo usé queso provolone y quedó riquísimo. Las cebollas caramelizadas le dan el toque dulce."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Pulled Pork Sandwich
+  Comentario: "El dry rub tiene el balance perfecto entre dulce, salado y picante. Súper tierno."
+
+- ⚠️ REGLA: Habla de 'dulce' en receta salada
+  Receta: Pulled Pork Sandwich
+  Comentario: "El dry rub tiene el balance perfecto entre dulce, salado y picante. Súper tierno."
+
+- ⚠️ REGLA: Habla de 'horno' en receta de sartén/fría
+  Receta: Biscuits & Gravy
+  Comentario: "No girar el cortador es el truco definitivo para que suban mucho en el horno. Quedaron altos y hermosos."
+
+- ⚠️ REGLA: Habla de 'horno' en receta de sartén/fría
+  Receta: Costillas BBQ Ahumadas
+  Comentario: "No hace falta ahumador para unas buenas costillas. Esta receta de horno es de 10."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Ensalada Cobb
+  Comentario: "Muy rica y nutritiva. La vinagreta de vino tinto corta perfecto la grasa del aguacate y tocino."
+
+- ⚠️ REGLA: Habla de 'dulce' en receta salada
+  Receta: Pan de Maíz (Cornbread)
+  Comentario: "Balance perfecto entre dulce y salado. Con un poco de miel encima es una delicia."
+
+- ⚠️ REGLA: Habla de 'caldo' pero no es sopa
+  Receta: Udon Tradicional
+  Comentario: "El caldo dashi claro y los fideos gruesos hacen una sopa sutil y elegante."
+
+- ⚠️ REGLA: Habla de 'dulce' en receta salada
+  Receta: Tamagoyaki
+  Comentario: "El toque dulce y el dashi le dan ese sabor de sushi bar auténtico."
+
+- ⚠️ REGLA: Habla de 'dulce' en receta salada
+  Receta: Pollo Kung Pao Auténtico
+  Comentario: "Súper auténtico. La salsa agridulce-picante es exactamente igual a la de los restaurantes de Chengdu."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Berenjenas Yu Xiang
+  Comentario: "Picante y reconfortante. Frían las berenjenas en aceite muy caliente para que no absorban tanta grasa."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Berenjenas Yu Xiang
+  Comentario: "La textura de la berenjena frita que absorbe la salsa picante-dulce es de otro mundo."
+
+- ⚠️ REGLA: Habla de 'dulce' en receta salada
+  Receta: Berenjenas Yu Xiang
+  Comentario: "La textura de la berenjena frita que absorbe la salsa picante-dulce es de otro mundo."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Butter Chicken (Murgh Makhani)
+  Comentario: "A mis hijos les fascinó porque no es muy picante, solo súper sabroso y cremoso."
+
+- ⚠️ REGLA: Habla de rebajar con 'agua' en recetas secas
+  Receta: Gulab Jamun
+  Comentario: "Pequeñas bombas dulces que se deshacen en la boca. El jarabe de agua de rosas huele a maravilla."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Mango Lassi
+  Comentario: "Espeso, frío y muy refrescante. Apaga el fuego de cualquier curry picante al instante."
+
+- ⚠️ REGLA: Habla de 'horno' en receta de sartén/fría
+  Receta: Pollo Tandoori
+  Comentario: "Asarlo a fuego altísimo en el horno simula muy bien el horno de barro tandoor. Crujiente por fuera."
+
+- ⚠️ REGLA: Habla de 'dulce' en receta salada
+  Receta: Rogan Josh
+  Comentario: "No lleva tomate, el color es puro chile dulce. Una obra maestra de Cachemira."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Tom Kha Gai
+  Comentario: "Muy reconfortante. El equilibrio de lima, picante y salado es magia pura."
+
+- ⚠️ REGLA: Habla de 'dulce' en receta salada
+  Receta: Tom Kha Gai
+  Comentario: "Cremosa, ácida y sutilmente dulce por el coco. Una de las mejores sopas del mundo."
+
+- ⚠️ REGLA: Habla de 'caldo' pero no es sopa
+  Receta: Khao Soi
+  Comentario: "Un caldo profundo y riquísimo. La mostaza encurtida y las chalotas como topping son indispensables."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Pad See Ew
+  Comentario: "El brócoli chino crujiente va genial con los fideos dulces. Riquísimo y cero picante."
+
+- ⚠️ REGLA: Habla de 'dulce' en receta salada
+  Receta: Pad See Ew
+  Comentario: "El brócoli chino crujiente va genial con los fideos dulces. Riquísimo y cero picante."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Larb Moo
+  Comentario: "Una ensalada de carne caliente picante y ácida brutal. El polvo de arroz tostado le da ese sabor a nuez."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Tom Yum Goong
+  Comentario: "La sopa picante y ácida más famosa. Golpearte la nariz con esos aromas herbales al destapar la olla es magia."
+
+- ⚠️ REGLA: Habla de 'dulce' en receta salada
+  Receta: Panang Curry
+  Comentario: "Un curry más espeso, dulce y menos picante que el verde. La hoja de lima kaffir finita por encima es genial."
+
+- ⚠️ REGLA: Habla de 'picante' en receta dulce o no picante
+  Receta: Yam Nua
+  Comentario: "Carne asada jugosa bañada en un aderezo ácido y picante súper refrescante."
+
+
+Total de posibles incongruencias detectadas: 110
