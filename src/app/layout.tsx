@@ -2,6 +2,7 @@ import React from 'react';
 import '../../public/CSS/index.css';
 import { AppProvider } from '@/context/AppContext';
 import Navbar from '@/components/Navbar';
+import RouteGuard from '@/components/auth/RouteGuard';
 
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:4000'),
@@ -42,8 +43,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <React.Suspense fallback={null}>
           <AppProvider>
-            <Navbar />
-            {children}
+            <RouteGuard>
+              <Navbar />
+              {children}
+            </RouteGuard>
           </AppProvider>
         </React.Suspense>
       </body>
