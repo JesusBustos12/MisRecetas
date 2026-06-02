@@ -129,14 +129,13 @@ export default function RecipeCard({
           <img src={displayImageUrl} alt={title} loading="lazy" />
           {/* Boton Favoritos superpuesto a la imagen (click stop propagation para no ir al link) */}
           <button
-            className="rc-heart-btn"
+            className={`rc-heart-btn ${isFavorite ? 'active' : ''}`}
             onClick={toggleFavorite}
             title={
               isFavorite
                 ? t.detail?.remove_favorite || 'Remove from favorites'
                 : t.detail?.add_favorite || 'Add to favorites'
             }
-            style={{ color: isFavorite ? '#f97316' : 'inherit' }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

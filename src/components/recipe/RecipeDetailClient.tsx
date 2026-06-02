@@ -71,6 +71,21 @@ export default function RecipeDetailClient({ id }: { id: string }) {
     fetchRecipeData();
   }, [id]);
 
+  // Asegurar que si el usuario carga después, el estado de favorito se sincronice
+  useEffect(() => {
+    const syncFavoriteState = async () => {
+      if (user && id) {
+        try {
+          const favIds = await userService.getFavoriteIds(user.id);
+          setIsFavorite(favIds.includes(Number(id)));
+        } catch (error) {
+          console.error('Error syncing favorite state:', error);
+        }
+      }
+    };
+    syncFavoriteState();
+  }, [user, id]);
+
   const fetchRecipeData = async (silent = false) => {
     if (!silent) setLoading(true);
     try {

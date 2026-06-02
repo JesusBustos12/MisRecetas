@@ -347,16 +347,16 @@ app.post('/api/recipes', authMiddleware, async (req, res) => {
   try {
     const {
       title, description, steps, ingredients, prep_time,
-      cook_time, servings, category_country, image_url, user_id
+      cook_time, servings, category_country, image_url, user_id, nutrition
     } = req.body;
 
     const [result] = await pool.query(`
       INSERT INTO recipes 
       (title, description, steps, ingredients, prep_time, cook_time, servings, category_country, image_url, user_id, category_type, diet_type, nutrition)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'vegetarian', 'Omnívoro', '{}')
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'vegetarian', 'Omnívoro', ?)
     `, [
       title, description, steps, ingredients, prep_time,
-      cook_time, servings, category_country, image_url, user_id
+      cook_time, servings, category_country, image_url, user_id, nutrition || '{}'
     ]);
 
     res.status(201).json({ id: result.insertId, message: 'Receta creada exitosamente' });
@@ -372,7 +372,7 @@ app.put('/api/recipes/:id', authMiddleware, async (req, res) => {
     const { id } = req.params;
     const {
       title, description, steps, ingredients, prep_time,
-      cook_time, servings, category_country, image_url
+      cook_time, servings, category_country, image_url, nutrition
     } = req.body;
 
     // Verificar que el usuario es el dueño de la receta
@@ -388,11 +388,11 @@ app.put('/api/recipes/:id', authMiddleware, async (req, res) => {
       UPDATE recipes 
       SET title = ?, description = ?, steps = ?, ingredients = ?, 
           prep_time = ?, cook_time = ?, servings = ?, 
-          category_country = ?, image_url = ?
+          category_country = ?, image_url = ?, nutrition = ?
       WHERE id = ? AND user_id = ?
     `, [
       title, description, steps, ingredients, prep_time,
-      cook_time, servings, category_country, image_url, id, req.user.id
+      cook_time, servings, category_country, image_url, nutrition || '{}', id, req.user.id
     ]);
 
     res.json({ message: 'Receta actualizada correctamente' });
