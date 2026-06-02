@@ -828,6 +828,7 @@ function ProfileHubContent() {
           onClose={() => setEditingRecipe(null)}
           onSuccess={fetchData}
           t={t.profile || {}}
+          tCommon={t.common || {}}
         />
       )}
 

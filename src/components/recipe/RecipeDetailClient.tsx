@@ -1124,6 +1124,7 @@ export default function RecipeDetailClient({ id }: { id: string }) {
           onClose={() => setIsEditModalOpen(false)}
           onSuccess={() => fetchRecipeData()}
           t={t.profile || {}}
+          tCommon={t.common || {}}
         />
       )}
 
