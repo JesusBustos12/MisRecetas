@@ -59,7 +59,6 @@ function ProfileHubContent() {
   const editAvatarInputRef = useRef<HTMLInputElement>(null);
 
   const [showHeavyPopup, setShowHeavyPopup] = useState(false);
-  const [heavyAction, setHeavyAction] = useState<(() => Promise<void>) | null>(null);
 
   const [toast, setToast] = useState<{
     message: string;
@@ -247,8 +246,13 @@ function ProfileHubContent() {
 
     if (file.size > 1024 * 1024) {
       console.log('Image is heavy, showing popup. Size:', file.size);
-      setHeavyAction(() => processUpload);
       setShowHeavyPopup(true);
+      
+      // Wait for 6 seconds while the visual popup counts down
+      await new Promise(resolve => setTimeout(resolve, 6000));
+      
+      setShowHeavyPopup(false);
+      await processUpload();
       return;
     }
     
@@ -319,14 +323,6 @@ function ProfileHubContent() {
     }
 
     await processEditUpload();
-  };
-
-  const onHeavyPopupComplete = async () => {
-    setShowHeavyPopup(false);
-    if (heavyAction) {
-      await heavyAction();
-      setHeavyAction(null);
-    }
   };
 
   if (loading) {
@@ -936,6 +932,8 @@ function ProfileHubContent() {
           </div>
         </div>
       )}
+
+      {showHeavyPopup && <HeavyImagePopup />}
 
       {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
     </div>

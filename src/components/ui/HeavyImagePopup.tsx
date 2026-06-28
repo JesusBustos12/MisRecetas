@@ -2,21 +2,15 @@
 
 import React, { useState, useEffect } from 'react';
 
-interface HeavyImagePopupProps {
-  onComplete: () => void;
-}
-
-export default function HeavyImagePopup({ onComplete }: HeavyImagePopupProps) {
+export default function HeavyImagePopup() {
   const [countdown, setCountdown] = useState(6);
 
   useEffect(() => {
     if (countdown > 0) {
       const timer = setTimeout(() => setCountdown(countdown - 1), 1000);
       return () => clearTimeout(timer);
-    } else {
-      onComplete();
     }
-  }, [countdown, onComplete]);
+  }, [countdown]);
 
   return (
     <div className="modal-overlay" style={{ zIndex: 9999 }}>

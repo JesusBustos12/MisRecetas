@@ -14,16 +14,18 @@ export const compressImageToWebp = (
   quality: number = 0.8
 ): Promise<string> => {
   return new Promise((resolve, reject) => {
-    // Usar URL.createObjectURL es mucho más eficiente en memoria que FileReader.readAsDataURL
+    console.log('compressImageToWebp: Starting object URL creation');
     const objectUrl = URL.createObjectURL(file);
+    console.log('compressImageToWebp: Object URL created', objectUrl);
     
     const img = new Image();
-    img.src = objectUrl;
     
     img.onload = () => {
-      // 2. Calcular nuevas dimensiones manteniendo la proporción
+      console.log('compressImageToWebp: img.onload FIRED');
+      
       let width = img.width;
       let height = img.height;
+      console.log(`compressImageToWebp: original size ${width}x${height}`);
 
       if (width > maxWidth) {
         height = Math.round((height * maxWidth) / width);
@@ -34,36 +36,40 @@ export const compressImageToWebp = (
         width = Math.round((width * maxHeight) / height);
         height = maxHeight;
       }
+      console.log(`compressImageToWebp: new size ${width}x${height}`);
 
-      // 3. Dibujar en un canvas
       const canvas = document.createElement('canvas');
       canvas.width = width;
       canvas.height = height;
       
       const ctx = canvas.getContext('2d');
       if (!ctx) {
+        console.error('compressImageToWebp: canvas context failed');
         reject(new Error('No se pudo obtener el contexto 2D del canvas'));
         return;
       }
       
-      // Rellenar de blanco en caso de PNGs transparentes
+      console.log('compressImageToWebp: drawing image to canvas');
       ctx.fillStyle = '#FFFFFF';
       ctx.fillRect(0, 0, width, height);
-      
-      // Dibujar la imagen escalada
       ctx.drawImage(img, 0, 0, width, height);
       
-      // Liberar la URL de memoria de forma segura DESPUÉS de haberla dibujado
+      console.log('compressImageToWebp: revoking URL');
       URL.revokeObjectURL(objectUrl);
 
-      // 4. Extraer como WEBP
+      console.log('compressImageToWebp: converting to webp');
       const webpDataUrl = canvas.toDataURL('image/webp', quality);
+      console.log('compressImageToWebp: webp conversion successful, length:', webpDataUrl.length);
       resolve(webpDataUrl);
     };
 
     img.onerror = (err) => {
+      console.error('compressImageToWebp: img.onerror FIRED', err);
       URL.revokeObjectURL(objectUrl);
       reject(new Error('Error al cargar la imagen para compresión.'));
     };
+
+    console.log('compressImageToWebp: setting img.src');
+    img.src = objectUrl;
   });
 };
