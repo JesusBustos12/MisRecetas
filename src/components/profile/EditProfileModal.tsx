@@ -71,8 +71,18 @@ export default function EditProfileModal({
 
     if (file.size > 1024 * 1024) {
       console.log('Heavy image detected (Modal). Size:', file.size);
-      setPendingHeavyFile(file);
       setShowHeavyPopup(true);
+      
+      await new Promise(resolve => setTimeout(resolve, 6000));
+      
+      setShowHeavyPopup(false);
+      try {
+        const compressedUrl = await compressImageToWebp(file, 800, 800, 0.8);
+        setAvatarUrl(compressedUrl);
+      } catch (error) {
+        console.error('Error comprimiendo imagen:', error);
+        setToast({ message: 'Error procesando la imagen', type: 'error' });
+      }
       return;
     }
 
@@ -86,24 +96,10 @@ export default function EditProfileModal({
     }
   };
 
-  const onHeavyPopupComplete = async () => {
-    setShowHeavyPopup(false);
-    if (pendingHeavyFile) {
-      try {
-        const compressedUrl = await compressImageToWebp(pendingHeavyFile, 800, 800, 0.8);
-        setAvatarUrl(compressedUrl);
-      } catch (error) {
-        console.error('Error comprimiendo imagen:', error);
-        setToast({ message: 'Error procesando la imagen', type: 'error' });
-      }
-      setPendingHeavyFile(null);
-    }
-  };
-
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        {showHeavyPopup && <HeavyImagePopup onComplete={onHeavyPopupComplete} />}
+        {showHeavyPopup && <HeavyImagePopup />}
         <div className="modal-header">
           <h2 className="modal-title">{t.title}</h2>
           <button className="modal-close" onClick={onClose}>
