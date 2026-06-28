@@ -210,13 +210,23 @@ function ProfileHubContent() {
 
   const handleAvatarUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
-    if (!file || !user) return;
+    if (!file || !user) {
+      console.log('handleAvatarUpload: No file or user');
+      return;
+    }
+    
+    console.log('handleAvatarUpload: START', file.name, file.size);
+    showToast('Procesando avatar...', 'info');
     
     const processUpload = async () => {
+      console.log('processUpload: START');
       setAvatarUploading(true);
       try {
+        console.log('processUpload: Compressing...');
         const base64Url = await compressImageToWebp(file, 800, 800, 0.8);
+        console.log('processUpload: Uploading to DB...', base64Url.length);
         await userService.uploadAvatar(user.id, base64Url);
+        console.log('processUpload: Upload success');
         if (setUserProfile) {
           setUserProfile(
             userProfile
@@ -225,11 +235,13 @@ function ProfileHubContent() {
           );
         }
         setProfile((prev: any) => (prev ? { ...prev, avatar_url: base64Url } : prev));
+        showToast('Avatar actualizado correctamente', 'success');
       } catch (error) {
-        console.error('Error subiendo avatar:', error);
+        console.error('processUpload: Error subiendo avatar:', error);
         showToast('Error uploading avatar', 'error');
       } finally {
         setAvatarUploading(false);
+        if (avatarInputRef.current) avatarInputRef.current.value = '';
       }
     };
 
@@ -358,11 +370,23 @@ function ProfileHubContent() {
                 alt={userName}
                 style={{ opacity: avatarUploading ? 0.5 : 1, transition: 'opacity 0.2s' }}
               />
-              <button
+              <label
                 className="pmc-camera-btn"
-                onClick={() => avatarInputRef.current?.click()}
-                disabled={avatarUploading}
+                style={{
+                  cursor: avatarUploading ? 'not-allowed' : 'pointer',
+                  pointerEvents: avatarUploading ? 'none' : 'auto',
+                }}
               >
+                <input
+                  type="file"
+                  accept="image/*"
+                  style={{ display: 'none' }}
+                  onChange={handleAvatarUpload}
+                  onClick={(e) => {
+                    (e.target as HTMLInputElement).value = '';
+                  }}
+                  disabled={avatarUploading}
+                />
                 {avatarUploading ? (
                   <span
                     className="loading-spinner"
@@ -385,17 +409,7 @@ function ProfileHubContent() {
                     />
                   </svg>
                 )}
-              </button>
-              <input
-                type="file"
-                accept="image/*"
-                ref={avatarInputRef}
-                style={{ display: 'none' }}
-                onChange={handleAvatarUpload}
-                onClick={(e) => {
-                  (e.target as HTMLInputElement).value = '';
-                }}
-              />
+              </label>
             </div>
             <div className="pmc-info">
               <h1 className="pmc-name">{userName}</h1>

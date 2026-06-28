@@ -227,16 +227,28 @@ export default function EditProfileModal({
                   </div>
                 )}
               </div>
-              <input
-                id="avatar-file-input"
-                type="file"
-                onChange={handleAvatarUpload}
-                onClick={(e) => {
-                  (e.target as HTMLInputElement).value = '';
+              <label
+                className="btn btn-secondary"
+                style={{
+                  padding: '0.8rem 1.5rem',
+                  display: 'inline-block',
+                  cursor: loading ? 'not-allowed' : 'pointer',
+                  pointerEvents: loading ? 'none' : 'auto',
                 }}
-                accept="image/png, image/jpeg, image/webp"
-                style={{ display: 'none' }}
-              />
+              >
+                Upload Image
+                <input
+                  id="avatar-file-input"
+                  type="file"
+                  onChange={handleAvatarUpload}
+                  onClick={(e) => {
+                    (e.target as HTMLInputElement).value = '';
+                  }}
+                  accept="image/png, image/jpeg, image/webp"
+                  style={{ display: 'none' }}
+                  disabled={loading}
+                />
+              </label>
               <span style={{ fontSize: '1.1rem', color: 'var(--text-muted)', marginTop: '0.4rem', fontWeight: 600 }}>
                 (Formatos permitidos: PNG, JPG, WEBP)
               </span>

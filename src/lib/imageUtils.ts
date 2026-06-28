@@ -14,59 +14,56 @@ export const compressImageToWebp = (
   quality: number = 0.8
 ): Promise<string> => {
   return new Promise((resolve, reject) => {
-    // 1. Leer el archivo como Data URL
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
+    // Usar URL.createObjectURL es mucho más eficiente en memoria que FileReader.readAsDataURL
+    const objectUrl = URL.createObjectURL(file);
     
-    reader.onload = (event) => {
-      const img = new Image();
-      img.src = event.target?.result as string;
+    const img = new Image();
+    img.src = objectUrl;
+    
+    img.onload = () => {
+      // Liberar la URL una vez cargada para evitar fugas de memoria
+      URL.revokeObjectURL(objectUrl);
       
-      img.onload = () => {
-        // 2. Calcular nuevas dimensiones manteniendo la proporción
-        let width = img.width;
-        let height = img.height;
+      // 2. Calcular nuevas dimensiones manteniendo la proporción
+      let width = img.width;
+      let height = img.height;
 
-        if (width > maxWidth) {
-          height = Math.round((height * maxWidth) / width);
-          width = maxWidth;
-        }
-        
-        if (height > maxHeight) {
-          width = Math.round((width * maxHeight) / height);
-          height = maxHeight;
-        }
+      if (width > maxWidth) {
+        height = Math.round((height * maxWidth) / width);
+        width = maxWidth;
+      }
+      
+      if (height > maxHeight) {
+        width = Math.round((width * maxHeight) / height);
+        height = maxHeight;
+      }
 
-        // 3. Dibujar en un canvas
-        const canvas = document.createElement('canvas');
-        canvas.width = width;
-        canvas.height = height;
-        
-        const ctx = canvas.getContext('2d');
-        if (!ctx) {
-          reject(new Error('No se pudo obtener el contexto 2D del canvas'));
-          return;
-        }
-        
-        // Rellenar de blanco en caso de PNGs transparentes (opcional, pero recomendado para WEBP si pierde alfa)
-        ctx.fillStyle = '#FFFFFF';
-        ctx.fillRect(0, 0, width, height);
-        
-        // Dibujar la imagen escalada
-        ctx.drawImage(img, 0, 0, width, height);
+      // 3. Dibujar en un canvas
+      const canvas = document.createElement('canvas');
+      canvas.width = width;
+      canvas.height = height;
+      
+      const ctx = canvas.getContext('2d');
+      if (!ctx) {
+        reject(new Error('No se pudo obtener el contexto 2D del canvas'));
+        return;
+      }
+      
+      // Rellenar de blanco en caso de PNGs transparentes
+      ctx.fillStyle = '#FFFFFF';
+      ctx.fillRect(0, 0, width, height);
+      
+      // Dibujar la imagen escalada
+      ctx.drawImage(img, 0, 0, width, height);
 
-        // 4. Extraer como WEBP
-        const webpDataUrl = canvas.toDataURL('image/webp', quality);
-        resolve(webpDataUrl);
-      };
-
-      img.onerror = (err) => {
-        reject(err);
-      };
+      // 4. Extraer como WEBP
+      const webpDataUrl = canvas.toDataURL('image/webp', quality);
+      resolve(webpDataUrl);
     };
 
-    reader.onerror = (err) => {
-      reject(err);
+    img.onerror = (err) => {
+      URL.revokeObjectURL(objectUrl);
+      reject(new Error('Error al cargar la imagen para compresión.'));
     };
   });
 };
