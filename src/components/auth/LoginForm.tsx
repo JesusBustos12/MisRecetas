@@ -102,27 +102,6 @@ export default function LoginForm({ t, onSwitchToRegister }: LoginFormProps) {
         <div className="auth-input-group">
           <div className="auth-label">
             <span>{t.password || 'Password'}</span>
-            <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                if (!email) {
-                  setError(
-                    language === 'es'
-                      ? 'Por favor, ingresa tu correo primero.'
-                      : 'Please enter your email first.',
-                  );
-                  return;
-                }
-                setError(
-                  language === 'es'
-                    ? `Se ha enviado un enlace de recuperación a: ${email}`
-                    : `A recovery link has been sent to: ${email}`,
-                );
-              }}
-            >
-              {t.forgot || 'Forgot password?'}
-            </a>
           </div>
           <div className="auth-input-wrapper">
             <svg
