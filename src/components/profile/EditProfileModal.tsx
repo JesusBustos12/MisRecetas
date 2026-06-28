@@ -70,11 +70,14 @@ export default function EditProfileModal({
     if (!file) return;
 
     if (file.size > 1024 * 1024) {
+      console.log('Heavy image detected (Modal). Size:', file.size);
       setPendingHeavyFile(file);
       setShowHeavyPopup(true);
+      if (e.target) e.target.value = '';
       return;
     }
 
+    console.log('Light image detected (Modal). Size:', file.size);
     try {
       const compressedUrl = await compressImageToWebp(file, 800, 800, 0.8);
       setAvatarUrl(compressedUrl);
@@ -82,6 +85,7 @@ export default function EditProfileModal({
       console.error('Error comprimiendo imagen:', error);
       setToast({ message: 'Error procesando la imagen', type: 'error' });
     }
+    if (e.target) e.target.value = '';
   };
 
   const onHeavyPopupComplete = async () => {

@@ -234,12 +234,16 @@ function ProfileHubContent() {
     };
 
     if (file.size > 1024 * 1024) {
+      console.log('Image is heavy, showing popup. Size:', file.size);
       setHeavyAction(() => processUpload);
       setShowHeavyPopup(true);
+      if (e.target) e.target.value = '';
       return;
     }
     
+    console.log('Image is light, processing immediately. Size:', file.size);
     await processUpload();
+    if (e.target) e.target.value = '';
   };
 
   const openEditModal = () => {
