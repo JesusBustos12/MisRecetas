@@ -21,9 +21,6 @@ export const compressImageToWebp = (
     img.src = objectUrl;
     
     img.onload = () => {
-      // Liberar la URL una vez cargada para evitar fugas de memoria
-      URL.revokeObjectURL(objectUrl);
-      
       // 2. Calcular nuevas dimensiones manteniendo la proporción
       let width = img.width;
       let height = img.height;
@@ -55,6 +52,9 @@ export const compressImageToWebp = (
       
       // Dibujar la imagen escalada
       ctx.drawImage(img, 0, 0, width, height);
+      
+      // Liberar la URL de memoria de forma segura DESPUÉS de haberla dibujado
+      URL.revokeObjectURL(objectUrl);
 
       // 4. Extraer como WEBP
       const webpDataUrl = canvas.toDataURL('image/webp', quality);
