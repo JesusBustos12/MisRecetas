@@ -317,8 +317,13 @@ function ProfileHubContent() {
     };
 
     if (file.size > 1024 * 1024) {
-      setHeavyAction(() => processEditUpload);
       setShowHeavyPopup(true);
+      
+      // Wait for 6 seconds while the visual popup counts down
+      await new Promise(resolve => setTimeout(resolve, 6000));
+      
+      setShowHeavyPopup(false);
+      await processEditUpload();
       return;
     }
 
