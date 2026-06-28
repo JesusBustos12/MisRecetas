@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import { userService } from '@/services/userService';
 import Toast from '@/components/Toast';
+import HeavyImagePopup from '@/components/ui/HeavyImagePopup';
+import { compressImageToWebp } from '@/lib/imageUtils';
 
 interface EditProfileModalProps {
   user: any;
@@ -27,6 +29,8 @@ export default function EditProfileModal({
     message: string;
     type: 'success' | 'error' | 'info';
   } | null>(null);
+  const [showHeavyPopup, setShowHeavyPopup] = useState(false);
+  const [pendingHeavyFile, setPendingHeavyFile] = useState<File | null>(null);
 
   const handleUpdateProfile = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -61,20 +65,43 @@ export default function EditProfileModal({
     }
   };
 
-  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleAvatarUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      const result = event.target?.result as string;
-      setAvatarUrl(result);
-    };
-    reader.readAsDataURL(file);
+
+    if (file.size > 1024 * 1024) {
+      setPendingHeavyFile(file);
+      setShowHeavyPopup(true);
+      return;
+    }
+
+    try {
+      const compressedUrl = await compressImageToWebp(file, 800, 800, 0.8);
+      setAvatarUrl(compressedUrl);
+    } catch (error) {
+      console.error('Error comprimiendo imagen:', error);
+      setToast({ message: 'Error procesando la imagen', type: 'error' });
+    }
+  };
+
+  const onHeavyPopupComplete = async () => {
+    setShowHeavyPopup(false);
+    if (pendingHeavyFile) {
+      try {
+        const compressedUrl = await compressImageToWebp(pendingHeavyFile, 800, 800, 0.8);
+        setAvatarUrl(compressedUrl);
+      } catch (error) {
+        console.error('Error comprimiendo imagen:', error);
+        setToast({ message: 'Error procesando la imagen', type: 'error' });
+      }
+      setPendingHeavyFile(null);
+    }
   };
 
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        {showHeavyPopup && <HeavyImagePopup onComplete={onHeavyPopupComplete} />}
         <div className="modal-header">
           <h2 className="modal-title">{t.title}</h2>
           <button className="modal-close" onClick={onClose}>

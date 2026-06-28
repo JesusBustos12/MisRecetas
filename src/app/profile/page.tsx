@@ -10,6 +10,7 @@ import Toast from '@/components/Toast';
 
 import { Suspense } from 'react';
 import { compressImageToWebp } from '@/lib/imageUtils';
+import HeavyImagePopup from '@/components/ui/HeavyImagePopup';
 
 function ProfileHubContent() {
   const { user, userProfile, setUserProfile, t, isAuthLoaded } = useAppContext();
@@ -56,6 +57,9 @@ function ProfileHubContent() {
   const [editAvatarUrl, setEditAvatarUrl] = useState('');
   const [editLoading, setEditLoading] = useState(false);
   const editAvatarInputRef = useRef<HTMLInputElement>(null);
+
+  const [showHeavyPopup, setShowHeavyPopup] = useState(false);
+  const [heavyAction, setHeavyAction] = useState<(() => Promise<void>) | null>(null);
 
   const [toast, setToast] = useState<{
     message: string;
@@ -207,25 +211,35 @@ function ProfileHubContent() {
   const handleAvatarUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file || !user) return;
-    setAvatarUploading(true);
-
-    try {
-      const base64Url = await compressImageToWebp(file, 800, 800, 0.8);
-      await userService.uploadAvatar(user.id, base64Url);
-      if (setUserProfile) {
-        setUserProfile(
-          userProfile
-            ? { ...userProfile, avatar_url: base64Url }
-            : { id: user.id, avatar_url: base64Url },
-        );
+    
+    const processUpload = async () => {
+      setAvatarUploading(true);
+      try {
+        const base64Url = await compressImageToWebp(file, 800, 800, 0.8);
+        await userService.uploadAvatar(user.id, base64Url);
+        if (setUserProfile) {
+          setUserProfile(
+            userProfile
+              ? { ...userProfile, avatar_url: base64Url }
+              : { id: user.id, avatar_url: base64Url },
+          );
+        }
+        setProfile((prev: any) => (prev ? { ...prev, avatar_url: base64Url } : prev));
+      } catch (error) {
+        console.error('Error subiendo avatar:', error);
+        showToast('Error uploading avatar', 'error');
+      } finally {
+        setAvatarUploading(false);
       }
-      setProfile((prev: any) => (prev ? { ...prev, avatar_url: base64Url } : prev));
-    } catch (error) {
-      console.error('Error subiendo avatar:', error);
-      showToast('Error uploading avatar', 'error');
-    } finally {
-      setAvatarUploading(false);
+    };
+
+    if (file.size > 1024 * 1024) {
+      setHeavyAction(() => processUpload);
+      setShowHeavyPopup(true);
+      return;
     }
+    
+    await processUpload();
   };
 
   const openEditModal = () => {
@@ -274,20 +288,30 @@ function ProfileHubContent() {
     const file = e.target.files?.[0];
     if (!file) return;
     
-    // El límite de tamaño se puede relajar un poco antes de la compresión, o mantenerlo.
-    // Vamos a comprimirlo independientemente.
-    try {
-      const compressedWebpUrl = await compressImageToWebp(file, 800, 800, 0.8);
-      // Validar si AÚN comprimida supera 2MB (muy raro con webp al 80%)
-      const sizeInBytes = Math.round((compressedWebpUrl.length * 3) / 4);
-      if (sizeInBytes > 2 * 1024 * 1024) {
-        showToast('El archivo sigue siendo muy pesado. Intenta otra imagen.', 'error');
-        return;
+    const processEditUpload = async () => {
+      try {
+        const compressedWebpUrl = await compressImageToWebp(file, 800, 800, 0.8);
+        setEditAvatarUrl(compressedWebpUrl);
+      } catch (error) {
+        console.error('Error comprimiendo avatar:', error);
+        showToast('Error al procesar el avatar.', 'error');
       }
-      setEditAvatarUrl(compressedWebpUrl);
-    } catch (error) {
-      console.error('Error comprimiendo avatar:', error);
-      showToast('Error al procesar el avatar.', 'error');
+    };
+
+    if (file.size > 1024 * 1024) {
+      setHeavyAction(() => processEditUpload);
+      setShowHeavyPopup(true);
+      return;
+    }
+
+    await processEditUpload();
+  };
+
+  const onHeavyPopupComplete = async () => {
+    setShowHeavyPopup(false);
+    if (heavyAction) {
+      await heavyAction();
+      setHeavyAction(null);
     }
   };
 
