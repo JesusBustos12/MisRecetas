@@ -73,7 +73,6 @@ export default function EditProfileModal({
       console.log('Heavy image detected (Modal). Size:', file.size);
       setPendingHeavyFile(file);
       setShowHeavyPopup(true);
-      if (e.target) e.target.value = '';
       return;
     }
 
@@ -85,7 +84,6 @@ export default function EditProfileModal({
       console.error('Error comprimiendo imagen:', error);
       setToast({ message: 'Error procesando la imagen', type: 'error' });
     }
-    if (e.target) e.target.value = '';
   };
 
   const onHeavyPopupComplete = async () => {
@@ -233,6 +231,9 @@ export default function EditProfileModal({
                 id="avatar-file-input"
                 type="file"
                 onChange={handleAvatarUpload}
+                onClick={(e) => {
+                  (e.target as HTMLInputElement).value = '';
+                }}
                 accept="image/png, image/jpeg, image/webp"
                 style={{ display: 'none' }}
               />
