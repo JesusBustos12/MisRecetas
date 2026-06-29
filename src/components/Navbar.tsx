@@ -81,7 +81,7 @@ export default function Navbar() {
           }}
         >
           <img
-            src="/Imgs/gorro-de-cocinero.png"
+            src="/Imgs/cocinando.png"
             alt="Chef Hat"
             style={{ width: '5.2rem', height: '5.2rem', objectFit: 'contain' }}
           />

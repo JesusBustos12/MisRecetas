@@ -32,8 +32,8 @@ export const metadata = {
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'MisRecetas Banner' }],
   },
   icons: {
-    icon: '/favicon.png',
-    apple: '/logo.png',
+    icon: '/Imgs/cocinando.png',
+    apple: '/Imgs/cocinando.png',
   },
 };
 
