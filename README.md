@@ -21,17 +21,19 @@ Como desarrollador autodidacta, creé este proyecto para:
 - **Autenticación Segura**: Registro e inicio de sesión de usuarios con tokens JWT.
 - **Generación por IA**: Creación de recetas personalizadas utilizando Google Gemini.
 - **Arquitectura de Alto Rendimiento**: Filtrado, búsqueda y paginación optimizados en el servidor MySQL.
+- **Optimización de Recursos (Cloudinary)**: Almacenamiento seguro y externo de imágenes (avatares y recetas) para reducir la carga y transferencia de datos en Vercel.
 - **Interfaz Premium**: Diseño elegante con notificaciones Toast, animaciones suaves (Framer Motion) y soporte para modo oscuro/claro.
 - **Internacionalización**: Soporte completo para Español e Inglés.
 - **Seguridad Robusta**: Implementación de Helmet, Rate Limiting y hashing Bcrypt.
 
 ## Tecnologías utilizadas
 - **Backend**: Node.js + Express.
-- **Base de Datos**: MySQL.
+- **Base de Datos**: MySQL (TiDB Cloud).
 - **Frontend**: Next.js (React), Framer Motion, Lucide React.
 - **IA**: Google Generative AI (Gemini).
 - **Seguridad**: JWT, bcryptjs, Helmet, Express-rate-limit.
-- **Vercel**: Configuración lista para despliegue en Vercel (opcional).
+- **Cloud & Almacenamiento**: Cloudinary (imágenes), Vercel (despliegue del cliente y API Serverless).
+- **Herramientas de desarrollo**: pnpm (gestor de paquetes optimizado y seguro).
 
 ## Estructura del proyecto
 ```text
@@ -41,14 +43,17 @@ Recetas de comida/
 │   │   ├── server.js        # Punto de entrada del backend
 │   │   ├── config/          # Configuración (BD, etc.)
 │   │   ├── controllers/     # Lógica de negocio
+│   │   ├── scripts/         # Scripts de mantenimiento (ej. migración a Cloudinary)
 │   │   └── routes/          # Rutas de la API
 │   └── package.json         # Dependencias del backend
 ├── src/                      # Cliente Next.js
 │   ├── app/                 # Rutas y páginas (Next.js App Router)
 │   │   └── api/             # API Routes (incluyendo generación por IA)
 │   ├── components/          # Componentes reutilizables
+│   ├── lib/                 # Librerías utilitarias (Cloudinary, etc.)
 │   ├── services/            # Servicios de comunicación con la API
 │   └── i18n.ts              # Configuración de internacionalización
+├── pnpm-workspace.yaml       # Configuración del monorepo
 ├── vercel.json               # Configuración para despliegue en Vercel
 ├── package.json              # Scripts raíz (orquestación)
 └── README.md                 # Este archivo
@@ -58,6 +63,7 @@ Recetas de comida/
 Este proyecto refleja competencias reales de un Junior Full-Stack listo para aportar valor:
 
 - **Backend sólido**: Rutas seguras, manejo de errores estructurado, conexión a base de datos y orquestación de servicios.
+- **Optimización de Costes e Infraestructura**: Uso inteligente de servicios externos (Cloudinary, TiDB Cloud) para sortear las limitaciones de las capas gratuitas de hosting (Serverless Vercel).
 - **Integración de IA**: Uso de APIs de inteligencia artificial para agregar valor real al producto.
 - **Frontend moderno**: Uso de Next.js, Server Components, manipulación del estado y diseño UI/UX premium.
 - **Seguridad y buenas prácticas**: Uso de JWT, hashing de contraseñas, protección contra ataques comunes y logs estructurados.
