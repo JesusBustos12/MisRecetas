@@ -10,6 +10,7 @@ import Toast from '@/components/Toast';
 
 import { Suspense } from 'react';
 import { compressImageToWebp } from '@/lib/imageUtils';
+import { uploadImageToCloudinary } from '@/lib/cloudinary';
 import HeavyImagePopup from '@/components/ui/HeavyImagePopup';
 
 function ProfileHubContent() {
@@ -199,10 +200,13 @@ function ProfileHubContent() {
     if (!file) return;
     
     try {
+      showToast('Subiendo imagen a Cloudinary...', 'info');
       const compressedWebpUrl = await compressImageToWebp(file, 1200, 1200, 0.8);
-      setNewImgUrl(compressedWebpUrl);
+      const cloudinaryUrl = await uploadImageToCloudinary(compressedWebpUrl);
+      setNewImgUrl(cloudinaryUrl);
+      showToast('Imagen lista', 'success');
     } catch (error) {
-      console.error('Error comprimiendo imagen:', error);
+      console.error('Error comprimiendo o subiendo imagen:', error);
       showToast('Error al procesar la imagen.', 'error');
     }
   };
@@ -223,17 +227,19 @@ function ProfileHubContent() {
       try {
         console.log('processUpload: Compressing...');
         const base64Url = await compressImageToWebp(file, 800, 800, 0.8);
-        console.log('processUpload: Uploading to DB...', base64Url.length);
-        await userService.uploadAvatar(user.id, base64Url);
+        console.log('processUpload: Uploading to Cloudinary...');
+        const cloudinaryUrl = await uploadImageToCloudinary(base64Url);
+        console.log('processUpload: Uploading URL to DB...');
+        await userService.uploadAvatar(user.id, cloudinaryUrl);
         console.log('processUpload: Upload success');
         if (setUserProfile) {
           setUserProfile(
             userProfile
-              ? { ...userProfile, avatar_url: base64Url }
-              : { id: user.id, avatar_url: base64Url },
+              ? { ...userProfile, avatar_url: cloudinaryUrl }
+              : { id: user.id, avatar_url: cloudinaryUrl },
           );
         }
-        setProfile((prev: any) => (prev ? { ...prev, avatar_url: base64Url } : prev));
+        setProfile((prev: any) => (prev ? { ...prev, avatar_url: cloudinaryUrl } : prev));
         showToast('Avatar actualizado correctamente', 'success');
       } catch (error) {
         console.error('processUpload: Error subiendo avatar:', error);
@@ -308,10 +314,13 @@ function ProfileHubContent() {
     
     const processEditUpload = async () => {
       try {
+        showToast('Subiendo avatar a Cloudinary...', 'info');
         const compressedWebpUrl = await compressImageToWebp(file, 800, 800, 0.8);
-        setEditAvatarUrl(compressedWebpUrl);
+        const cloudinaryUrl = await uploadImageToCloudinary(compressedWebpUrl);
+        setEditAvatarUrl(cloudinaryUrl);
+        showToast('Avatar subido correctamente', 'success');
       } catch (error) {
-        console.error('Error comprimiendo avatar:', error);
+        console.error('Error comprimiendo o subiendo avatar:', error);
         showToast('Error al procesar el avatar.', 'error');
       }
     };

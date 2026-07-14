@@ -642,6 +642,28 @@ app.get('/api/status', async (req, res) => {
   }
 });
 
+// Endpoint para firmar subidas a Cloudinary
+import crypto from 'crypto';
+app.get('/api/cloudinary/sign', (req, res) => {
+  try {
+    const timestamp = Math.round((new Date).getTime() / 1000);
+    const apiSecret = process.env.CLOUDINARY_API_SECRET;
+    
+    if (!apiSecret) {
+      return res.status(500).json({ error: 'Configuración de Cloudinary faltante' });
+    }
+
+    const signatureStr = `timestamp=${timestamp}${apiSecret}`;
+    const signature = crypto.createHash('sha1').update(signatureStr).digest('hex');
+
+    res.json({ timestamp, signature });
+  } catch (error) {
+    console.error('Error generating Cloudinary signature:', error);
+    res.status(500).json({ error: 'Error al generar firma de Cloudinary' });
+  }
+});
+
+
 
 // Iniciar servidor localmente (omitido en Vercel)
 if (!process.env.VERCEL) {

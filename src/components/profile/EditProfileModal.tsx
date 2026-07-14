@@ -4,6 +4,7 @@ import { userService } from '@/services/userService';
 import Toast from '@/components/Toast';
 import HeavyImagePopup from '@/components/ui/HeavyImagePopup';
 import { compressImageToWebp } from '@/lib/imageUtils';
+import { uploadImageToCloudinary } from '@/lib/cloudinary';
 
 interface EditProfileModalProps {
   user: any;
@@ -77,10 +78,13 @@ export default function EditProfileModal({
       
       setShowHeavyPopup(false);
       try {
+        setToast({ message: 'Subiendo imagen a Cloudinary...', type: 'info' });
         const compressedUrl = await compressImageToWebp(file, 800, 800, 0.8);
-        setAvatarUrl(compressedUrl);
+        const cloudinaryUrl = await uploadImageToCloudinary(compressedUrl);
+        setAvatarUrl(cloudinaryUrl);
+        setToast({ message: 'Imagen subida correctamente', type: 'success' });
       } catch (error) {
-        console.error('Error comprimiendo imagen:', error);
+        console.error('Error procesando o subiendo imagen:', error);
         setToast({ message: 'Error procesando la imagen', type: 'error' });
       }
       return;
@@ -88,10 +92,13 @@ export default function EditProfileModal({
 
     console.log('Light image detected (Modal). Size:', file.size);
     try {
+      setToast({ message: 'Subiendo imagen a Cloudinary...', type: 'info' });
       const compressedUrl = await compressImageToWebp(file, 800, 800, 0.8);
-      setAvatarUrl(compressedUrl);
+      const cloudinaryUrl = await uploadImageToCloudinary(compressedUrl);
+      setAvatarUrl(cloudinaryUrl);
+      setToast({ message: 'Imagen subida correctamente', type: 'success' });
     } catch (error) {
-      console.error('Error comprimiendo imagen:', error);
+      console.error('Error procesando o subiendo imagen:', error);
       setToast({ message: 'Error procesando la imagen', type: 'error' });
     }
   };

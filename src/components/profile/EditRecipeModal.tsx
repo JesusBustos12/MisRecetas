@@ -2,6 +2,8 @@
 import { useState, useRef, useEffect } from 'react';
 import { recipeService } from '@/services/recipeService';
 import Toast from '@/components/Toast';
+import { compressImageToWebp } from '@/lib/imageUtils';
+import { uploadImageToCloudinary } from '@/lib/cloudinary';
 
 interface EditRecipeModalProps {
   recipe: any;
@@ -145,15 +147,19 @@ export default function EditRecipeModal({ recipe, onClose, onSuccess, t, tCommon
     }
   };
 
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      const result = event.target?.result as string;
-      setImgUrl(result);
-    };
-    reader.readAsDataURL(file);
+    try {
+      setToast({ message: 'Subiendo imagen a Cloudinary...', type: 'info' });
+      const compressedWebpUrl = await compressImageToWebp(file, 1200, 1200, 0.8);
+      const cloudinaryUrl = await uploadImageToCloudinary(compressedWebpUrl);
+      setImgUrl(cloudinaryUrl);
+      setToast({ message: 'Imagen lista', type: 'success' });
+    } catch (error) {
+      console.error('Error comprimiendo o subiendo imagen:', error);
+      setToast({ message: 'Error al procesar la imagen.', type: 'error' });
+    }
   };
 
   const addIngredient = () => setIngredients([...ingredients, '']);

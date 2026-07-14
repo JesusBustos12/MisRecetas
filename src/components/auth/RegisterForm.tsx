@@ -9,6 +9,7 @@ interface RegisterFormProps {
 }
 
 import { compressImageToWebp } from '@/lib/imageUtils';
+import { uploadImageToCloudinary } from '@/lib/cloudinary';
 
 export default function RegisterForm({ t, onSwitchToLogin }: RegisterFormProps) {
   const router = useRouter();
@@ -79,12 +80,16 @@ export default function RegisterForm({ t, onSwitchToLogin }: RegisterFormProps) 
     if (!file) return;
     
     try {
+      showToast('Subiendo imagen a Cloudinary...', 'info');
       // Comprimir y convertir a WEBP antes de guardar en estado
       const compressedWebpUrl = await compressImageToWebp(file, 800, 800, 0.8);
-      setAvatarUrl(compressedWebpUrl);
+      // Subir a Cloudinary
+      const cloudinaryUrl = await uploadImageToCloudinary(compressedWebpUrl);
+      setAvatarUrl(cloudinaryUrl);
+      showToast('Imagen subida correctamente', 'success');
     } catch (error) {
-      console.error('Error compressing image:', error);
-      showToast('Error procesando la imagen', 'error');
+      console.error('Error uploading image:', error);
+      showToast('Error procesando o subiendo la imagen', 'error');
     }
   };
 
