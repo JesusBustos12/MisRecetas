@@ -107,6 +107,14 @@ h6 {
   line-height: 1.2;
 }
 
+/* Tipografía Inteligente (Fluid Typography) */
+h1 {
+  font-size: clamp(3.2rem, 5vw, 4.8rem);
+}
+h2 {
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+}
+
 /* ========================================================================= */
 /* LAYOUT BASE Y NAVBAR (Mockup) */
 /* ========================================================================= */
@@ -118,11 +126,19 @@ h6 {
 
 .main-content {
   flex: 1;
-  padding: 4rem 3.2rem;
+  padding: clamp(2rem, 4vw, 4rem) clamp(1.6rem, 3vw, 3.2rem);
   max-width: 160rem;
-  /* Increased to allow wider cards to fit */
   margin: 0 auto;
   width: 100%;
+}
+
+/* Pantallas Extra Grandes (Televisores) */
+@media (min-width: 1920px) {
+  .main-content {
+    max-width: 200rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
 }
 
 /* NAVBAR RECIPEWORLD */
@@ -150,18 +166,18 @@ h6 {
 .navbar-logo {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: clamp(0.8rem, 2vw, 1.5rem);
   letter-spacing: 0.1rem;
   font-family: var(--font-family-heading);
-  font-size: 4rem;
+  font-size: clamp(2.4rem, 4vw, 4rem);
   font-weight: 800;
   color: var(--text-color);
   text-decoration: none;
 }
 
 .navbar-logo-img {
-  width: 4.2rem;
-  height: 4.2rem;
+  width: clamp(3.2rem, 4vw, 4.2rem);
+  height: clamp(3.2rem, 4vw, 4.2rem);
   object-fit: contain;
 }
 
@@ -588,30 +604,113 @@ input[type=number] {
 
 @media (max-width: 768px) {
   .header {
-    flex-direction: column;
-    height: auto;
-    padding: 1.6rem 2rem;
-    gap: 1.6rem;
+    flex-direction: row;
+    height: 7rem;
+    padding: 0 1.6rem;
+    justify-content: space-between;
   }
 
   .navbar-left {
-    width: 100%;
-    justify-content: space-between;
+    width: auto;
+    gap: 1.5rem;
   }
 
+  /* El buscador real y menú de links se moverán al nav móvil (hamburger menu) */
+  .navbar-search-mockup,
   .navbar-links {
     display: none;
-    /* Idealmente en movil seria un menú hamburguesa */
-  }
-
-  .navbar-search-mockup {
-    width: 100%;
   }
 
   .navbar-right {
-    width: 100%;
-    justify-content: space-between;
+    width: auto;
+    gap: 1.5rem;
   }
+  
+  .theme-switch-wrapper {
+    display: none; /* Podemos moverlo dentro del menu hamburguesa en Navbar.tsx */
+  }
+}
+
+/* --------------------------------------------------- */
+/* MOBILE MENU OVERLAY & HAMBURGER */
+/* --------------------------------------------------- */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0.8rem;
+}
+
+.hamburger-btn svg {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+@media (max-width: 768px) {
+  .hamburger-btn {
+    display: block;
+  }
+}
+
+.mobile-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-color);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  padding: 2.4rem;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-nav-overlay.open {
+  transform: translateX(0);
+}
+
+.mobile-nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3.2rem;
+}
+
+.close-menu-btn {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0.8rem;
+}
+
+.close-menu-btn svg {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.mobile-nav-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.mobile-nav-content .navbar-search-mockup {
+  display: block;
+  width: 100%;
+}
+
+.mobile-nav-content .theme-switch-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 /* ========================================================================= */
@@ -950,7 +1049,7 @@ input[type=number] {
 }
 
 .hero-title {
-  font-size: 4.8rem;
+  font-size: clamp(3.2rem, 6vw, 4.8rem);
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 1.6rem;
@@ -1302,10 +1401,14 @@ input[type=number] {
 
 .recipe-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
-  /* Increased card width */
-  gap: 4.8rem;
-  /* Slightly more gap for proportion */
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: clamp(2.4rem, 4vw, 4.8rem);
+}
+
+@media (min-width: 1920px) {
+  .recipe-grid {
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  }
 }
 
 /* LIST VIEW MODIFIER */
@@ -1413,9 +1516,9 @@ input[type=number] {
 .rc-img-wrapper {
   position: relative;
   width: 66.6%;
-  /* Two thirds of the card */
   height: 100%;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .rc-img-wrapper img {
@@ -1464,14 +1567,30 @@ input[type=number] {
 }
 
 .rc-content {
-  padding: 2.8rem;
+  padding: clamp(1.6rem, 2.5vw, 2.8rem);
   display: flex;
   flex-direction: column;
   flex: 1;
   width: 33.3%;
-  /* One third of the card */
   justify-content: flex-start;
   height: 100%;
+}
+
+@media (max-width: 640px) {
+  .recipe-card-m {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .rc-img-wrapper {
+    width: 100%;
+    height: 200px;
+  }
+
+  .rc-content {
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* No changes needed to rc-top-meta but ensuring it looks good in narrow column */

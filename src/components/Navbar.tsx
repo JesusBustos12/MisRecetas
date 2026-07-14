@@ -28,6 +28,7 @@ export default function Navbar() {
     login: 'Login',
   };
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   const router = useRouter();
   const pathname = usePathname();
@@ -36,6 +37,7 @@ export default function Navbar() {
 
   useEffect(() => {
     setMenuOpen(false);
+    setMobileNavOpen(false);
   }, [pathname]);
 
   useEffect(() => {
@@ -170,6 +172,58 @@ export default function Navbar() {
             {fallbackT.nav?.login || 'Entrar'}
           </Link>
         )}
+
+        {/* Botón Hamburguesa (solo móvil) */}
+        <button 
+          className="hamburger-btn" 
+          onClick={() => setMobileNavOpen(true)}
+          aria-label="Abrir menú"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+
+      {/* Overlay Móvil */}
+      <div className={`mobile-nav-overlay ${mobileNavOpen ? 'open' : ''}`}>
+        <div className="mobile-nav-header">
+          <span style={{ fontSize: '2.4rem', fontWeight: 'bold', fontFamily: 'var(--font-family-heading)' }}>Menú</span>
+          <button className="close-menu-btn" onClick={() => setMobileNavOpen(false)} aria-label="Cerrar menú">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <div className="mobile-nav-content">
+          <div className="navbar-search-mockup">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+            <input
+              type="text"
+              placeholder={fallbackT.nav?.search_placeholder || 'Buscar recetas...'}
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
+
+          <div className="theme-switch-wrapper">
+            <span style={{ fontSize: '1.6rem', fontWeight: 600 }}>Modo Oscuro</span>
+            <div className="theme-slider" onClick={toggleTheme}>
+              <div className="slider-icons"><span>☀️</span><span>🌙</span></div>
+              <div className="slider-thumb">{theme === 'dark' ? '🌙' : '☀️'}</div>
+            </div>
+          </div>
+          
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1.6rem 0', borderBottom: '1px solid var(--border-color)' }}>
+             <span style={{ fontSize: '1.6rem', fontWeight: 600 }}>Idioma</span>
+             <button onClick={toggleLanguage} className="icon-btn-round" style={{ width: '4rem', height: '4rem', fontSize: '1.4rem', fontWeight: 600 }}>
+               {language === 'es' ? 'EN' : 'ES'}
+             </button>
+          </div>
+        </div>
       </div>
     </nav>
   );
