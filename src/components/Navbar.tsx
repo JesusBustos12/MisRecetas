@@ -37,7 +37,11 @@ export default function Navbar() {
 
   useEffect(() => {
     setMenuOpen(false);
-    setMobileNavOpen(false);
+    
+    // Evitar que el menú se cierre de golpe si la redirección fue causada por escribir en el buscador
+    if (document.activeElement?.tagName !== 'INPUT') {
+      setMobileNavOpen(false);
+    }
   }, [pathname]);
 
   useEffect(() => {

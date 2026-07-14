@@ -621,10 +621,12 @@ input[type=number] {
   .navbar-right {
     width: auto;
     gap: 1.5rem;
+    align-items: center;
   }
   
-  .theme-switch-wrapper {
-    display: none; /* Podemos moverlo dentro del menu hamburguesa en Navbar.tsx */
+  .theme-switch-wrapper,
+  .navbar-left > .icon-btn-round {
+    display: none; /* Se ocultan en el header principal, ya están en el menú móvil */
   }
 }
 
@@ -699,6 +701,12 @@ input[type=number] {
 .mobile-nav-content .navbar-search-mockup {
   display: block;
   width: 100%;
+}
+
+/* Modificamos el input para que sea más fácil de tocar en móvil */
+.mobile-nav-content .navbar-search-mockup input {
+  padding: 1.4rem 1.7rem 1.4rem 4.1rem;
+  font-size: 1.6rem; /* Previene que iOS haga zoom automático */
 }
 
 .mobile-nav-content .theme-switch-wrapper {
