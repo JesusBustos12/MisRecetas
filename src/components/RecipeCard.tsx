@@ -123,7 +123,7 @@ export default function RecipeCard({
         href={`/recipe/${recipe.id}`}
         prefetch={false}
         className="rc-link-wrapper"
-        style={{ textDecoration: 'none', color: 'inherit', flex: 1, display: 'flex' }}
+        style={{ textDecoration: 'none', color: 'inherit', flex: 1, display: 'flex', flexDirection: 'inherit' }}
       >
         <div className="rc-img-wrapper">
           <img src={displayImageUrl} alt={title} loading="lazy" />
