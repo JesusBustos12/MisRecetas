@@ -82,7 +82,20 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     const savedUser = localStorage.getItem('app_user');
     const savedToken = localStorage.getItem('app_token');
     if (savedUser && savedToken) {
-      setUser(JSON.parse(savedUser));
+      try {
+        const payload = JSON.parse(atob(savedToken.split('.')[1]));
+        if (payload.exp * 1000 < Date.now()) {
+          console.warn('Token expired. Logging out.');
+          localStorage.removeItem('app_user');
+          localStorage.removeItem('app_token');
+        } else {
+          setUser(JSON.parse(savedUser));
+        }
+      } catch (e) {
+        console.error('Invalid token format:', e);
+        localStorage.removeItem('app_user');
+        localStorage.removeItem('app_token');
+      }
     }
     setIsAuthLoaded(true);
   }, []);

@@ -50,7 +50,8 @@ function authMiddleware(req, res, next) {
     req.user = decoded;
     next();
   } catch (error) {
-    return res.status(401).json({ error: 'Token inválido o expirado' });
+    console.error('AuthMiddleware Error:', error.message, 'Token:', authHeader.substring(0, 20) + '...');
+    return res.status(401).json({ error: 'Token inválido o expirado', details: error.message });
   }
 }
 

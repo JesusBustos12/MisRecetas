@@ -61,6 +61,14 @@ export const userService = {
         },
         body: JSON.stringify({ user_id: userId, recipe_id: recipeId }),
       });
+
+      if (response.status === 401) {
+        localStorage.removeItem('app_user');
+        localStorage.removeItem('app_token');
+        window.location.href = '/login';
+        throw new Error('Session expired');
+      }
+
       const data = await response.json();
       return data.favorite;
     } catch (error) {

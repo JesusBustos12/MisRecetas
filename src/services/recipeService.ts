@@ -228,6 +228,14 @@ export const recipeService = {
         },
         body: JSON.stringify({ user_id: userId, recipe_id: recipeId }),
       });
+
+      if (response.status === 401) {
+        localStorage.removeItem('app_user');
+        localStorage.removeItem('app_token');
+        window.location.href = '/login';
+        throw new Error('Session expired');
+      }
+
       if (!response.ok) throw new Error('Error toggling favorite');
       return await response.json();
     } catch (error) {
